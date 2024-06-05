@@ -2,11 +2,6 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  router: {
-    routes: [
-
-    ]
-  },
   locales: {
     root: {
       title: "Nine Chronicles Developer Portal",
@@ -16,15 +11,23 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
-          { text: 'Quick Start', link: '/en/quick-start' }
+          { text: 'Examples', link: '/en/examples/' }
         ],
     
         sidebar: [
           {
-            text: 'Examples',
+            text: "Ecosystem",
             items: [
-              { text: 'Markdown Examples', link: '/en/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/en/api-examples' }
+              { text: "@planetarium/account", link: "https://www.npmjs.com/package/@planetarium/account" },
+              { text: "@planetarium/tx", link: "https://www.npmjs.com/package/@planetarium/tx" },
+              { text: "@planetarium/lib9c", link: "https://lib9c.nine-chronicles.dev/" },
+            ]
+          },
+          {
+            text: 'Examples',
+            link: "/en/examples/",
+            items: [
+              { text: 'Bridge WNCG', link: '/en/examples/bridge-wncg' },
             ]
           }
         ],
@@ -41,16 +44,27 @@ export default defineConfig({
       lang: 'ko',
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/ko/index' },
-          { text: 'Examples', link: '/ko/markdown-examples' }
+          { text: 'Home', link: '/ko/' },
+          { text: '예제', link: '/ko/examples/' }
         ],
     
         sidebar: [
           {
-            text: 'Examples',
+            text: "둘러보기", link: "/ko/overview"
+          },
+          {
+            text: "에코시스템",
             items: [
-              { text: 'Markdown Examples', link: '/ko/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/ko/api-examples' }
+              { text: "@planetarium/account", link: "https://www.npmjs.com/package/@planetarium/account" },
+              { text: "@planetarium/tx", link: "https://www.npmjs.com/package/@planetarium/tx" },
+              { text: "@planetarium/lib9c", link: "https://lib9c.nine-chronicles.dev/" },
+            ]
+          },
+          {
+            text: '예재',
+            link: "/ko/examples/",
+            items: [
+              { text: 'WNCG 환전', link: '/ko/examples/bridge-wncg' },
             ]
           }
         ],

@@ -4,22 +4,12 @@ layout: home
 
 hero:
   name: "Nine Chronicles Developer Portal"
-  text: "A site for Nine Chronicles Ecosystem Developers"
-  tagline: My great project tagline
+  tagline: "당신의 나인크로니클을 만드세요"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Overview
+      link: /ko/overview
     - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: Examples
+      link: /ko/examples/
 ---
-
