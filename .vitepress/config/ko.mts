@@ -20,6 +20,7 @@ export const ko = defineConfig({
             { text: "@planetarium/account", link: "https://www.npmjs.com/package/@planetarium/account" },
             { text: "@planetarium/tx", link: "https://www.npmjs.com/package/@planetarium/tx" },
             { text: "@planetarium/lib9c", link: "https://lib9c.nine-chronicles.dev/" },
+            { text: "@planetarium/chrono-sdk & Chrono", link: "https://chrono.nine-chronicles.dev/" },
           ]
         },
         {
