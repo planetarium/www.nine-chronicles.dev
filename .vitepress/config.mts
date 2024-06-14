@@ -27,7 +27,7 @@ export default defineConfig({
             text: 'Examples',
             link: "/en/examples/",
             items: [
-              { text: 'Bridge WNCG', link: '/en/examples/bridge-wncg' },
+              { text: 'Transfer NCG (Chrono)', link: '/en/examples/transfer/chrono' },
             ]
           }
         ],
@@ -64,7 +64,7 @@ export default defineConfig({
             text: '예재',
             link: "/ko/examples/",
             items: [
-              { text: 'WNCG 환전', link: '/ko/examples/bridge-wncg' },
+              { text: 'NCG 송금 (Chrono)', link: '/ko/examples/transfer/chrono' }
             ]
           }
         ],
