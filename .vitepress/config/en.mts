@@ -6,11 +6,14 @@ export const en = defineConfig({
     lang: 'en-US',
     themeConfig: {
         nav: [
-            { text: 'Home', link: '/enaa' },
+            { text: 'Home', link: '/en' },
             { text: 'Examples', link: '/en/examples' }
         ],
 
         sidebar: [
+            {
+                text: "Overview", link: "/en/overview"
+            },
             {
                 text: "Ecosystem",
                 items: [
