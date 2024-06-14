@@ -23,7 +23,7 @@ function App() {
 export default App
 ```
 
-## 2. 연결 버튼 만들기
+## 2. 연결 버튼 띄우기
 
 dApp을 많이 사용했다면 MetaMask와 웹사이트를 연결하는 Connect 버튼을 많이 보셨을겁니다. Chrono도 아무 웹사이트나 서명을 하지 못 하도록 연결하는 과정이 있습니다. 이를 위해 Connect 버튼을 보여줍시다.
 

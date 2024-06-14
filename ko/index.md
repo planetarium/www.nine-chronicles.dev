@@ -7,9 +7,9 @@ hero:
   tagline: "당신의 나인크로니클을 만드세요"
   actions:
     - theme: brand
-      text: Overview
-      link: /ko/overview
+      text: 둘러보기
+      link: /ko/ove기view
     - theme: alt
-      text: Examples
+      text: 예제
       link: /ko/examples/
 ---
