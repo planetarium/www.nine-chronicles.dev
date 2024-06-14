@@ -23,7 +23,7 @@ function App() {
 export default App
 ```
 
-## 2. Create a Connect button
+## 2. Show a Connect button
 
 If you've used a lot of dApps, you've probably seen a lot of Connect buttons that connect MetaMasks to websites. Chrono also has a process for connecting to websites to prevent them from signing just any website. To do this, let's show the Connect button.
 
