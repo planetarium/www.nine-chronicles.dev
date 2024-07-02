@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 둘러보기
-      link: /ko/ove기view
+      link: /ko/overview
     - theme: alt
       text: 예제
       link: /ko/examples/
