@@ -1,10 +1,3 @@
----
-outline: deep
-next:
-  text: Examples
-  link: ./examples
----
-
 # Overview
 
 This developer portal is for [Nine Chronicles]-related developers. This includes mod developers, 3rd-party app developers, and anyone else who wants to write NCIP and contribute directly to Nine Chronicles.
