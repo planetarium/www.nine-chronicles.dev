@@ -1,10 +1,3 @@
----
-outline: deep
-next:
-  text: 예제
-  link: ./examples
----
-
 # 둘러보기
 
 본 개발자 포탈은 [Nine Chronicles] 관련 개발자들을 위한 공간입니다. 모드 개발자는 물론이고, 3rd-paty 앱 개발자 그리고 NCIP 를 작성하고 직접 Nine Chronicles에 직접 기여하고자 하는 사람들을 모두 포함합니다.

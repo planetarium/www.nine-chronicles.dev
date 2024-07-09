@@ -1,9 +1,3 @@
----
-next:
-  text: NCG 송금 (Chrono)
-  link: ./transfer/chrono
----
-
 # 예제
 
 여러 라이브러리들을 활용한 예제 앱의 소스코드를 제공하고 만드는 과정을 설명합니다.

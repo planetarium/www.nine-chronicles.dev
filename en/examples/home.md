@@ -1,9 +1,3 @@
----
-next:
-  text: Transfer NCG (Chrono)
-  link: ./transfer/chrono
----
-
 # Example
 
 Provides the source code for an example app utilizing several libraries and explains the process of creating it.
