@@ -62,7 +62,7 @@ export const en = defineConfig({
           ]
         },
         {
-          text: 'Join Minnet',
+          text: 'Join Mainnet',
           link: '/en/guide/join-mainnet/home',
           collapsed: false,
           items: [
