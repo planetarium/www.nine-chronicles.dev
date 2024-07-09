@@ -46,34 +46,34 @@ export const ko = defineConfig({
         },
         {
           text: '상태 조회하기',
-          link: '/ko/guide/create-network/get-state',
+          link: '/ko/guide/get-state/home',
           collapsed: false,
           items: [
-            { text: 'GraphQL(Headless)', link: '/ko/guide/create-network/get-state-with-headless-graphql' },
-            { text: 'GraphQL(Mimir)', link: '/ko/guide/create-network/get-state-with-mimir-graphql' }
+            { text: 'GraphQL(Headless)', link: '/ko/guide/get-state/get-state-with-headless-graphql' },
+            { text: 'GraphQL(Mimir)', link: '/ko/guide/get-state/get-state-with-mimir-graphql' }
           ]
         },
         {
           text: '트랜젝션 발행하기',
-          link: '/ko/guide/create-network/issue-transaction',
+          link: '/ko/guide/issue-transaction/home',
           collapsed: false,
           items: [
-            { text: '크로노', link: '/ko/guide/create-network/issue-transaction-with-chrono' }
+            { text: '크로노', link: '/ko/guide/issue-transaction/issue-transaction-with-chrono' }
           ]
         },
         {
           text: '메인넷 참여하기',
-          link: '/ko/guide/mainnet/join-mainnet',
+          link: '/ko/guide/join-mainnet/home',
           collapsed: false,
           items: [
-            { text: '나인크로니클 플레이', link: '/ko/guide/mainnet/play-nc' },
-            { text: '노드 운영', link: '/ko/guide/mainnet/node-operations' },
-            { text: '모딩', link: '/ko/guide/mainnet/modding' },
+            { text: '나인크로니클 플레이', link: '/ko/guide/join-mainnet/play-nc' },
+            { text: '노드 운영', link: '/ko/guide/join-mainnet/node-operations' },
+            { text: '모딩', link: '/ko/guide/join-mainnet/modding' },
           ]
         },
         {
           text: '예재',
-          link: '/ko/examples/getting-started',
+          link: '/ko/examples/home',
           collapsed: false,
           items: [
             { text: 'NCG 송금(크로노)', link: '/ko/examples/transfer/chrono' }

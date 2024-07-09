@@ -46,34 +46,34 @@ export const en = defineConfig({
         },
         {
           text: 'Get State',
-          link: '/en/guide/create-network/get-state',
+          link: '/en/guide/get-state/home',
           collapsed: false,
           items: [
-            { text: 'GraphQL(Headless)', link: '/en/guide/create-network/get-state-with-headless-graphql' },
-            { text: 'GraphQL(Mimir)', link: '/en/guide/create-network/get-state-with-mimir-graphql' }
+            { text: 'GraphQL(Headless)', link: '/en/guide/get-state/get-state-with-headless-graphql' },
+            { text: 'GraphQL(Mimir)', link: '/en/guide/get-state/get-state-with-mimir-graphql' }
           ]
         },
         {
           text: 'Issue Transaction',
-          link: '/en/guide/create-network/issue-transaction',
+          link: '/en/guide/issue-transaction/home',
           collapsed: false,
           items: [
-            { text: 'Chrono', link: '/en/guide/create-network/issue-transaction-with-chrono' }
+            { text: 'Chrono', link: '/en/guide/issue-transaction/issue-transaction-with-chrono' }
           ]
         },
         {
           text: 'Join Minnet',
-          link: '/en/guide/mainnet/join-mainnet',
+          link: '/en/guide/join-mainnet/home',
           collapsed: false,
           items: [
-            { text: 'Play NineChronicles', link: '/en/guide/mainnet/play-nc' },
-            { text: 'Node Operations', link: '/en/guide/mainnet/node-operations' },
-            { text: 'Modding', link: '/en/guide/mainnet/modding' },
+            { text: 'Play NineChronicles', link: '/en/guide/join-mainnet/play-nc' },
+            { text: 'Node Operations', link: '/en/guide/join-mainnet/node-operations' },
+            { text: 'Modding', link: '/en/guide/join-mainnet/modding' },
           ]
         },
         {
           text: 'Examples',
-          link: '/en/examples/getting-started',
+          link: '/en/examples/home',
           collapsed: false,
           items: [
             { text: 'Transfer NCG(Chrono)', link: '/en/examples/transfer/chrono' }
