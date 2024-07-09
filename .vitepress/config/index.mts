@@ -12,5 +12,5 @@ export default defineConfig({
   locales: {
     en: { label: 'English', ...en },
     ko: { label: 'Korean', ...ko }
-  }
+  },
 })

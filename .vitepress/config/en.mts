@@ -27,16 +27,6 @@ export const en = defineConfig({
           ]
         },
         {
-          text: 'Join Minnet',
-          link: '/en/guide/mainnet/join-mainnet',
-          collapsed: false,
-          items: [
-            { text: 'Play NineChronicles', link: '/en/guide/mainnet/play-nc' },
-            { text: 'Node Operations', link: '/en/guide/mainnet/node-operations' },
-            { text: 'Modding', link: '/en/guide/mainnet/modding' },
-          ]
-        },
-        {
           text: 'Create Network',
           link: '/en/guide/create-network/getting-started',
           collapsed: false,
@@ -52,21 +42,33 @@ export const en = defineConfig({
                 { text: 'Docker', link: '/en/guide/create-network/run-node-with-docker' }
               ]
             },
-            {
-              text: 'Get State',
-              link: '/en/guide/create-network/get-state',
-              items: [
-                { text: 'GraphQL(Headless)', link: '/en/guide/create-network/get-state-with-headless-graphql' },
-                { text: 'GraphQL(Mimir)', link: '/en/guide/create-network/get-state-with-mimir-graphql' }
-              ]
-            },
-            {
-              text: 'Issue Transaction',
-              link: '/en/guide/create-network/issue-transaction',
-              items: [
-                { text: 'Chrono', link: '/en/guide/create-network/issue-transaction-with-chrono' }
-              ]
-            },
+          ]
+        },
+        {
+          text: 'Get State',
+          link: '/en/guide/create-network/get-state',
+          collapsed: false,
+          items: [
+            { text: 'GraphQL(Headless)', link: '/en/guide/create-network/get-state-with-headless-graphql' },
+            { text: 'GraphQL(Mimir)', link: '/en/guide/create-network/get-state-with-mimir-graphql' }
+          ]
+        },
+        {
+          text: 'Issue Transaction',
+          link: '/en/guide/create-network/issue-transaction',
+          collapsed: false,
+          items: [
+            { text: 'Chrono', link: '/en/guide/create-network/issue-transaction-with-chrono' }
+          ]
+        },
+        {
+          text: 'Join Minnet',
+          link: '/en/guide/mainnet/join-mainnet',
+          collapsed: false,
+          items: [
+            { text: 'Play NineChronicles', link: '/en/guide/mainnet/play-nc' },
+            { text: 'Node Operations', link: '/en/guide/mainnet/node-operations' },
+            { text: 'Modding', link: '/en/guide/mainnet/modding' },
           ]
         },
         {
