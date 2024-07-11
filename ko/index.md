@@ -7,9 +7,9 @@ hero:
   tagline: "당신의 나인크로니클을 만드세요"
   actions:
     - theme: brand
-      text: 둘러보기
-      link: /ko/overview
+      text: 나인크로니클은 무엇인가?
+      link: /ko/introduce/what-is-nine-chronicles
     - theme: alt
-      text: 예제
-      link: /ko/examples/
+      text: 시작하기
+      link: /ko/guide/create-network/getting-started
 ---
