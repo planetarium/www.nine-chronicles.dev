@@ -27,8 +27,8 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'Getting Started', link: '/en/guide/create-network/getting-started' },
-          { text: 'Create Private Key', link: '/en/guide/create-network/create-private-key' },
-          { text: 'Create Genesis Block', link: '/en/guide/create-network/create-genesis-block' },
+          { text: 'Create a Private Key', link: '/en/guide/create-network/create-a-private-key' },
+          { text: 'Create a Genesis Block', link: '/en/guide/create-network/create-a-genesis-block' },
           {
             text: 'Run Node',
             link: '/en/guide/create-network/run-node',

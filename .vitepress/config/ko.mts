@@ -27,8 +27,8 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: '시작하기', link: '/ko/guide/create-network/getting-started' },
-          { text: '비밀키 만들기', link: '/ko/guide/create-network/create-private-key' },
-          { text: '제네시스 블록 만들기', link: '/ko/guide/create-network/create-genesis-block' },
+          { text: '개인 키 만들기', link: '/ko/guide/create-network/create-a-private-key' },
+          { text: '제네시스 블록 만들기', link: '/ko/guide/create-network/create-a-genesis-block' },
           {
             text: '노드 실행하기',
             link: '/ko/guide/create-network/run-node',
