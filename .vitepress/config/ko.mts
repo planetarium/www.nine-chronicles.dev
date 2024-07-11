@@ -64,7 +64,7 @@ export const ko = defineConfig({
         ]
       },
       {
-        text: '예재',
+        text: '예제',
         collapsed: false,
         items: [
           { text: '시작하기', link: '/ko/examples/getting-started' },
