@@ -30,11 +30,10 @@ export const en = defineConfig({
           { text: 'Create a Private Key', link: '/en/guide/create-network/create-a-private-key' },
           { text: 'Create a Genesis Block', link: '/en/guide/create-network/create-a-genesis-block' },
           {
-            text: 'Run Node',
-            link: '/en/guide/create-network/run-node',
+            text: 'Running a Blockchain Node',
             items: [
-              { text: '.NET Project', link: '/en/guide/create-network/run-node-with-dotnet-project' },
-              { text: 'Docker', link: '/en/guide/create-network/run-node-with-docker' }
+              { text: '.NET Project', link: '/en/guide/create-network/running-a-blockchain-node-with-dotnet-project' },
+              { text: 'Docker', link: '/en/guide/create-network/running-a-blockchain-node-with-docker' }
             ]
           },
         ]
@@ -59,7 +58,7 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'Play NineChronicles', link: '/en/guide/join-mainnet/play-nc' },
-          { text: 'Node Operations', link: '/en/guide/join-mainnet/node-operations' },
+          { text: 'Operating a Blockchain Node', link: '/en/guide/join-mainnet/operating-a-blockchain-node' },
           { text: 'Modding', link: '/en/guide/join-mainnet/modding' },
         ]
       },

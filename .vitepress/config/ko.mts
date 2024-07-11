@@ -30,11 +30,10 @@ export const ko = defineConfig({
           { text: '개인 키 만들기', link: '/ko/guide/create-network/create-a-private-key' },
           { text: '제네시스 블록 만들기', link: '/ko/guide/create-network/create-a-genesis-block' },
           {
-            text: '노드 실행하기',
-            link: '/ko/guide/create-network/run-node',
+            text: '블록체인 노드 실행하기',
             items: [
-              { text: '.NET 프로젝트', link: '/ko/guide/create-network/run-node-with-dotnet-project' },
-              { text: 'Docker', link: '/ko/guide/create-network/run-node-with-docker' }
+              { text: '.NET 프로젝트', link: '/ko/guide/create-network/running-a-blockchain-node-with-dotnet-project' },
+              { text: 'Docker', link: '/ko/guide/create-network/running-a-blockchain-node-with-docker' }
             ]
           },
         ]
@@ -59,7 +58,7 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: '나인크로니클 플레이', link: '/ko/guide/join-mainnet/play-nc' },
-          { text: '노드 운영', link: '/ko/guide/join-mainnet/node-operations' },
+          { text: '블록체인 노드 운영', link: '/ko/guide/join-mainnet/operating-a-blockchain-node' },
           { text: '모딩', link: '/ko/guide/join-mainnet/modding' },
         ]
       },
