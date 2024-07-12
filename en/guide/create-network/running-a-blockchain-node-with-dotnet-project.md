@@ -102,6 +102,10 @@ You could specify each option separately, but we'll use the `--config` option to
 
 Create a file in the path `NineChronicles.Headless.Executable/appsettings.local.json` and set the options as shown below. Focus on the `Headless` entry.
 
+::: danger :rotating_light:
+We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
+:::
+
 ::: details `appsettings.local.json` file
 ```json
 {

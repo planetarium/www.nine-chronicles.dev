@@ -101,6 +101,10 @@ Options:
 
 `NineChronicles.Headless.Executable/appsettings.local.json` 경로에 파일을 만들고 아래와 같이 옵션을 설정해줍니다. `Headless` 항목을 위주로 보세요.
 
+::: danger :rotating_light:
+여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
+:::
+
 ::: details `appsettings.local.json` 파일
 ```json
 {
