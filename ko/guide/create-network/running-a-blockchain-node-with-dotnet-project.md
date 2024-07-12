@@ -2,7 +2,7 @@
 
 블록체인 노드(Node)는 블록체인 네트워크를 구성하는 개별 컴퓨터나 서버를 의미합니다. 각 노드는 블록체인 데이터를 저장하고, 새 트랜잭션을 검증하며, 다른 노드들과 정보를 교환하여 네트워크의 분산성을 유지합니다. 노드는 블록체인 네트워크의 근간이 되며, 네트워크의 보안과 무결성을 보장하는 역할을 합니다.
 
-우리는 [앞에서](./create-a-genesis-block.md) 나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]를 복제해서 제네시스 블록을 만드는데 사용해봤습니다. 이번에는 블록체인 노드를 실행해보겠습니다.
+우리는 [앞에서](./create-a-genesis-block) 나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]를 복제해서 제네시스 블록을 만드는데 사용해봤습니다. 이번에는 블록체인 노드를 실행해보겠습니다.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 
