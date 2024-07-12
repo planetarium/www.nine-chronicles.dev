@@ -43,7 +43,7 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: 'GraphQL(Headless)', link: '/ko/guide/get-state/get-state-with-headless-graphql' },
-          { text: 'GraphQL(Mimir)', link: '/ko/guide/get-state/get-state-with-mimir-graphql' }
+          { text: 'GraphQL(Mimir)' }
         ]
       },
       {
