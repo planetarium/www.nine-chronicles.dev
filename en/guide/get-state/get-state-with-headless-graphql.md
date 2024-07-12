@@ -18,7 +18,7 @@ We tried running a blockchain node [earlier](../create-network/running-a-blockch
 
 We've set the GraphQL URL to `127.0.0.1:31280` in `appsettings.local.json`. Now let's go to http://127.0.0.1:31280/ui/playground or http://localhost:31280/ui/playground.
 
-![Empty GraphQL Playground](./graphql-playground-01.png)
+![Empty GraphQL Playground](/public/graphql-playground-01.png)
 
 Click the `DOCS` and `SCHEMA` buttons on the right side of the Playground to see a variety of information.
 
