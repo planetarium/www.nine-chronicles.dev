@@ -9,6 +9,7 @@ export default defineConfig({
   title: 'Nine Chronicles Developer Portal',
   description: 'A comprehensive guide for Nine Chronicles developers.',
 
+  ignoreDeadLinks: true,
   cleanUrls: true,
   lastUpdated: true,
 

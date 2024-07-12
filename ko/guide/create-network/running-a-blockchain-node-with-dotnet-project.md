@@ -2,7 +2,7 @@
 
 블록체인 노드(Node)는 블록체인 네트워크를 구성하는 개별 컴퓨터나 서버를 의미합니다. 각 노드는 블록체인 데이터를 저장하고, 새 트랜잭션을 검증하며, 다른 노드들과 정보를 교환하여 네트워크의 분산성을 유지합니다. 노드는 블록체인 네트워크의 근간이 되며, 네트워크의 보안과 무결성을 보장하는 역할을 합니다.
 
-우리는 [앞에서](./create-a-genesis-block.md) 나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]를 복제해서 제네시스 블록을 만드는데 사용해봤습니다. 이번에는 블록체인 노드를 실행해보겠습니다.
+우리는 [앞에서](./create-a-genesis-block) 나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]를 복제해서 제네시스 블록을 만드는데 사용해봤습니다. 이번에는 블록체인 노드를 실행해보겠습니다.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 
@@ -100,6 +100,10 @@ Options:
 각각의 옵션을 따로 지정해주는 방법을 사용할 수도 있지만, 여기서는 `--config` 옵션을 사용해서 `json` 형식으로 작성된 옵션 파일을 지정해주는 방법을 사용해 보겠습니다.
 
 `NineChronicles.Headless.Executable/appsettings.local.json` 경로에 파일을 만들고 아래와 같이 옵션을 설정해줍니다. `Headless` 항목을 위주로 보세요.
+
+::: danger :rotating_light:
+여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
+:::
 
 ::: details `appsettings.local.json` 파일
 ```json

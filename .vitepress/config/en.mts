@@ -33,7 +33,7 @@ export const en = defineConfig({
             text: 'Running a Blockchain Node',
             items: [
               { text: '.NET Project', link: '/en/guide/create-network/running-a-blockchain-node-with-dotnet-project' },
-              { text: 'Docker', link: '/en/guide/create-network/running-a-blockchain-node-with-docker' }
+              { text: 'Docker' }
             ]
           },
         ]
@@ -43,7 +43,7 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'GraphQL(Headless)', link: '/en/guide/get-state/get-state-with-headless-graphql' },
-          { text: 'GraphQL(Mimir)', link: '/en/guide/get-state/get-state-with-mimir-graphql' }
+          { text: 'GraphQL(Mimir)' }
         ]
       },
       {

@@ -2,7 +2,7 @@
 
 A blockchain node is an individual computer or server that makes up a blockchain network. Each node stores blockchain data, validates new transactions, and exchanges information with other nodes to maintain the network's decentralization. Nodes are the backbone of a blockchain network and are responsible for ensuring the security and integrity of the network.
 
-We cloned NineChronicles' blockchain node implementation [NineChronicles.Headless][nc-headless] [earlier](./create-a-genesis-block.md) and used it to create a genesis block. This time, let's run the blockchain node.
+We cloned NineChronicles' blockchain node implementation [NineChronicles.Headless][nc-headless] [earlier](./create-a-genesis-block) and used it to create a genesis block. This time, let's run the blockchain node.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 
@@ -101,6 +101,10 @@ Options:
 You could specify each option separately, but we'll use the `--config` option to specify an options file written in `json` format.
 
 Create a file in the path `NineChronicles.Headless.Executable/appsettings.local.json` and set the options as shown below. Focus on the `Headless` entry.
+
+::: danger :rotating_light:
+We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
+:::
 
 ::: details `appsettings.local.json` file
 ```json
