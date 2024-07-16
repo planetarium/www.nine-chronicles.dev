@@ -24,17 +24,15 @@ Playground 우측의 `DOCS`와 `SCHEMA` 버튼을 클릭해서 다양한 정보�
 
 ## 최신 블록의 정보 조회하기
 
-여러 쿼리들 중에서 `chainQuery`를 사용해서 최신 블록의 정보를 조회해보겠습니다. Playground의 좌측 영역에 아래와 같이 GraphQL 쿼리를 작성하고, 화면 중앙의 :arrow_forward: 버튼을 클릭합니다.
+여러 쿼리들 중에서 `nodeStatus`를 사용해서 최신 블록의 정보를 조회해보겠습니다. Playground의 좌측 영역에 아래와 같이 GraphQL 쿼리를 작성하고, 화면 중앙의 :arrow_forward: 버튼을 클릭합니다.
 
 ```graphql
 query {
-  chainQuery {
-    blockQuery {
-      blocks(desc: true, limit:1) {
-        miner
-        hash
-        index
-      }
+  nodeStatus {
+    tip {
+      miner
+      hash
+      index
     }
   }
 }
@@ -46,15 +44,11 @@ query {
 ```json
 {
   "data": {
-    "chainQuery": {
-      "blockQuery": {
-        "blocks": [
-          {
-            "miner": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
-            "hash": "44d64ad7b644416928a410df29289c09aff14f43e74531f05f43e61b423fec23",
-            "index": 9
-          }
-        ]
+    "nodeStatus": {
+      "tip": {
+        "miner": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+        "hash": "44d64ad7b644416928a410df29289c09aff14f43e74531f05f43e61b423fec23",
+        "index": 9
       }
     }
   },
@@ -71,15 +65,11 @@ query {
 ```json
 {
   "data": {
-    "chainQuery": {
-      "blockQuery": {
-        "blocks": [
-          {
-            "miner": "0xb287F295d2C4e875Bde83A36F11B60d8d12b7976",
-            "hash": "a88ded5a592503f2986d9288386af4c30669a8b82390fc46fa2fe29cb3b2fdc4",
-            "index": 11136526
-          }
-        ]
+    "nodeStatus": {
+      "tip": {
+        "miner": "0xb287F295d2C4e875Bde83A36F11B60d8d12b7976",
+        "hash": "a88ded5a592503f2986d9288386af4c30669a8b82390fc46fa2fe29cb3b2fdc4",
+        "index": 11136526
       }
     }
   },

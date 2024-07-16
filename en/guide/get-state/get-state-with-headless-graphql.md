@@ -24,17 +24,15 @@ Click the `DOCS` and `SCHEMA` buttons on the right side of the Playground to see
 
 ## Get information from the latest block
 
-Among other queries, we'll use `chainQuery` to retrieve information about the latest block. Write the following GraphQL query in the left area of the Playground, and click the :arrow_forward: button in the center of the screen.
+Among other queries, we'll use `nodeStatus` query to retrieve information about the latest block. Write the following GraphQL query in the left area of the Playground, and click the :arrow_forward: button in the center of the screen.
 
 ```graphql
 query {
-  chainQuery {
-    blockQuery {
-      blocks(desc: true, limit:1) {
-        miner
-        hash
-        index
-      }
+  nodeStatus {
+    tip {
+      miner
+      hash
+      index
     }
   }
 }
@@ -46,15 +44,11 @@ You may have noticed that the `miner` of the block you queried is the same as th
 ```json
 {
   "data": {
-    "chainQuery": {
-      "blockQuery": {
-        "blocks": [
-          {
-            "miner": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
-            "hash": "44d64ad7b644416928a410df29289c09aff14f43e74531f05f43e61b423fec23",
-            "index": 9
-          }
-        ]
+    "nodeStatus": {
+      "tip": {
+        "miner": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+        "hash": "44d64ad7b644416928a410df29289c09aff14f43e74531f05f43e61b423fec23",
+        "index": 9
       }
     }
   },
@@ -71,15 +65,11 @@ Let's run the GraphQL query we used above by connecting to the GraphQL Playgroun
 ```json
 {
   "data": {
-    "chainQuery": {
-      "blockQuery": {
-        "blocks": [
-          {
-            "miner": "0xb287F295d2C4e875Bde83A36F11B60d8d12b7976",
-            "hash": "a88ded5a592503f2986d9288386af4c30669a8b82390fc46fa2fe29cb3b2fdc4",
-            "index": 11136526
-          }
-        ]
+    "nodeStatus": {
+      "tip": {
+        "miner": "0xb287F295d2C4e875Bde83A36F11B60d8d12b7976",
+        "hash": "a88ded5a592503f2986d9288386af4c30669a8b82390fc46fa2fe29cb3b2fdc4",
+        "index": 11136526
       }
     }
   },
