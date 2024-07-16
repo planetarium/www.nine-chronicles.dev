@@ -12,7 +12,6 @@ For the purposes of this article, we've been working with the `v200200` tag in t
 
 ## Setting up `appsettings.local.json`
 
-나인크로니클의 블록체인 노드를 실행할 때에는 아래와 같이 많은 옵션을 입력할 수 있습니다.
 When running a blockchain node on NineChronicles, you can enter many options, as shown below.
 
 ::: details `NineChronicles.Headless.Executable` run options
@@ -226,7 +225,6 @@ Let's run the blockchain node with the command below.
 ➜  NineChronicles.Headless.Executable & dotnet run --config=./appsettings.local.json --arena-participants-sync=false
 ```
 
-아래는 블록체인 노드의 로그입니다. 강조된 라인들을 보면, 0번 블록 즉 제네시스 블록을 평가한 후에 1번 블록을 만들어서 제안하고, 다시 1번 블록을 평가하고 블록체인에 추가한 후에 합의와 관련한 로그가 찍히고, 2번 블록을 만들기 시작하는 것을 알 수 있습니다.
 Below is a log from a blockchain node. In the highlighted lines, you can see that after evaluating block 0, or the genesis block, it creates block 1 and proposes it, evaluates block 1 again and adds it to the blockchain, logs the consensus, and starts creating block 2.
 
 ::: details console logs of `NineChronicles.Headless.Executable`
