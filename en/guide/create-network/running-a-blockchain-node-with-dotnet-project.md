@@ -110,8 +110,6 @@ We're exposing the private key here for illustrative purposes, but you should ne
 {
     "$schema": "./appsettings-schema.json",
     "Headless": {
-        // Set to the planet Odin.
-        "Planet": "Odin",
         // Enter the absolute path or URL of the genesis block file. e.g., the absolute path to the custom genesis block file you created earlier
         "GenesisBlockPath": "path-of-genesis-block",
         // Set the tag version to 200200 to match the version of the tag.
