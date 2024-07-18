@@ -110,8 +110,6 @@ Options:
 {
     "$schema": "./appsettings-schema.json",
     "Headless": {
-        // 오딘 행성으로 설정했습니다.
-        "Planet": "Odin",
         // 제네시스 블록 파일의 절대 경로 또는 URL을 입력합니다. e.g., 앞에서 만든 사용자 정의 제네시스 블록 파일의 절대 경로
         "GenesisBlockPath": "path-of-genesis-block",
         // 태그버전에 맞게 200200 버전으로 설정했습니다.
