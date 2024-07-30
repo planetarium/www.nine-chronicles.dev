@@ -1,143 +1,194 @@
-# 제네시스 블록 만들기
+# Mimir를 활용한 서드파티 웹사이트 제작 튜토리얼 
 
-제네시스 블록은 블록체인 네트워크가 시작할 때 생성되는 첫 번째 블록입니다. 나인크로니클의 블록체인 네트워크에도 제네시스 블록이 존재하고, 모든 게임 플레이가 이 블록에서 시작됩니다.
+나인크로니클의 최신 상태를 GraphQL로 쉽게 조회해볼 수 있는 서비스인 [Mimir](../../guide/get-state/get-state-with-mimir-graphql)를 통해 간단하게 아레나 랭킹 보드를 만들어보는 튜토리얼 입니다.
 
-나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]에서는 [NineChronicles.Headless.Executable][nc-headless-executable] 프로젝트를 통해서 `genesis`라는 명령을 제공합니다. 이를 사용해서 사용자 정의된 제네시스 블록을 만들어 보겠습니다.
+# 프로젝트 세팅
 
-[nc-headless]: https://github.com/planetarium/NineChronicles.Headless
-[nc-headless-executable]: https://github.com/planetarium/NineChronicles.Headless/tree/main/NineChronicles.Headless.Executable
+프로젝트는 빠르게 프론트를 만들어볼 수 있는 [React](https://react.dev/)와 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.
 
-## `NineChronicles.Headless` 저장소 복제
+```sh
+npx create-react-app my-app --template typescript
+```
+먼저 [Create React APP](https://create-react-app.dev/)을 통해 기본적인 프로젝트 설정들을 받아온 후 실행해봅니다.
 
-먼저, `NineChronicles.Headless`의 [GitHub 저장소](https://github.com/planetarium/NineChronicles.Headless)를 복제합니다.
-
-### cli
-
-::: code-group
-```shell [git]
-git clone --recursive https://github.com/planetarium/NineChronicles.Headless.git
+```sh
+npm run start
 ```
 
-```shell [gh(GitHub)]
-gh repo clone planetarium/NineChronicles.Headless -- --recurse-submodules
-```
-:::
+실행이 정상적으로 되었다면 준비는 끝입니다!
 
-::: info :bulb:
-본 문서에서는 `v200200` 태그를 기준으로 진행했습니다.
-```shell
-git checkout v200200
-```
-:::
+## Graphql Client
 
-## `NineChronicles.Headless.Executable genesis`
+Mimir를 사용하기 위해선 요청을 위한 Client가 필요합니다. 이 Client는 GraphQL Schema를 받아 자동으로 생성할 수 있습니다.
 
-이제 `NineChronicles.Headless.Executable` 프로젝트의 `genesis` 명령어로 무엇을 할 수 있는지 확인해보겠습니다.
-
-[nc-headless-readme]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#create-a-new-genesis-block
-
-```console
-➜  NineChronicles.Headless $ cd ./NineChronicles.Headless.Executable
-➜  NineChronicles.Headless.Executable $ dotnet run -- genesis --help
-Usage: NineChronicles. genesis [--help] config
-
-Mine a new genesis block
-
-Arguments:
-  0: config    JSON config path to mine genesis block (Default: ./config.json)
-
-Options:
-  -h, --help    Show help message
+```sh
+npm i @apollo/client graphql graphql-request@^6.1.0 graphql-tag @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request @graphql-codegen/cli @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo @graphql-codegen/typescript-resolvers
 ```
 
-위의 명령어를 사용하여 새로운 제네시스 블록을 생성할 수 있습니다. 이 명령어는 기본적으로 `./config.json` 파일에서 설정 정보를 읽습니다. 만약 다른 경로의 JSON 파일을 사용하려면, `--config` 옵션을 사용하여 해당 경로를 지정할 수 있습니다.
-이제 `NineChronicles.Headless.Executable/config.json` 경로에 설정 파일을 만들어 보겠습니다. 설정 파일의 스키마는 [Structure of genesis block][structure-of-genesis-block]과 [config.schema.json][config-schema-json]에서 확인할 수 있습니다. 아래는 이전 단계에서 생성한 개인 키를, 블록체인의 관리자이자 재화(`NCG`)의 주조자이자 블록 검증자가 되게끔 설정해보았습니다.
+명령어를 통해 필요한 라이브러리들을 다운받습니다.
 
-[structure-of-genesis-block]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#structure-of-genesis-block
-[config-schema-json]: https://github.com/planetarium/NineChronicles.Headless/blob/development/config.schema.json
+이제 스키마 파일이 필요합니다. 스키마 파일은 Mimir에 접속해 `Schema Definition` 을 누르면 우측 버튼을 통해 다운받을 수 있으며 `package.json` 과 같은 폴더에 위치시켜줍니다.
 
-::: danger :rotating_light:
-여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
-:::
+```yaml
+overwrite: true
+schema: ./schema.graphql
+documents: ./api.graphql
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withComponent: false
+      withHOC: false
+      scalars:
+        Long: number
+        TxId: string
+  src/generated/graphql-request.ts:
+    plugins:
+    - typescript
+    - typescript-operations
+    - typescript-graphql-request
+```
 
-```json
-{
-    "$schema": "../config.schema.json",
-    "data": {
-        // 테이블시트 csv 파일들을 포함하고 있는 경로를 설정합니다.
-        "tablePath": "../Lib9c/Lib9c/TableCSV"
-    },
-    // 블록체인의 관리자를 설정합니다.
-    "admin": {
-        "activate": true,
-        // 앞에서 예시로 만든 개인 키의 주소를 입력했습니다.
-        "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
-        "validUntil": 1000000
-    },
-    // 재화(NCG)의 주조자와 예금량을 설정합니다.
-    "currency": {
-        // 관리자의 개인 키를 입력했습니다.
-        "initialMinter": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
-        "initialCurrencyDeposit": [
-            {
-                // 관리자의 주소를 입력했습니다.
-                "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
-                "amount": 1000000,
-                "start": 0,
-                "end": 0
-            }
-        ]
-    },
-    // 블록 검증자를 설정합니다.
-    "initialValidatorSet": [
-        {
-            // 관리자의 공개 키를 입력했습니다.
-            "publicKey": "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14",
-            "power": 1
-        }
-    ],
-    // 미드(Mead)를 설정합니다.
-    "initialMeadConfigs": [
-        {
-            // 관리자의 주소를 입력했습니다.
-            "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
-            "amount": "1000000"
-        }
-    ],
-    "initialPledgeConfigs": []
+graphql codegen을 하기 위해선 몇가지 설정이 필요합니다. 위 설정을 동일한 경로에 `codegen.yaml` 이름으로 생성해줍니다.
+
+```graphql
+query GetArenaLeaderBoard {
+  arena {
+    leaderboard(ranking: 1, length: 10) {
+      arenaAddress
+      avatarAddress
+      cp
+      lose
+      purchasedTicketCount
+      rank
+      score
+      ticket
+      ticketResetCount
+      win
+    }
+  }
 }
 ```
 
-이제 이 `config.json` 파일을 사용해서 제네시스 블록을 만들어 보겠습니다.
+이제 생성에 사용할 실제 쿼리를 작성해줘야합니다. 아레나 랭킹을 표시해주기 위해 아레나 랭킹을 쿼리해올 쿼리를 위와 같이 작성해 `api.graphql` 파일을 생성해줍니다.
 
-```console
-➜  NineChronicles.Headless.Executable $ dotnet run -- genesis ./config.json 
-
-Processing data for genesis...
-
-Processing currency for genesis...
-
-Processing admin for genesis...
-Admin config done
-
-Processing initial validator set for genesis...
-Initial validator set config done: PublicKey: 033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14, Power: 1
-
-
-Processing initial mead distribution...
-Preparing initial 1000000 MEAD for 0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159...
-
-Processing initial pledges...
-
-Mining genesis block...
-
-Admin privilege has been granted to given admin address. Keep this account in secret.
-
-Genesis block created.
+```json
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "codegen": "graphql-codegen"
+  },
 ```
 
-이제 `genesis-block` 파일이 만들어졌습니다.
+마지막으로 Client를 생성할 시간입니다. 생성을 쉽게 하기 위해 `package.json`에 codegen 스크립트를 추가한 이후 `npm run codegen`을 통해 client를 생성합니다.
 
-::: tip :tada:
-수고하셨습니다! 이제 여러분은 `NineChronicles.Headless.Executable` 프로젝트의 `genesis` 명령어를 사용해서 제네시스 블록을 만드는 방법을 배웠습니다. 다음은 개인 키와 제네시스 블록을 사용해서 나인크로니클의 블록체인 노드를 실행해보겠습니다.
-:::
+## Board 만들기
+
+이제부턴 본격적으로 데이터를 gql에서 받아와 사용할 겁니다.
+
+```ts
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+const client = new ApolloClient({
+  uri: "https://mimir.nine-chronicles.dev/odin/graphql",
+  cache: new InMemoryCache(),
+});
+
+root.render(
+  <React.StrictMode>
+		<ApolloProvider client={client}>
+            <App />
+		</ApolloProvider>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
+생성한 Client를 사용하기 위해 `ApolloProvider` 에 url 과 함께 client를 `index.tsx`에 추가해 전역에 설정해줍니다.
+
+```ts
+import { useGetArenaLeaderBoardQuery } from "./generated/graphql";
+
+function App() {
+  const { loading, data } = useGetArenaLeaderBoardQuery();
+
+  return (
+      <div className="App">
+        <header className="App-header">
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Arena Address</th>
+                  <th>Avatar Address</th>
+                  <th>CP</th>
+                  <th>Lose</th>
+                  <th>Purchased Ticket Count</th>
+                  <th>Score</th>
+                  <th>Ticket</th>
+                  <th>Ticket Reset Count</th>
+                  <th>Win</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data?.arena?.leaderboard?.map((player, index) => (
+                  <tr key={index}>
+                    <td>{player?.rank}</td>
+                    <td>{player?.arenaAddress}</td>
+                    <td>{player?.avatarAddress}</td>
+                    <td>{player?.cp ?? 'N/A'}</td>
+                    <td>{player?.lose}</td>
+                    <td>{player?.purchasedTicketCount}</td>
+                    <td>{player?.score}</td>
+                    <td>{player?.ticket}</td>
+                    <td>{player?.ticketResetCount}</td>
+                    <td>{player?.win}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </header>
+      </div>
+  );
+}
+
+export default App;
+```
+
+데이터를 받아 Table에 그려 데이터를 확인해보기 위해 `App.tsx`를 수정해 확인해봅니다.
+
+![alt text](/arena-result.png)
+
+## 페이지네이션
+
+위에서 저희는 `api.graphql` 를 생성할 때 length를 고정해서 받아왔습니다. 이제 동적으로 값을 넣어주기 위해 해당 값을 수정해 페이지 네이션을 구현할겁니다.
+
+## 스타일
+
+데이터를 받아와 그려주는건 완성되었습니다. 이제 좀 더 가독성있게 보기 위해 CSS Theme를 하나 가져와 입혀줄겁니다.
+
+## 완성
+

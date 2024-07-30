@@ -26,13 +26,13 @@ export const ko = defineConfig({
         text: '모딩 가이드',
         collapsed: false,
         items: [
-          { text: '시작하기', link: '/ko/guide/create-network/getting-started' },
-          { text: 'Mimir를 활용한 서드파티 웹사이트 제작', link: '/ko/for-moder/guide/make-ares-website' },
-          { text: 'Bepinex를 활용한 클라이언트 모드 제작' },
+          { text: '시작하기', link: '/ko/for-moder/getting-started' },
+          { text: 'Mimir를 활용한 서드파티 웹사이트 튜토리얼', link: '/ko/for-moder/guide/make-ares-website' },
+          { text: 'Bepinex를 활용한 클라이언트 모드 튜토리얼', link: '/ko/for-moder/guide/make-bepenix-app.md' },
           {
             text: 'NineChronicles의 시스템 이해하기',
             items: [
-              { text: 'TableSheet 보는 법' },
+              { text: 'TableSheet' },
               { text: 'Hit 계산 공식' },
             ]
           },
@@ -59,7 +59,7 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: 'GraphQL(Headless)', link: '/ko/guide/get-state/get-state-with-headless-graphql' },
-          { text: 'GraphQL(Mimir)' }
+          { text: 'GraphQL(Mimir)', link: '/ko/guide/get-state/get-state-with-mimir-graphql'  }
         ]
       },
       {
