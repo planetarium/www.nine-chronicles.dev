@@ -23,6 +23,22 @@ export const ko = defineConfig({
         ]
       },
       {
+        text: '모딩 가이드',
+        collapsed: false,
+        items: [
+          { text: '시작하기', link: '/ko/guide/create-network/getting-started' },
+          { text: 'Mimir를 활용한 서드파티 웹사이트 제작', link: '/ko/for-moder/guide/make-ares-website' },
+          { text: 'Bepinex를 활용한 클라이언트 모드 제작' },
+          {
+            text: 'NineChronicles의 시스템 이해하기',
+            items: [
+              { text: 'TableSheet 보는 법' },
+              { text: 'Hit 계산 공식' },
+            ]
+          },
+        ]
+      },
+      {
         text: '네트워크 만들기',
         collapsed: false,
         items: [
