@@ -78,6 +78,7 @@ export const en = defineConfig({
           { text: 'How to select filtered inventory items in the NineChronicles Unity project', link: '/en/forum-trunk/how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
           { text: 'How to use my own RPC server, not Planetarium’s', link: '/en/forum-trunk/how-to-use-my-own-rpc-server-not-planetariums' },
           { text: 'The Structure of Lib9c and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-0-overview' },
+          { text: 'Working with Bencodex', link: '/en/forum-trunk/working-with-bencodex' },
         ]
       }
     ],
