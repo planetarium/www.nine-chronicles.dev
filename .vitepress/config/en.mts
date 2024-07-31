@@ -124,6 +124,7 @@ export const en = defineConfig({
           { text: 'The currency of NineChronicles', link: '/en/forum-trunk/the-currency-of-nine-chronicles' },
           { text: 'How to play web9c', link: '/en/forum-trunk/how-to-play-web9c' },
           { text: 'How to create actions in JavaScript environment', link: '/en/forum-trunk/how-to-create-actions-in-javascript-environment' },
+          { text: 'File Paths used on NineChronicles', link: '/en/forum-trunk/file-paths-used-on-nine-chronicles' },
         ]
       }
     ],
