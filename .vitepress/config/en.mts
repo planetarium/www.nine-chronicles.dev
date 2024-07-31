@@ -100,6 +100,7 @@ export const en = defineConfig({
           { text: 'Explain App Protocol Version(a.k.a. APV)', link: '/en/forum-trunk/explain-app-protocol-version-a-k-a-apv' },
           { text: 'Manage your keys with the ‘planet’ command', link: '/en/forum-trunk/manage-your-keys-with-the-planet-command' },
           { text: 'Processing of the Invitation Code', link: '/en/forum-trunk/processing-of-the-invitation-code' },
+          { text: 'Configure a single-node network for testing', link: '/en/forum-trunk/configure-a-single-node-network-for-testing' },
         ]
       }
     ],
