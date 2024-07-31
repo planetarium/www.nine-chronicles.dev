@@ -74,6 +74,7 @@ export const en = defineConfig({
         text: 'Forum Trunk',
         collapsed: false,
         items: [
+          { text: 'About the key store', link: '/en/forum-trunk/about-the-key-store' },
         ]
       }
     ],
