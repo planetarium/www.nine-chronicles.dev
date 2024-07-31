@@ -95,6 +95,7 @@ export const en = defineConfig({
           { text: '[TIP] How to play while changing multiple keys in the Unity editor', link: '/en/forum-trunk/tip-how-to-play-while-changing-multiple-keys-in-the-unity-editor' },
           { text: 'Play 9c on x86 macOS / Linux using CI Artifacts (UNOFFICIAL SUPPORT)', link: '/en/forum-trunk/play-9c-on-x86-macos-linux-using-ci-artifacts-unofficial-support' },
           { text: 'Playing the Nine Chronicles main network with the Unity editor', link: '/en/forum-trunk/playing-the-nine-chronicles-main-network-with-the-unity-editor' },
+          { text: 'Create, Analyze APV with the "planet" command', link: '/en/forum-trunk/create-analyze-apv-with-the-planet-command' },
         ]
       }
     ],
