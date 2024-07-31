@@ -112,6 +112,7 @@ export const en = defineConfig({
           { text: 'How to create your own Nine Chronicles genesis block', link: '/en/forum-trunk/how-to-create-your-own-nine-chronicles-genesis-block' },
           { text: 'Sphere: Easy interaction with Libplanet-based blockchains using JavaScript', link: '/en/forum-trunk/sphere-easy-interaction-with-libplanet-based-blockchains-using-javascript' },
           { text: 'Data Provider: Performance resolver for Ranking', link: '/en/forum-trunk/data-provider-performance-resolver-for-ranking' },
+          { text: 'How to send GraphQL query in programmatic way', link: '/en/forum-trunk/how-to-send-graphql-query-in-programmatic-way' },
         ]
       }
     ],
