@@ -118,6 +118,7 @@ export const en = defineConfig({
           { text: 'About the `replay blocks` command', link: '/en/forum-trunk/about-the-replay-blocks-command' },
           { text: 'How to get mainnet’s blockchain store(w/ Unity Tools)', link: '/en/forum-trunk/how-to-get-mainnets-blockchain-store-w-unity-tools' },
           { text: 'Create a new action and develop graphQL together', link: '/en/forum-trunk/create-a-new-action-and-develop-graphql-together' },
+          { text: '[Unity] Address Tool', link: '/en/forum-trunk/unity-address-tool' },
         ]
       }
     ],
