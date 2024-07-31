@@ -108,6 +108,7 @@ export const en = defineConfig({
           { text: '[Unity] How to implement a `Action` logics(feat. TransferAsset)', link: '/en/forum-trunk/unity-how-to-implement-a-action-logics-feat-transferasset' },
           { text: 'The Structure of Lib9c and Its Implementations (1) - Event Flow: What actually happens when the daily reward bar is pressed?', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-1-event-flow-what-actually-happens-when-the-daily-reward-bar-is-pressed' },
           { text: 'Create action and transaction with GraphQL API', link: '/en/forum-trunk/create-action-and-transaction-with-graphql-api' },
+          { text: '[WIP] How to submit transaction to the network, using GraphQL', link: '/en/forum-trunk/wip-how-to-submit-transaction-to-the-network-using-graphql' },
         ]
       }
     ],
