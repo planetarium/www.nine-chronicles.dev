@@ -104,6 +104,7 @@ export const en = defineConfig({
           { text: 'Launcher Preload Procedure', link: '/en/forum-trunk/launcher-preload-procedure' },
           { text: 'Issues with .NET SDK on M1 Mac', link: '/en/forum-trunk/issues-with-net-sdk-on-m1-mac' },
           { text: 'Replay of transactions incorporated into blocks', link: '/en/forum-trunk/replay-of-transactions-incorporated-into-blocks' },
+          { text: 'Transfer asset with GraphQL queries', link: '/en/forum-trunk/transfer-asset-with-graphql-queries' },
         ]
       }
     ],
