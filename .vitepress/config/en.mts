@@ -117,6 +117,7 @@ export const en = defineConfig({
           { text: 'How to create a weapon resource for player character', link: '/en/forum-trunk/how-to-create-a-weapon-resource-for-player-character' },
           { text: 'About the `replay blocks` command', link: '/en/forum-trunk/about-the-replay-blocks-command' },
           { text: 'How to get mainnet’s blockchain store(w/ Unity Tools)', link: '/en/forum-trunk/how-to-get-mainnets-blockchain-store-w-unity-tools' },
+          { text: 'Create a new action and develop graphQL together', link: '/en/forum-trunk/create-a-new-action-and-develop-graphql-together' },
         ]
       }
     ],
