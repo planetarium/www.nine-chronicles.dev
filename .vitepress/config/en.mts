@@ -70,6 +70,12 @@ export const en = defineConfig({
           { text: 'Daily Reward DApp', link: '/en/examples/daily-reward-dapp' }
         ]
       },
+      {
+        text: 'Forum Trunk',
+        collapsed: false,
+        items: [
+        ]
+      }
     ],
 
     socialLinks: [
