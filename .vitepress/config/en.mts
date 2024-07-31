@@ -75,6 +75,7 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'About the key store', link: '/en/forum-trunk/about-the-key-store' },
+          { text: 'How to select filtered inventory items in the NineChronicles Unity project', link: '/en/forum-trunk/how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
         ]
       }
     ],
