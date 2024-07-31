@@ -98,6 +98,7 @@ export const en = defineConfig({
           { text: 'Create, Analyze APV with the "planet" command', link: '/en/forum-trunk/create-analyze-apv-with-the-planet-command' },
           { text: '[Tutorial] UniLibPlanet: Libplanet SDK Unity package for easily creating a blockchain Unity application', link: '/en/forum-trunk/tutorial-unilibplanet-libplanet-sdk-unity-package-for-easily-creating-a-blockchain-unity-application' },
           { text: 'Explain App Protocol Version(a.k.a. APV)', link: '/en/forum-trunk/explain-app-protocol-version-a-k-a-apv' },
+          { text: 'Manage your keys with the ‘planet’ command', link: '/en/forum-trunk/manage-your-keys-with-the-planet-command' },
         ]
       }
     ],
