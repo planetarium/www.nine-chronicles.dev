@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress';
 import { ko } from './ko.mts';
 import { en } from './en.mts';
-import 'mermaid';
+import footnote from 'markdown-it-footnote';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,6 +19,9 @@ export default defineConfig({
   },
 
   markdown: {
+    config: (md) => {
+      md.use(footnote)
+    },
     linkify: true,
     typographer: true,
   }
