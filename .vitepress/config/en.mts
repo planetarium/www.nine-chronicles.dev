@@ -120,6 +120,7 @@ export const en = defineConfig({
           { text: 'Create a new action and develop graphQL together', link: '/en/forum-trunk/create-a-new-action-and-develop-graphql-together' },
           { text: '[Unity] Address Tool', link: '/en/forum-trunk/unity-address-tool' },
           { text: '[Unity] State Viewer', link: '/en/forum-trunk/unity-state-viewer' },
+          { text: 'Run your own local headless node controlled by Unity editor', link: '/en/forum-trunk/run-your-own-local-headless-node-controlled-by-unity-editor' },
         ]
       }
     ],
