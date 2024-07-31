@@ -110,6 +110,7 @@ export const en = defineConfig({
           { text: 'Create action and transaction with GraphQL API', link: '/en/forum-trunk/create-action-and-transaction-with-graphql-api' },
           { text: '[WIP] How to submit transaction to the network, using GraphQL', link: '/en/forum-trunk/wip-how-to-submit-transaction-to-the-network-using-graphql' },
           { text: 'How to create your own Nine Chronicles genesis block', link: '/en/forum-trunk/how-to-create-your-own-nine-chronicles-genesis-block' },
+          { text: 'Sphere: Easy interaction with Libplanet-based blockchains using JavaScript', link: '/en/forum-trunk/sphere-easy-interaction-with-libplanet-based-blockchains-using-javascript' },
         ]
       }
     ],
