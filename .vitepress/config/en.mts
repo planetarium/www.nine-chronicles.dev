@@ -122,6 +122,7 @@ export const en = defineConfig({
           { text: '[Unity] State Viewer', link: '/en/forum-trunk/unity-state-viewer' },
           { text: 'Run your own local headless node controlled by Unity editor', link: '/en/forum-trunk/run-your-own-local-headless-node-controlled-by-unity-editor' },
           { text: 'The currency of NineChronicles', link: '/en/forum-trunk/the-currency-of-nine-chronicles' },
+          { text: 'How to play web9c', link: '/en/forum-trunk/how-to-play-web9c' },
         ]
       }
     ],
