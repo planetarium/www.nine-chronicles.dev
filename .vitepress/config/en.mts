@@ -82,6 +82,7 @@ export const en = defineConfig({
           { text: 'NineChronicles service and repository structure', link: '/en/forum-trunk/nine-chronicles-service-and-repository-structure' },
           { text: 'The Structure and Detail of the Snapshot File', link: '/en/forum-trunk/the-structure-and-detail-of-the-snapshot-file' },
           { text: 'Build and run your own NineChronicles server (a.k.a. Headless)', link: '/en/forum-trunk/build-and-run-your-own-nine-chronicles-server-a-k-a-headless' },
+          { text: 'Working with Libplanet Web3KeyStore', link: '/en/forum-trunk/working-with-libplanet-web3keystore' },
         ]
       }
     ],
