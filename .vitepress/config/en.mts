@@ -90,6 +90,7 @@ export const en = defineConfig({
           { text: '"planet" : Libplanet tools to help your Libplanet development journey', link: '/en/forum-trunk/planet-libplanet-tools-to-help-your-libplanet-development-journey' },
           { text: 'How to fix RocksDB error caused by `libdl`?', link: '/en/forum-trunk/how-to-fix-rocksdb-error-caused-by-libdl' },
           { text: 'Install .NET Core 3.1 in Ubuntu 22.04', link: '/en/forum-trunk/install-net-core-3-1-in-ubuntu-22-04' },
+          { text: 'Playing the Nine Chronicles local network with the Unity editor', link: '/en/forum-trunk/playing-the-nine-chronicles-local-network-with-the-unity-editor' },
         ]
       }
     ],
