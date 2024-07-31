@@ -77,6 +77,7 @@ export const en = defineConfig({
           { text: 'About the key store', link: '/en/forum-trunk/about-the-key-store' },
           { text: 'How to select filtered inventory items in the NineChronicles Unity project', link: '/en/forum-trunk/how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
           { text: 'How to use my own RPC server, not Planetarium’s', link: '/en/forum-trunk/how-to-use-my-own-rpc-server-not-planetariums' },
+          { text: 'The Structure of Lib9c and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-0-overview' },
         ]
       }
     ],
