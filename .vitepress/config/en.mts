@@ -114,6 +114,7 @@ export const en = defineConfig({
           { text: 'Data Provider: Performance resolver for Ranking', link: '/en/forum-trunk/data-provider-performance-resolver-for-ranking' },
           { text: 'How to send GraphQL query in programmatic way', link: '/en/forum-trunk/how-to-send-graphql-query-in-programmatic-way' },
           { text: 'How to check my balance with GraphQL', link: '/en/forum-trunk/how-to-check-my-balance-with-graphql' },
+          { text: 'How to create a weapon resource for player character', link: '/en/forum-trunk/how-to-create-a-weapon-resource-for-player-character' },
         ]
       }
     ],
