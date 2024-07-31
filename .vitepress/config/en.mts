@@ -119,6 +119,7 @@ export const en = defineConfig({
           { text: 'How to get mainnet’s blockchain store(w/ Unity Tools)', link: '/en/forum-trunk/how-to-get-mainnets-blockchain-store-w-unity-tools' },
           { text: 'Create a new action and develop graphQL together', link: '/en/forum-trunk/create-a-new-action-and-develop-graphql-together' },
           { text: '[Unity] Address Tool', link: '/en/forum-trunk/unity-address-tool' },
+          { text: '[Unity] State Viewer', link: '/en/forum-trunk/unity-state-viewer' },
         ]
       }
     ],
