@@ -85,6 +85,7 @@ export const en = defineConfig({
           { text: 'Working with Libplanet Web3KeyStore', link: '/en/forum-trunk/working-with-libplanet-web3keystore' },
           { text: 'The Structure and Location of "config.json"', link: '/en/forum-trunk/the-structure-and-location-of-config-json' },
           { text: 'The Structure of Battle System and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-battle-system-and-its-implementations-0-overview' },
+          { text: 'The Structure of Battle System and its implementations (1) - Turns and Casting Skills : How Skills to Cast are Selected', link: '/en/forum-trunk/the-structure-of-battle-system-and-its-implementations-1-turns-and-casting-skills-how-skills-to-cast-are-selected' },
         ]
       }
     ],
