@@ -80,6 +80,7 @@ export const en = defineConfig({
           { text: 'The Structure of Lib9c and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-0-overview' },
           { text: 'Working with Bencodex', link: '/en/forum-trunk/working-with-bencodex' },
           { text: 'NineChronicles service and repository structure', link: '/en/forum-trunk/nine-chronicles-service-and-repository-structure' },
+          { text: 'The Structure and Detail of the Snapshot File', link: '/en/forum-trunk/the-structure-and-detail-of-the-snapshot-file' },
         ]
       }
     ],
