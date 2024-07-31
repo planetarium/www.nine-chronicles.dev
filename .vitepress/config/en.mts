@@ -79,6 +79,7 @@ export const en = defineConfig({
           { text: 'How to use my own RPC server, not Planetarium’s', link: '/en/forum-trunk/how-to-use-my-own-rpc-server-not-planetariums' },
           { text: 'The Structure of Lib9c and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-0-overview' },
           { text: 'Working with Bencodex', link: '/en/forum-trunk/working-with-bencodex' },
+          { text: 'NineChronicles service and repository structure', link: '/en/forum-trunk/nine-chronicles-service-and-repository-structure' },
         ]
       }
     ],
