@@ -102,6 +102,7 @@ export const en = defineConfig({
           { text: 'Processing of the Invitation Code', link: '/en/forum-trunk/processing-of-the-invitation-code' },
           { text: 'Configure a single-node network for testing', link: '/en/forum-trunk/configure-a-single-node-network-for-testing' },
           { text: 'Launcher Preload Procedure', link: '/en/forum-trunk/launcher-preload-procedure' },
+          { text: 'Issues with .NET SDK on M1 Mac', link: '/en/forum-trunk/issues-with-net-sdk-on-m1-mac' },
         ]
       }
     ],
