@@ -96,6 +96,7 @@ export const en = defineConfig({
           { text: 'Play 9c on x86 macOS / Linux using CI Artifacts (UNOFFICIAL SUPPORT)', link: '/en/forum-trunk/play-9c-on-x86-macos-linux-using-ci-artifacts-unofficial-support' },
           { text: 'Playing the Nine Chronicles main network with the Unity editor', link: '/en/forum-trunk/playing-the-nine-chronicles-main-network-with-the-unity-editor' },
           { text: 'Create, Analyze APV with the "planet" command', link: '/en/forum-trunk/create-analyze-apv-with-the-planet-command' },
+          { text: '[Tutorial] UniLibPlanet: Libplanet SDK Unity package for easily creating a blockchain Unity application', link: '/en/forum-trunk/tutorial-unilibplanet-libplanet-sdk-unity-package-for-easily-creating-a-blockchain-unity-application' },
         ]
       }
     ],
