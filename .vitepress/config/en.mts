@@ -87,6 +87,7 @@ export const en = defineConfig({
           { text: 'The Structure of Battle System and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-battle-system-and-its-implementations-0-overview' },
           { text: 'The Structure of Battle System and its implementations (1) - Turns and Casting Skills : How Skills to Cast are Selected', link: '/en/forum-trunk/the-structure-of-battle-system-and-its-implementations-1-turns-and-casting-skills-how-skills-to-cast-are-selected' },
           { text: 'Hands-On Modding Tutorial: Wear any constumes you want', link: '/en/forum-trunk/hands-on-modding-tutorial-wear-any-constumes-you-want' },
+          { text: '"planet" : Libplanet tools to help your Libplanet development journey', link: '/en/forum-trunk/planet-libplanet-tools-to-help-your-libplanet-development-journey' },
         ]
       }
     ],
