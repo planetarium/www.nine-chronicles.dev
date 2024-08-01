@@ -27,8 +27,9 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: '시작하기', link: '/ko/for-moder/getting-started' },
-          { text: 'Mimir를 활용한 서드파티 웹사이트 튜토리얼', link: '/ko/for-moder/guide/make-ares-website' },
-          { text: 'Bepinex를 활용한 클라이언트 모드 튜토리얼', link: '/ko/for-moder/guide/make-bepenix-app.md' },
+          { text: '아바타 정보 웹사이트 제작 가이드', link: '/ko/for-moder/guide/avatar-information-dapp-guide.md' },
+          { text: '서명을 할 수 있는 daily reward 웹사이트 제작 가이드', link: '/ko/for-moder/guide/daily-reward-dapp-guide.md' },
+          { text: 'Bepinex를 활용한 클라이언트 모드 제작 가이드', link: '/ko/for-moder/guide/bepenix-guide.md' },
           {
             text: 'NineChronicles의 시스템 이해하기',
             items: [
