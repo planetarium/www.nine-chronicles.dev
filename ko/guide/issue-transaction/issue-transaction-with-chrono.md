@@ -43,23 +43,23 @@ pnpm run build
 
 - 크롬 브라우저를 실행하고, 주소란에 `chrome://extensions`를 입력합니다.
 - 화면 우상단의 `Developer Mode`를 활성화합니다.
-![Enable Developer Mode](/chrome-extensions-enable-developer-mode.png)
+![Enable Developer Mode](/images/en/guide/issue-transaction/issue-transaction-with-chrono/enable-developer-mode.png)
 - 화면 좌상단의 `Load unpacked` 버튼을 클릭하고 `/build` 디렉터리를 선택합니다.
-![Load unpacked button in Chrome extensions](/chrome-extensions-load-unpacked-01.png)
-![Select "build" directory](/chrome-extensions-select-build-directory.png)
+![Load unpacked button in Chrome extensions](/images/en/guide/issue-transaction/issue-transaction-with-chrono/load-unpacked-01.png)
+![Select "build" directory](/images/en/guide/issue-transaction/issue-transaction-with-chrono/select-build-directory.png)
 - `크로노`가 설치됐습니다.
-!["Chrono" in Chrome extensions](/chrome-extensions-chrono.png)
+!["Chrono" in Chrome extensions](/images/en/guide/issue-transaction/issue-transaction-with-chrono/chrome-extensions-chrono.png)
 
 ## `크로노` 실행과 개인 키 등록하기
 
 - 편의를 위해서 `크로노`를 고정하겠습니다.
-![Pinning "Chrono" in Chrome extensions](/chrome-extensions-pinning-chrono.png)
+![Pinning "Chrono" in Chrome extensions](/images/en/guide/issue-transaction/issue-transaction-with-chrono/pinning-chrono.png)
 
 - `크로노`를 처음 실행하고, 비밀번호를 설정합니다.
-![Set password of "Chrono"](/chrome-extensions-chrono-set-password.png)
+![Set password of "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/set-password.png)
 
 - `크로노`는 첫 실행시 계정을 생성하거나 등록하게 됩니다. 기존의 개인 키를 가지고 있다면, `Recover`를 선택하고 개인 키의 Seed Phrase를 입력하여 계정을 등록합니다. 새로운 계정을 생성하려면, `New`를 선택하고 자동 생성된 Seed Phrase로 계정을 등록합니다.
-![Create first account of "Chrono"](/chrome-extensions-chrono-first-account.png)
+![Create first account of "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/first-account.png)
 
 ### 개인 키 추가 등록하기
 
@@ -70,23 +70,23 @@ pnpm run build
 :::
 
 - `크로노`를 열고, 좌상단의 `Account 1` 버튼을 선택하고, `Import` 버튼을 선택합니다.
-![Select "Account 1" and "Import" button of "Chrono"](/chrome-extensions-chrono-account-import.png)
+![Select "Account 1" and "Import" button of "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/account-import.png)
 
 - 계정 이름을 `My private key`로 설정하고, 개인 키 평문을 입력하고 `Import` 버튼을 클릭합니다.
-![Import "My private key" to "Chrono"](/chrome-extensions-chrono-import-my-private-key.png)
+![Import "My private key" to "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-my-private-key.png)
 
 - 조금 기다리면, `My private key`가 성공적으로 추가됩니다.
-!["My private key" on "Chrono"](/chrome-extensions-chrono-my-private-key.png)
+!["My private key" on "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/my-private-key.png)
 
 ## `크로노`에 네트워크 추가하기
 
 이제 `크로노`가 통신할 나인크로니클 블록체인 네트워크를 등록해보겠습니다.
 
 - `크로노`를 열고, 좌상단의 `odin` 버튼을 선택하고, `Add New` 버튼을 선택합니다.
-![Add network to "Chrono"](/chrome-extensions-chrono-add-network.png)
+![Add network to "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/add-network.png)
 
 - 아래 이미지와 같이 네트워크 정보를 입력하는 UI가 나타납니다. 여기서 네트워크 정보를 입력하고 `Import` 버튼을 클릭합니다.
-![alt text](/chrome-extensions-chrono-import-network-empty.png)
+![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-network-empty.png)
 
 ### 로컬 노드를 네트워크로 추가하기
 
@@ -127,10 +127,10 @@ query {
 ```
 
 - 이제 위 정보를 입력하고 `Import` 버튼을 클릭합니다.
-![alt text](/chrome-extensions-chrono-import-my-local-network.png)
+![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-my-local-network.png)
 
 - 잠시 기다리면, `My local` 네트워크가 성공적으로 추가됩니다. 자세히 보시면 로컬 노드에서 블록을 채굴한 보상이 3,920 NCG나 쌓여 있는 것을 확인할 수 있습니다.
-![alt text](/chrome-extensions-chrono-my-local-network.png)
+![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/my-local-network.png)
 
 ## `크로노` 예제 프로젝트로 트랜젝션 발행해보기
 
