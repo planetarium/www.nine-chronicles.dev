@@ -27,9 +27,9 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: '시작하기', link: '/ko/for-moder/getting-started' },
-          { text: '아바타 정보 웹사이트 제작 가이드', link: '/ko/for-moder/guide/avatar-information-dapp-guide.md' },
-          { text: '서명을 할 수 있는 daily reward 웹사이트 제작 가이드', link: '/ko/for-moder/guide/daily-reward-dapp-guide.md' },
-          { text: 'Bepinex를 활용한 클라이언트 모드 제작 가이드', link: '/ko/for-moder/guide/bepenix-guide.md' },
+          { text: '아바타 정보 웹사이트', link: '/ko/for-moder/guide/avatar-information-dapp-guide.md' },
+          { text: '송금 웹사이트', link: '/ko/for-moder/guide/transfer-ncg-with-chrono.md' },
+          { text: 'Bepinex를 활용한 클라이언트 모딩', link: '/ko/for-moder/guide/bepenix-guide.md' },
           {
             text: 'NineChronicles의 시스템 이해하기',
             items: [
@@ -77,15 +77,6 @@ export const ko = defineConfig({
           { text: '나인크로니클 플레이', link: '/ko/guide/join-mainnet/play-nc' },
           { text: '블록체인 노드 운영', link: '/ko/guide/join-mainnet/operating-a-blockchain-node' },
           { text: '모딩', link: '/ko/guide/join-mainnet/modding' },
-        ]
-      },
-      {
-        text: '예제',
-        collapsed: false,
-        items: [
-          { text: '시작하기', link: '/ko/examples/getting-started' },
-          { text: 'NCG 송금(크로노)', link: '/ko/examples/transfer-ncg-with-chrono' },
-          { text: '일일 보상 DApp', link: '/ko/examples/daily-reward-dapp' }
         ]
       },
     ],
