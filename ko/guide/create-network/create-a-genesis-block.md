@@ -36,9 +36,13 @@ git checkout v200200
 
 [nc-headless-readme]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#create-a-new-genesis-block
 
-```console
-➜  NineChronicles.Headless $ cd ./NineChronicles.Headless.Executable
-➜  NineChronicles.Headless.Executable $ dotnet run -- genesis --help
+```shell
+cd ./NineChronicles.Headless.Executable
+```
+```shell
+dotnet run -- genesis --help
+```
+```console {6}
 Usage: NineChronicles. genesis [--help] config
 
 Mine a new genesis block
@@ -110,9 +114,10 @@ Options:
 
 이제 이 `config.json` 파일을 사용해서 제네시스 블록을 만들어 보겠습니다.
 
+```shell
+dotnet run -- genesis ./config.json 
+```
 ```console
-➜  NineChronicles.Headless.Executable $ dotnet run -- genesis ./config.json 
-
 Processing data for genesis...
 
 Processing currency for genesis...

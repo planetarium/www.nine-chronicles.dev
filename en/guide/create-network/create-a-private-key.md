@@ -21,16 +21,20 @@ This document uses the `planet` cli version 5.0.0.
 
 Let's create a private key using the `planet key` command. First, let's run the `planet key` command to see the list of managed keys.
 
+```shell
+planet key
+```
 ```console
-$ planet key
 Key ID                               Address                                   
 ------------------------------------ ------------------------------------------
 ```
 
 We can see that we don't have the key yet. Next, let's run the `planet key --help` command to see what we can do.
 
-```console
-$ planet key --help
+```shell
+planet key --help
+```
+```console {7}
 Usage: planet key [command]
 Usage: planet key [--path <String>] [--help]
 
@@ -56,8 +60,10 @@ Now let's generate a new private key using the `planet key create` command.
 When create your private key, you should use a strong passphrase.
 :::
 
+```shell
+planet key create
+```
 ```console
-$ planet key create
 Passphrase: ***************
 Retype passphrase: ***************
 Key ID                               Address                                   
@@ -67,8 +73,10 @@ Key ID                               Address
 
 After entering the passphrase, a new private key was created. This key is represented by the `Key ID` and `Address` at the `planet` cli level. Below, we'll see the private and public keys from this key. Let's use the `planet key export --help` command to see how to use it.
 
-```console
-$ planet key export --help
+```shell
+planet key export --help
+```
+```console {9}
 Usage: planet key export [--passphrase <PASSPHRASE>] [--passphrase-file <FILE>] [--public-key] [--bytes] [--json] [--path <String>] [--help] key-id
 
 Export a raw private key (or public key).
@@ -92,15 +100,19 @@ Let's verify the private key by entering the passphrase we entered above in the 
 We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
 :::
 
+```shell
+planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=***************
+```
 ```console
-$ planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=***************
 9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102
 ```
 
 Let's check the public key by adding the `--public-key` option.
 
+```shell
+planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=*************** --public-key
+```
 ```console
-$ planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=*************** --public-key
 033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14
 ```
 
