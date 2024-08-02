@@ -4,6 +4,8 @@
 
 나인크로니클의 블록체인 노드 구현체인 [NineChronicles.Headless][nc-headless]에서는 [NineChronicles.Headless.Executable][nc-headless-executable] 프로젝트를 통해서 `genesis`라는 명령을 제공합니다. 이를 사용해서 사용자 정의된 제네시스 블록을 만들어 보겠습니다.
 
+예시 private key로 생성된 제네시스 블록 파일을 제공합니다. (새 탭으로 열어서 다운로드 받아주세요.) [Genesis Block](/files/genesis-block)
+
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 [nc-headless-executable]: https://github.com/planetarium/NineChronicles.Headless/tree/main/NineChronicles.Headless.Executable
 
