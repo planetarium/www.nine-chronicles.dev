@@ -21,16 +21,20 @@
 
 `planet key` 명령어를 사용해서 개인 키를 만들어 보겠습니다. 우선 `planet key` 명령어를 실행해서 관리되고 있는 키 목록을 확인해보겠습니다.
 
+```shell
+planet key
+```
 ```console
-$ planet key
 Key ID                               Address                                   
 ------------------------------------ ------------------------------------------
 ```
 
 아직은 키가 없는 것을 확인할 수 있습니다. 다음은 `planet key --help` 명령어를 실행해서 무엇을 할 수 있는지 확인해보겠습니다.
 
-```console
-$ planet key --help
+```shell
+planet key --help
+```
+```console {7}
 Usage: planet key [command]
 Usage: planet key [--path <String>] [--help]
 
@@ -56,8 +60,10 @@ Options:
 개인 키를 생성할 때에는 강력한 암호 구문을 사용해야 합니다.
 :::
 
+```shell
+planet key create
+```
 ```console
-$ planet key create
 Passphrase: ***************
 Retype passphrase: ***************
 Key ID                               Address                                   
@@ -67,8 +73,10 @@ Key ID                               Address
 
 암호 구문을 입력하고 나니 새로운 개인 키가 생성되었습니다. 이 키는 `planet` cli 수준에서 `Key ID`와 `Address`로 표현됩니다. 아래에는 이 키로부터 개인 키와 공개 키를 확인해보겠습니다. `planet key export --help` 명령어를 사용해서 어떻게 사용해야 하는지 확인해보겠습니다.
 
-```console
-$ planet key export --help
+```shell
+planet key export --help
+```
+```console {9}
 Usage: planet key export [--passphrase <PASSPHRASE>] [--passphrase-file <FILE>] [--public-key] [--bytes] [--json] [--path <String>] [--help] key-id
 
 Export a raw private key (or public key).
@@ -92,15 +100,19 @@ Options:
 여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
 :::
 
+```shell
+planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=***************
+```
 ```console
-$ planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=***************
 9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102
 ```
 
 `--public-key` 옵션을 추가해서 공개 키를 확인해보겠습니다.
 
+```shell
+planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=*************** --public-key
+```
 ```console
-$ planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=*************** --public-key
 033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14
 ```
 
