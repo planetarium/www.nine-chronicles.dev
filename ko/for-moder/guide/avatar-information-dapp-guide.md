@@ -11,6 +11,7 @@ npx create-react-app some-app-name --template @planetarium/9c-mimir-gql
 
 ```sh
 cd some-app-name
+npm run codegen
 npm run start
 ```
 
