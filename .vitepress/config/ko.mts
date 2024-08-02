@@ -50,7 +50,7 @@ export const ko = defineConfig({
             text: '블록체인 노드 실행하기',
             items: [
               { text: '.NET 프로젝트', link: '/ko/guide/create-network/running-a-blockchain-node-with-dotnet-project' },
-              { text: 'Docker' }
+              // { text: 'Docker' }
             ]
           },
         ]
@@ -60,7 +60,7 @@ export const ko = defineConfig({
         collapsed: false,
         items: [
           { text: 'GraphQL(Headless)', link: '/ko/guide/get-state/get-state-with-headless-graphql' },
-          { text: 'GraphQL(Mimir)', link: '/ko/guide/get-state/get-state-with-mimir-graphql' }
+          // { text: 'GraphQL(Mimir)' },
         ]
       },
       {
