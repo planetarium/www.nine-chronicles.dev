@@ -15,7 +15,8 @@
 
 ::: code-group
 ```shell [git]
-git clone --recursive https://github.com/planetarium/NineChronicles.Headless.git
+git clone https://github.com/planetarium/NineChronicles.Headless.git
+git submodule update --init --recursive
 ```
 
 ```shell [gh(GitHub)]
