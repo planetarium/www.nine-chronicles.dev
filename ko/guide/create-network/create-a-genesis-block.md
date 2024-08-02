@@ -65,6 +65,8 @@ Options:
 여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
 :::
 
+::: details `config.json` 파일에 대한 설명
+
 ```json
 {
     "$schema": "../config.schema.json",
@@ -105,6 +107,45 @@ Options:
     "initialMeadConfigs": [
         {
             // 관리자의 주소를 입력했습니다.
+            "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+            "amount": "1000000"
+        }
+    ],
+    "initialPledgeConfigs": []
+}
+```
+:::
+
+```json
+{
+    "$schema": "../config.schema.json",
+    "data": {
+        "tablePath": "../Lib9c/Lib9c/TableCSV"
+    },
+    "admin": {
+        "activate": true,
+        "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+        "validUntil": 1000000
+    },
+    "currency": {
+        "initialMinter": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+        "initialCurrencyDeposit": [
+            {
+                "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+                "amount": 1000000,
+                "start": 0,
+                "end": 0
+            }
+        ]
+    },
+    "initialValidatorSet": [
+        {
+            "publicKey": "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14",
+            "power": 1
+        }
+    ],
+    "initialMeadConfigs": [
+        {
             "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
             "amount": "1000000"
         }
