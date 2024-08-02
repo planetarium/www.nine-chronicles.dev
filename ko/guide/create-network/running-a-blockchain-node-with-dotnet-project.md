@@ -105,26 +105,40 @@ Options:
 여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
 :::
 
+```json
+// 제네시스 블록 파일의 절대 경로 또는 URL을 입력합니다. e.g., 앞에서 만든 사용자 정의 제네시스 블록 파일의 절대 경로
+"GenesisBlockPath": "path-of-genesis-block",
+// 태그버전에 맞게 200200 버전으로 설정했습니다.
+"AppProtocolVersionString": "200200/AB2da648b9154F2cCcAFBD85e0Bc3d51f97330Fc/MEUCIQCaK89fzl+RWPKD28zCFYUJvWFrcqsBizZ3k5HYLMcsogIgMtXiuZZlp.C3OSZIyYRHbcV263F2nh2CJhFwP1NY85I=/ZHU5OnRpbWVzdGFtcHUxMDoyMDI0LTA3LTA5ZQ==",
+"StoreType": "rocksdb",
+// 블록체인 저장소의 절대 경로를 설정합니다. e.g., "/Users/{username}/nine-chronicles/store"
+"StorePath": "path-of-blockchain-store",
+// 블록을 채굴하기 위해서 false로 설정했습니다.
+"NoMiner": false,
+// 블록에 서명하기 위한 개인 키를 앞에서 예시로 만든 개인 키로 설정했습니다.
+"MinerPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+// 블록 합의를 위한 개인 키를 앞에서 예시로 만든 개인 키로 설정했습니다.
+"ConsensusPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+"ConsensusSeedStrings": [
+    // 앞에서 예시로 만든 개인 키의 공개 키를 설정했습니다.
+    "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14,127.0.0.1,31588"
+],
+```
+
 ::: details `appsettings.local.json` 파일
+
 ```json
 {
     "$schema": "./appsettings-schema.json",
     "Headless": {
-        // 제네시스 블록 파일의 절대 경로 또는 URL을 입력합니다. e.g., 앞에서 만든 사용자 정의 제네시스 블록 파일의 절대 경로
-        "GenesisBlockPath": "path-of-genesis-block",
-        // 태그버전에 맞게 200200 버전으로 설정했습니다.
+        "GenesisBlockPath": "{path-of-genesis-block}",
         "AppProtocolVersionString": "200200/AB2da648b9154F2cCcAFBD85e0Bc3d51f97330Fc/MEUCIQCaK89fzl+RWPKD28zCFYUJvWFrcqsBizZ3k5HYLMcsogIgMtXiuZZlp.C3OSZIyYRHbcV263F2nh2CJhFwP1NY85I=/ZHU5OnRpbWVzdGFtcHUxMDoyMDI0LTA3LTA5ZQ==",
         "StoreType": "rocksdb",
-        // 블록체인 저장소의 절대 경로를 설정합니다. e.g., "/Users/{username}/nine-chronicles/store"
-        "StorePath": "path-of-blockchain-store",
-        // 블록을 채굴하기 위해서 false로 설정했습니다.
+        "StorePath": "{path-of-blockchain-store}",
         "NoMiner": false,
-        // 블록에 서명하기 위한 개인 키를 앞에서 예시로 만든 개인 키로 설정했습니다.
         "MinerPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
-        // 블록 합의를 위한 개인 키를 앞에서 예시로 만든 개인 키로 설정했습니다.
         "ConsensusPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
         "ConsensusSeedStrings": [
-            // 앞에서 예시로 만든 개인 키의 공개 키를 설정했습니다.
             "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14,127.0.0.1,31588"
         ],
         "ConsensusPort": 31588,
