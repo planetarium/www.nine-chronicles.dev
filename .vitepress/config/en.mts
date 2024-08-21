@@ -29,7 +29,7 @@ export const en = defineConfig({
           { text: 'Getting started', link: '/en/for-modder/getting-started' },
           { text: 'Avatar information website', link: '/en/for-modder/guide/avatar-information-dapp-guide.md' },
           { text: 'Transfer NCG website', link: '/en/for-modder/guide/transfer-ncg-with-chrono.md' },
-          { text: 'Client modding with Bepinex', link: '/ko/for-modder/guide/bepinex-guide.md' },
+          { text: 'Client modding with Bepinex', link: '/en/for-modder/guide/bepinex-guide.md' },
           // {
           //   text: 'NineChronicles의 시스템 이해하기',
           //   items: [
