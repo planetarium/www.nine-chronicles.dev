@@ -6,7 +6,7 @@
 
 ### 1. 크롬 웹 스토어
 
-크롬 웹 스토어의 [Chrono  페이지](https://chromewebstore.google.com/detail/chrono/aebhdpgiljdcefojiedcafoljbblegde)에서 간단히 설치할 수 있습니다.
+크롬 웹 스토어의 [Chrono  페이지](https://chromewebstore.google.com/detail/chrono-development-build/gcloogpfjklfhgfddenekamfjgbcklic)에서 간단히 설치할 수 있습니다.
 
 ### 2. 직접 설치
 
