@@ -26,5 +26,12 @@ export const shared = defineConfig({
         ['meta', { property: 'og:image', content: '/images/share.jpg' }],
         ['meta', { property: 'og:url', content: 'https://nine-chronicles.dev/' }],
     ],
+
+    themeConfig: {
+        // logo: { src: '/favicon/favicon-32x32.png', width: 24, height: 24 },
+
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/planetarium/www.nine-chronicles.dev' }
+        ],
     }
 })
