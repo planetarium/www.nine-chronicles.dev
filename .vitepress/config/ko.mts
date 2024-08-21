@@ -30,13 +30,13 @@ export const ko = defineConfig({
           { text: '아바타 정보 웹사이트', link: '/ko/for-modder/guide/avatar-information-dapp-guide.md' },
           { text: '송금 웹사이트', link: '/ko/for-modder/guide/transfer-ncg-with-chrono.md' },
           { text: 'Bepinex를 활용한 클라이언트 모딩', link: '/ko/for-modder/guide/bepinex-guide.md' },
-          {
-            text: 'NineChronicles의 시스템 이해하기',
-            items: [
-              { text: 'TableSheet' },
-              { text: 'Hit 계산 공식' },
-            ]
-          },
+          // {
+          //   text: 'NineChronicles의 시스템 이해하기',
+          //   items: [
+          //     { text: 'TableSheet' },
+          //     { text: 'Hit 계산 공식' },
+          //   ]
+          // },
         ]
       },
       {
@@ -70,15 +70,15 @@ export const ko = defineConfig({
           { text: '크로노', link: '/ko/guide/issue-transaction/issue-transaction-with-chrono' }
         ]
       },
-      {
-        text: '메인넷 참여하기',
-        collapsed: false,
-        items: [
-          { text: '나인크로니클 플레이', link: '/ko/guide/join-mainnet/play-nc' },
-          { text: '블록체인 노드 운영', link: '/ko/guide/join-mainnet/operating-a-blockchain-node' },
-          { text: '모딩', link: '/ko/guide/join-mainnet/modding' },
-        ]
-      },
+      // {
+      //   text: '메인넷 참여하기',
+      //   collapsed: false,
+      //   items: [
+      //     { text: '나인크로니클 플레이', link: '/ko/guide/join-mainnet/play-nc' },
+      //     { text: '블록체인 노드 운영', link: '/ko/guide/join-mainnet/operating-a-blockchain-node' },
+      //     { text: '모딩', link: '/ko/guide/join-mainnet/modding' },
+      //   ]
+      // },
     ],
 
     socialLinks: [
