@@ -23,6 +23,13 @@ export const en = defineConfig({
         ]
       },
       {
+        text: 'Modding',
+        collapsed: false,
+        items: [
+          { text: 'Getting started', link: '/en/for-modder/getting-started' },
+        ]
+      },
+      {
         text: 'Create Network',
         collapsed: false,
         items: [
