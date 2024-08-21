@@ -28,6 +28,7 @@ export const en = defineConfig({
         items: [
           { text: 'Getting started', link: '/en/for-modder/getting-started' },
           { text: 'Avatar information website', link: '/en/for-modder/guide/avatar-information-dapp-guide.md' },
+          { text: 'Transfer NCG website', link: '/en/for-modder/guide/transfer-ncg-with-chrono.md' },
         ]
       },
       {
