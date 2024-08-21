@@ -18,11 +18,11 @@ hero:
 
 features:
   - icon: 🛠️
-    title: 탈중앙 게임
+    title: Decentralized Game
   - icon: 🛠️
-    title: 커뮤니티 주도 개발
+    title: Community Driven
   - icon: 🛠️
-    title: 모딩 친화적
+    title: Modding Friendly
   - icon: 🛠️
-    title: 네트워크 참여
+    title: Join the Network
 ---
