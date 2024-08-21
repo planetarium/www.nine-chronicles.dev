@@ -5,6 +5,10 @@ export const shared = defineConfig({
     title: 'Nine Chronicles Developer Portal',
     description: 'A comprehensive guide for Nine Chronicles developers.',
 
+    rewrites: {
+        'en/:rest*': ':rest*'
+    },
+
     cleanUrls: true,
     lastUpdated: true,
 
