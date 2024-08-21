@@ -2,7 +2,7 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 
 export const en = defineConfig({
   lang: 'en-US',
-  title: 'NineChronicles Developer Portal',
+  title: 'Developer Portal',
   description: 'Site for NineChronicles Ecosystem Developers.',
 
   themeConfig: {

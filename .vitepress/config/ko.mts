@@ -2,7 +2,7 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 
 export const ko = defineConfig({
   lang: 'ko-KR',
-  title: '나인크로니클 개발자 포탈',
+  title: '개발자 포탈',
   description: '나인크로니클 에코시스템 개발자를 위한 사이트',
 
   themeConfig: {
