@@ -4,7 +4,7 @@
 
 - Installing Nine Chronicles at https://nine-chronicles.com/start
 
-### Verifying Nine Chronicles Operation
+### Verifying Nine Chronicles Operation (1st time)
 
 - Launch the Nine Chronicles launcher and player to ensure they are working correctly.
 - Close the Nine Chronicles player after confirmation. You may leave the launcher running.
@@ -21,7 +21,7 @@
 <img width="327" alt="Untitled" src="https://github.com/Atralupus/NineChronicles.Mods/assets/30599098/1a089551-cfa4-44a6-9e47-7d4934bf9a8d">
 <img width="335" alt="Untitled (1)" src="https://github.com/Atralupus/NineChronicles.Mods/assets/30599098/a0bb3e6e-5e4a-4233-96c5-191adeac60d2">
 
-### Verifying Nine Chronicles Operation
+### Verifying Nine Chronicles Operation (2nd time)
 
 - Check if the Nine Chronicles player operates correctly with the default BepInEx installation.
 - Close the Nine Chronicles player after confirmation.
@@ -41,7 +41,7 @@
   Type = Camera
 ```
 
-### Verifying Nine Chronicles Operation
+### Verifying Nine Chronicles Operation (3rd time)
 
 - After modifying the BepInEx settings, confirm that the Nine Chronicles player operates correctly.
 - Notice the difference with the BepInEx log terminal opening.
