@@ -1,11 +1,11 @@
 # Getting Started
 
-This developer portal serves as a space for developers involved with NineChronicles. It caters not only to modders but also third-party app developers who wish to contribute directly to or create new features within the game through NCIP.
+This developer portal serves as a space for developers involved with Nine Chronicles. It caters not only to modders but also third-party app developers who wish to contribute directly to or create new features within the game through NCIP.
 
 Existing libraries developed by teams in the Planetarium community already exist, but there lacks an example of how to organically connect those libraries when creating a third-party app, which can leave users feeling uncertain. To address this gap and provide guidance on such tasks, we aim to share examples that illustrate how to do so.
 
 1. **Client Editing Modding**: How to modify the actual game client that runs the game.
-2. **Third-Party Application Modding**: How to provide NineChronicles information through websites or applications.
+2. **Third-Party Application Modding**: How to provide Nine Chronicles information through websites or applications.
 
 We provide detailed guides for each area, so please refer to the links below.
 

@@ -6,7 +6,7 @@ Now, let's not worry about this and just run Unity. And after a few clicks, let'
 
 There is [the easiest article](./playing-the-nine-chronicles-main-network-with-the-unity-editor/#install-unity) and you will have Unity.
 
-### Didn't you clone NineChronicles repo?
+### Didn't you clone Nine Chronicles repo?
 
 You can follow [this part](./playing-the-nine-chronicles-main-network-with-the-unity-editor/#prepare-the-nine-chronicles-repository).
 

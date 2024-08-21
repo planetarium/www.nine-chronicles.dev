@@ -7,7 +7,7 @@ hero:
   tagline: "Build your Nine Chronicles"
   actions:
     - theme: brand
-      text: What is NineChronicles?
+      text: What is Nine Chronicles?
       link: /en/introduce/what-is-nine-chronicles
     - theme: alt
       text: Getting Started with Modding

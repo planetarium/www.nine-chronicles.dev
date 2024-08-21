@@ -3,7 +3,7 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 export const en = defineConfig({
   lang: 'en-US',
   title: 'Developer Portal',
-  description: 'Site for NineChronicles Ecosystem Developers.',
+  description: 'Site for Nine Chronicles Ecosystem Developers.',
 
   themeConfig: {
     outline: 'deep',
@@ -14,7 +14,7 @@ export const en = defineConfig({
         text: 'Introduce',
         collapsed: false,
         items: [
-          { text: 'NineChronicles?', link: '/en/introduce/what-is-nine-chronicles' },
+          { text: 'Nine Chronicles?', link: '/en/introduce/what-is-nine-chronicles' },
           { text: 'Networks', link: '/en/introduce/networks' },
           { text: 'Multiplanetary', link: '/en/introduce/multiplanetary' },
           { text: 'Developer Ecosystem', link: '/en/introduce/developer-ecosystem' },
@@ -72,7 +72,7 @@ export const en = defineConfig({
       //   text: 'Join Mainnet',
       //   collapsed: false,
       //   items: [
-      //     { text: 'Play NineChronicles', link: '/en/guide/join-mainnet/play-nc' },
+      //     { text: 'Play Nine Chronicles', link: '/en/guide/join-mainnet/play-nc' },
       //     { text: 'Operating a Blockchain Node', link: '/en/guide/join-mainnet/operating-a-blockchain-node' },
       //     { text: 'Modding', link: '/en/guide/join-mainnet/modding' },
       //   ]
@@ -91,13 +91,13 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'About the key store', link: '/en/forum-trunk/about-the-key-store' },
-          { text: 'How to select filtered inventory items in the NineChronicles Unity project', link: '/en/forum-trunk/how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
+          { text: 'How to select filtered inventory items in the Nine Chronicles Unity project', link: '/en/forum-trunk/how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
           { text: 'How to use my own RPC server, not Planetarium’s', link: '/en/forum-trunk/how-to-use-my-own-rpc-server-not-planetariums' },
           { text: 'The Structure of Lib9c and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-lib9c-and-its-implementations-0-overview' },
           { text: 'Working with Bencodex', link: '/en/forum-trunk/working-with-bencodex' },
-          { text: 'NineChronicles service and repository structure', link: '/en/forum-trunk/nine-chronicles-service-and-repository-structure' },
+          { text: 'Nine Chronicles service and repository structure', link: '/en/forum-trunk/nine-chronicles-service-and-repository-structure' },
           { text: 'The Structure and Detail of the Snapshot File', link: '/en/forum-trunk/the-structure-and-detail-of-the-snapshot-file' },
-          { text: 'Build and run your own NineChronicles server (a.k.a. Headless)', link: '/en/forum-trunk/build-and-run-your-own-nine-chronicles-server-a-k-a-headless' },
+          { text: 'Build and run your own Nine Chronicles server (a.k.a. Headless)', link: '/en/forum-trunk/build-and-run-your-own-nine-chronicles-server-a-k-a-headless' },
           { text: 'Working with Libplanet Web3KeyStore', link: '/en/forum-trunk/working-with-libplanet-web3keystore' },
           { text: 'The Structure and Location of "config.json"', link: '/en/forum-trunk/the-structure-and-location-of-config-json' },
           { text: 'The Structure of Battle System and its implementations (0) - Overview', link: '/en/forum-trunk/the-structure-of-battle-system-and-its-implementations-0-overview' },
@@ -137,10 +137,10 @@ export const en = defineConfig({
           { text: '[Unity] Address Tool', link: '/en/forum-trunk/unity-address-tool' },
           { text: '[Unity] State Viewer', link: '/en/forum-trunk/unity-state-viewer' },
           { text: 'Run your own local headless node controlled by Unity editor', link: '/en/forum-trunk/run-your-own-local-headless-node-controlled-by-unity-editor' },
-          { text: 'The currency of NineChronicles', link: '/en/forum-trunk/the-currency-of-nine-chronicles' },
+          { text: 'The currency of Nine Chronicles', link: '/en/forum-trunk/the-currency-of-nine-chronicles' },
           { text: 'How to play web9c', link: '/en/forum-trunk/how-to-play-web9c' },
           { text: 'How to create actions in JavaScript environment', link: '/en/forum-trunk/how-to-create-actions-in-javascript-environment' },
-          { text: 'File Paths used on NineChronicles', link: '/en/forum-trunk/file-paths-used-on-nine-chronicles' },
+          { text: 'File Paths used on Nine Chronicles', link: '/en/forum-trunk/file-paths-used-on-nine-chronicles' },
           { text: 'About the redeem code', link: '/en/forum-trunk/about-the-redeem-code' },
         ]
       }

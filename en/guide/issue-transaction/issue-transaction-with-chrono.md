@@ -1,6 +1,6 @@
 # Issuing Transactions: `Chrono`
 
-Let's explore using `Chrono` to issue transactions on the NineChronicles blockchain network among the various available methods. `Chrono` is a Chrome browser extension similar to `MetaMask`. Users can register their private keys, configure their desired network settings, and sign and propagate transactions requested by web apps using `Chrono`.
+Let's explore using `Chrono` to issue transactions on the Nine Chronicles blockchain network among the various available methods. `Chrono` is a Chrome browser extension similar to `MetaMask`. Users can register their private keys, configure their desired network settings, and sign and propagate transactions requested by web apps using `Chrono`.
 
 ## Installation
 
@@ -112,7 +112,7 @@ After a short wait, `My private key` will be successfully added.
 
 ## Adding a Network in `Chrono`
 
-Now, let's register the NineChronicles blockchain network that `Chrono` will communicate with. Open `Chrono`, select the `odin` button in the top left corner, and click the `Add New` button.
+Now, let's register the Nine Chronicles blockchain network that `Chrono` will communicate with. Open `Chrono`, select the `odin` button in the top left corner, and click the `Add New` button.
 ![Add network to "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/add-network.png){width=360}
 
 The UI for entering network information appears as shown in the image below. Enter the network information here and click the `Import` button.

@@ -22,7 +22,7 @@ If you're first time using this tool, please run all menus from top to bottom in
 
 To run headless node, we have to get NineChronicles.Headless source code and prepare. By clicking this menu, Unity asks target directory to put your source code. After selecting, Unity will clone a copy of NnieChronicles.Headless to `NineChronicles-unity-runner`.
 The headless repository is set to `development` branch by default. To clarify, Unity will pull from origin and also fetches submodules.
-`Lib9c` is a set of models and actions to make game Nine Chronicles. What we're doing is create new feature mostly. Since both NineChronicles and Headless uses lib9c, so we have to sync or share lib9c code. To achieve this, Unity makes symbolic link from unity lib9c to headless lib9c.
+`Lib9c` is a set of models and actions to make game Nine Chronicles. What we're doing is create new feature mostly. Since both Nine Chronicles and Headless uses lib9c, so we have to sync or share lib9c code. To achieve this, Unity makes symbolic link from unity lib9c to headless lib9c.
 
 ### 3. Prepare store and genesis block
 
@@ -67,9 +67,9 @@ That's it! you have local headless node that can make your game play on it. Plea
 
 This is another clone of [NineChronicles.Headless](https://github.com/planetarium/NineChronicles.Headless). To avoid conflict, we just picked another name to see what this is.
 
-## Do I have to update both NineChronicles and Unity-runner when I want to modify lib9c?
+## Do I have to update both Nine Chronicles and Unity-runner when I want to modify lib9c?
 
-In short, NO. You can apply your lib9c changes to both repositories because NineChronicles and Unity-runner shares lib9c source code by symbolic link. Thus just edit lib9c code in unity project and re-run headless node.
+In short, NO. You can apply your lib9c changes to both repositories because Nine Chronicles and Unity-runner shares lib9c source code by symbolic link. Thus just edit lib9c code in unity project and re-run headless node.
 
 # Troubleshooting
 

@@ -1,6 +1,6 @@
 # Multiplanetary
 
-Just as there are multiple servers in a centralized online game, the NineChronicles blockchain network also has multiple planets. In NineChronicles, this is referred to as Multiplanetary. Each planet within the Multiplanetary has information such as ID, name, and network access URL. Each planet operates independently, yet they are interconnected within the broader NineChronicles ecosystem.
+Just as there are multiple servers in a centralized online game, the Nine Chronicles blockchain network also has multiple planets. In Nine Chronicles, this is referred to as Multiplanetary. Each planet within the Multiplanetary has information such as ID, name, and network access URL. Each planet operates independently, yet they are interconnected within the broader Nine Chronicles ecosystem.
 
 ## Planet Registry
 

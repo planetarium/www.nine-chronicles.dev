@@ -1,8 +1,8 @@
 # Create a genesis block
 
-The genesis block is the first block created when a blockchain network starts. NineChronicles' blockchain network also has a genesis block, and all gameplay starts from this block.
+The genesis block is the first block created when a blockchain network starts. Nine Chronicles' blockchain network also has a genesis block, and all gameplay starts from this block.
 
-NineChronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless], provides a command called `genesis` via the [NineChronicles.Headless.Executable][nc-headless-executable] project. Let's use it to create a customized genesis block.
+Nine Chronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless], provides a command called `genesis` via the [NineChronicles.Headless.Executable][nc-headless-executable] project. Let's use it to create a customized genesis block.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 [nc-headless-executable]: https://github.com/planetarium/NineChronicles.Headless/tree/main/NineChronicles.Headless.Executable
@@ -144,5 +144,5 @@ Genesis block created.
 The `genesis-block` file has now been created.
 
 ::: tip :tada:
-Congratulations! You've now learned how to create a genesis block using the `genesis` command in the `NineChronicles.Headless.Executable` project. Next, we'll use the private key and the genesis block to run NineChronicles' blockchain node.
+Congratulations! You've now learned how to create a genesis block using the `genesis` command in the `NineChronicles.Headless.Executable` project. Next, we'll use the private key and the genesis block to run Nine Chronicles' blockchain node.
 :::

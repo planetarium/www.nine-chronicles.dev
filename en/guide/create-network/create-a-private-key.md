@@ -2,7 +2,7 @@
 
 In order to participate in a blockchain network, that is, to issue transactions, we need to create a private key. A private key allows us to secure our account and perform transactions using our own independent key.
 
-[Libplanet][libplanet], the blockchain technology behind NineChronicles, provides a cli called `planet` through the [Libplanet.Tools][libplanet-tools] project. Let's use it to create a private key.
+[Libplanet][libplanet], the blockchain technology behind Nine Chronicles, provides a cli called `planet` through the [Libplanet.Tools][libplanet-tools] project. Let's use it to create a private key.
 
 [libplanet]: https://github.com/planetarium/libplanet
 [libplanet-tools]: https://github.com/planetarium/libplanet/tree/main/tools/Libplanet.Tools
