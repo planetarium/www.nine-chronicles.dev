@@ -148,5 +148,9 @@ export const en = defineConfig({
       }
     ],
 
+    editLink: {
+      pattern: 'https://github.com/planetarium/www.nine-chronicles.dev/edit/main/:path',
+      text: 'Edit this page on GitHub'
+    },
   }
 });

@@ -81,5 +81,9 @@ export const ko = defineConfig({
       // },
     ],
 
+    editLink: {
+      pattern: 'https://github.com/planetarium/www.nine-chronicles.dev/edit/main/:path',
+      text: '이 페이지 편집 제안하기'
+    },
   }
 });
