@@ -33,5 +33,9 @@ export const shared = defineConfig({
         socialLinks: [
             { icon: 'github', link: 'https://github.com/planetarium/www.nine-chronicles.dev' }
         ],
+
+        search: {
+            provider: 'local',
+        },
     }
 })
