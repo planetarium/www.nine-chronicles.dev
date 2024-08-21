@@ -4,7 +4,7 @@
 
 - https://nine-chronicles.com/start에서 나인크로니클을 설치합니다.
 
-### 나인크로니클 정상 동작 확인하기
+### 나인크로니클 정상 동작 확인하기 (첫 번째)
 
 - 설치한 나인크로니클 런처와 플레이어를 실행해서 정상 동작하는지 확인합니다.
 - 확인 후에 나인크로니클 플레이어를 종료합니다. 런처는 그대로 두어도 됩니다.
@@ -20,7 +20,7 @@
   <img width="327" alt="Untitled" src="https://github.com/Atralupus/NineChronicles.Mods/assets/30599098/1a089551-cfa4-44a6-9e47-7d4934bf9a8d">
   <img width="335" alt="Untitled (1)" src="https://github.com/Atralupus/NineChronicles.Mods/assets/30599098/a0bb3e6e-5e4a-4233-96c5-191adeac60d2">
 
-### 나인크로니클 정상 동작 확인하기
+### 나인크로니클 정상 동작 확인하기 (두 번째)
 
 - BepInEx 기본 설치 환경에서 나인크로니클 플레이어가 정상 동작하는지 확인합니다.
 - 확인 후에 나인크로니클 플레이어를 종료합니다.
@@ -40,7 +40,7 @@
   Type = Camera
 ```
 
-### 나인크로니클 정상 동작 확인하기
+### 나인크로니클 정상 동작 확인하기 (세 번째)
 
 - BepInEx 설정 수정 후, 나인크로니클 플레이어가 정상 동작하는지 확인합니다.
 - BepInEx 로그 터미널이 열리는 차이를 확인합니다.
