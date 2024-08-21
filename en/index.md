@@ -11,7 +11,7 @@ hero:
       link: /en/introduce/what-is-nine-chronicles
     - theme: alt
       text: Getting Started with Modding
-      link: /en/for-moder/getting-started
+      link: /en/for-modder/getting-started
     - theme: alt
       text: Getting Started with Network
       link: /en/guide/create-network/getting-started
