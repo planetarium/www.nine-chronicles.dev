@@ -26,10 +26,10 @@ export const ko = defineConfig({
         text: '모딩 가이드',
         collapsed: false,
         items: [
-          { text: '시작하기', link: '/ko/for-moder/getting-started' },
-          { text: '아바타 정보 웹사이트', link: '/ko/for-moder/guide/avatar-information-dapp-guide.md' },
-          { text: '송금 웹사이트', link: '/ko/for-moder/guide/transfer-ncg-with-chrono.md' },
-          { text: 'Bepinex를 활용한 클라이언트 모딩', link: '/ko/for-moder/guide/bepenix-guide.md' },
+          { text: '시작하기', link: '/ko/for-modder/getting-started' },
+          { text: '아바타 정보 웹사이트', link: '/ko/for-modder/guide/avatar-information-dapp-guide.md' },
+          { text: '송금 웹사이트', link: '/ko/for-modder/guide/transfer-ncg-with-chrono.md' },
+          { text: 'Bepinex를 활용한 클라이언트 모딩', link: '/ko/for-modder/guide/bepenix-guide.md' },
           {
             text: 'NineChronicles의 시스템 이해하기',
             items: [
