@@ -23,6 +23,23 @@ export const en = defineConfig({
         ]
       },
       {
+        text: 'Modding',
+        collapsed: false,
+        items: [
+          { text: 'Getting started', link: '/en/for-modder/getting-started' },
+          { text: 'Avatar information website', link: '/en/for-modder/guide/avatar-information-dapp-guide.md' },
+          { text: 'Transfer NCG website', link: '/en/for-modder/guide/transfer-ncg-with-chrono.md' },
+          { text: 'Client modding with Bepinex', link: '/ko/for-modder/guide/bepinex-guide.md' },
+          // {
+          //   text: 'NineChronicles의 시스템 이해하기',
+          //   items: [
+          //     { text: 'TableSheet' },
+          //     { text: 'Hit 계산 공식' },
+          //   ]
+          // },
+        ]
+      },
+      {
         text: 'Create Network',
         collapsed: false,
         items: [
@@ -53,15 +70,15 @@ export const en = defineConfig({
           { text: 'Chrono', link: '/en/guide/issue-transaction/issue-transaction-with-chrono' }
         ]
       },
-      {
-        text: 'Join Mainnet',
-        collapsed: false,
-        items: [
-          { text: 'Play NineChronicles', link: '/en/guide/join-mainnet/play-nc' },
-          { text: 'Operating a Blockchain Node', link: '/en/guide/join-mainnet/operating-a-blockchain-node' },
-          { text: 'Modding', link: '/en/guide/join-mainnet/modding' },
-        ]
-      },
+      // {
+      //   text: 'Join Mainnet',
+      //   collapsed: false,
+      //   items: [
+      //     { text: 'Play NineChronicles', link: '/en/guide/join-mainnet/play-nc' },
+      //     { text: 'Operating a Blockchain Node', link: '/en/guide/join-mainnet/operating-a-blockchain-node' },
+      //     { text: 'Modding', link: '/en/guide/join-mainnet/modding' },
+      //   ]
+      // },
       {
         text: 'Examples',
         collapsed: false,
