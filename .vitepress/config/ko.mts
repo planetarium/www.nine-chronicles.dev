@@ -1,15 +1,13 @@
-import { defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig } from 'vitepress'
 
 export const ko = defineConfig({
+  lang: 'ko-KR',
   title: '나인크로니클 개발자 포탈',
   description: '나인크로니클 에코시스템 개발자를 위한 사이트',
-  lang: 'ko-KR',
+
   themeConfig: {
     outline: 'deep',
-    nav: [
-      { text: '가이드', link: '/ko/introduce/what-is-nine-chronicles' },
-      { text: '예제', link: '/ko/examples/getting-started' }
-    ],
+    nav: nav(),
 
     sidebar: [
       {
@@ -87,3 +85,16 @@ export const ko = defineConfig({
     },
   }
 });
+
+function nav(): DefaultTheme.NavItem[] {
+  return [
+    {
+      text: '가이드',
+      link: '/ko/introduce/what-is-nine-chronicles'
+    },
+    {
+      text: '예제',
+      link: '/ko/examples/getting-started'
+    }
+  ];
+}

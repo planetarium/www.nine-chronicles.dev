@@ -1,15 +1,13 @@
-import { defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig } from 'vitepress'
 
 export const en = defineConfig({
-  title: 'NineChronicles Developer Portal',
-  description: 'Site for NineChronicles Ecosystem Developers',
   lang: 'en-US',
+  title: 'NineChronicles Developer Portal',
+  description: 'Site for NineChronicles Ecosystem Developers.',
+
   themeConfig: {
     outline: 'deep',
-    nav: [
-      { text: 'Guide', link: '/en/introduce/what-is-nine-chronicles' },
-      { text: 'Examples', link: '/en/examples/getting-started' }
-    ],
+    nav: nav(),
 
     sidebar: [
       {
@@ -154,3 +152,16 @@ export const en = defineConfig({
     },
   }
 });
+
+function nav(): DefaultTheme.NavItem[] {
+  return [
+    {
+      text: 'Guide',
+      link: '/en/introduce/what-is-nine-chronicles'
+    },
+    {
+      text: 'Examples',
+      link: '/en/examples/getting-started'
+    },
+  ];
+}
