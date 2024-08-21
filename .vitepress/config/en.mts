@@ -27,6 +27,7 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           { text: 'Getting started', link: '/en/for-modder/getting-started' },
+          { text: 'Avatar information website', link: '/en/for-modder/guide/avatar-information-dapp-guide.md' },
         ]
       },
       {
