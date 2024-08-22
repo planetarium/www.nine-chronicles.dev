@@ -8,13 +8,13 @@ hero:
   actions:
     - theme: brand
       text: What is Nine Chronicles?
-      link: /en/introduce/what-is-nine-chronicles
+      link: /introduce/what-is-nine-chronicles
     - theme: alt
       text: Getting Started with Modding
-      link: /en/for-modder/getting-started
+      link: /for-modder/getting-started
     - theme: alt
       text: Getting Started with Network
-      link: /en/guide/create-network/getting-started
+      link: /guide/create-network/getting-started
 
 features:
   - icon: 🛠️
