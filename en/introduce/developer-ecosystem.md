@@ -1,6 +1,6 @@
 # Developer Ecosystem
 
-In the developer ecosystem of NineChronicles, there are numerous projects beyond the core game required for playing NineChronicles. These include tools, platforms, and services that facilitate development, community interaction, and content creation.
+In the developer ecosystem of Nine Chronicles, there are numerous projects beyond the core game required for playing Nine Chronicles. These include tools, platforms, and services that facilitate development, community interaction, and content creation.
 
 ## Community
 

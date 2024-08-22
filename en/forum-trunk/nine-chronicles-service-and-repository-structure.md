@@ -48,7 +48,7 @@ The repository for Launcher. You can build and run your own Nine Chronicles laun
 9c-launcher is mostly written in TypeScript and you can easily build and run launcher following [Getting Started](https://github.com/planetarium/9c-launcher/wiki/Getting-Started).  
 If you build and run your launcher with default setting, the launcher will attach to Nine Chronicles mainnet(the production server).  
 Otherwise you can attach to different(maybe your own) blockchain network, you can achieve that through editing `config.json` to change target network.
-You can get the `config.json` for mainnet [here](https://download.nine-chronicles.com/9c-launcher-config.json) and the detailed document at [here](../the-structure-and-location-of-config-json.md).
+You can get the `config.json` for mainnet [here](https://download.nine-chronicles.com/9c-launcher-config.json) and the detailed document at [here](./the-structure-and-location-of-config-json.md).
 
 ## 3.2. NineChronicles.Headless
 

@@ -4,15 +4,15 @@ Now, let's not worry about this and just run Unity. And after a few clicks, let'
 
 ### Don't have Unity?
 
-There is [the easiest article](./playing-the-nine-chronicles-main-network-with-the-unity-editor/#install-unity) and you will have Unity.
+There is [the easiest article](./playing-the-nine-chronicles-main-network-with-the-unity-editor#install-unity) and you will have Unity.
 
-### Didn't you clone NineChronicles repo?
+### Didn't you clone Nine Chronicles repo?
 
-You can follow [this part](./playing-the-nine-chronicles-main-network-with-the-unity-editor/#prepare-the-nine-chronicles-repository).
+You can follow [this part](./playing-the-nine-chronicles-main-network-with-the-unity-editor#prepare-the-nine-chronicles-repository).
 
 ### Is this the first time to use Unity?
 
-Here is [the guide](./playing-the-nine-chronicles-main-network-with-the-unity-editor/#open-the-nine-chronicles-project-with-the-unity-hub).
+Here is [the guide](./playing-the-nine-chronicles-main-network-with-the-unity-editor#open-the-nine-chronicles-project-with-the-unity-hub).
 
 ## NineChronicles(Unity) Tools Menu
 
@@ -52,4 +52,4 @@ That's it! Thank you for following this article. Have fun!
 
 ### Frankly, this method takes too long.
 
-It is faster to decide which mainnet blockchain store snapshot to receive by referring to [this article](./replay-of-transactions-incorporated-into-blocks/#preparing-the-blockchain), download it quickly and reliably using an FTP client (e.g., FileZilla), and use a separate decompression program.
+It is faster to decide which mainnet blockchain store snapshot to receive by referring to [this article](./replay-of-transactions-incorporated-into-blocks#preparing-the-blockchain), download it quickly and reliably using an FTP client (e.g., FileZilla), and use a separate decompression program.

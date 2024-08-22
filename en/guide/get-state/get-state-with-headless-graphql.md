@@ -2,13 +2,13 @@
 
 GraphQL is a query language and data format for APIs, a specification for building APIs. It provides a more efficient way to get data from a server compared to traditional RESTful APIs by allowing clients to request exactly the data they need, reducing the amount of data sent over the network.
 
-NineChronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless], allows you to query various information via the GraphQL API. In this article, you'll learn how to send a simple GraphQL request to Headless using a browser and get the blockchain status.
+Nine Chronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless], allows you to query various information via the GraphQL API. In this article, you'll learn how to send a simple GraphQL request to Headless using a browser and get the blockchain status.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 
 ## Run a blockchain node
 
-We tried running a blockchain node [earlier](../create-network/running-a-blockchain-node-with-dotnet-project) by cloning NineChronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless]. We'll do the same thing this time.
+We tried running a blockchain node [earlier](../create-network/running-a-blockchain-node-with-dotnet-project) by cloning Nine Chronicles' blockchain node implementation, [NineChronicles.Headless][nc-headless]. We'll do the same thing this time.
 
 ```console
 ➜  NineChronicles.Headless.Executable & dotnet run --config=./appsettings.local.json --arena-participants-sync=false
@@ -16,7 +16,7 @@ We tried running a blockchain node [earlier](../create-network/running-a-blockch
 
 ## Access the GraphQL Playground
 
-We've set the GraphQL URL to `127.0.0.1:31280` in `appsettings.local.json`. Now let's go to http://127.0.0.1:31280/ui/playground or http://localhost:31280/ui/playground.
+We've set the GraphQL URL to `127.0.0.1:31280` in `appsettings.local.json`. Now let's go to http://127.0.0.1:31280/ui/playground.
 
 ![Empty GraphQL Playground](/graphql-playground-01.png)
 

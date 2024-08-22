@@ -71,7 +71,7 @@ There are several ways to use the new weapon textures in play. I introduce a two
 
 ### 2. Fix the sprite getter method
 
-There is the [SpriteHelper]() and this class has `GetPlayerSpineTextureWeapon()` method like below.
+There is the SpriteHelper and this class has `GetPlayerSpineTextureWeapon()` method like below.
 
 ```cs
 public static Sprite GetPlayerSpineTextureWeapon(int equipmentId)

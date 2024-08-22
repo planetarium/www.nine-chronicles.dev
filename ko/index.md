@@ -11,7 +11,7 @@ hero:
       link: /ko/introduce/what-is-nine-chronicles
     - theme: alt
       text: 모딩 시작하기
-      link: /ko/for-moder/getting-started
+      link: /ko/for-modder/getting-started
     - theme: alt
       text: 네트워크 시작하기
       link: /ko/guide/create-network/getting-started
