@@ -15,8 +15,8 @@ $ cd ./NineChronicles.Headless/NineChronicles.Headless.Executable
 #### Prepare blockchain store
 
 You can use your local store already exist or download a new one.
-Please refer to [this article](./file-paths-used-on-nine-chronicles/#blockchain-store) for the local store path.
-Or if you want to download a new store, [this article](./replay-of-transactions-incorporated-into-blocks/#preparing-the-blockchain) will help.
+Please refer to [this article](./file-paths-used-on-nine-chronicles#blockchain-store) for the local store path.
+Or if you want to download a new store, [this article](./replay-of-transactions-incorporated-into-blocks#preparing-the-blockchain) will help.
 
 ## Replay blocks
 

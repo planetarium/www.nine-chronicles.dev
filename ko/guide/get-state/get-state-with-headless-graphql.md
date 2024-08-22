@@ -16,7 +16,7 @@ GraphQL은 API용 쿼리 언어이자 데이터 형식, 즉 API를 구축하기 
 
 ## GraphQL Playground에 접속하기
 
-GraphQL URL은 `appsettings.local.json`에서 `127.0.0.1:31280`으로 설정했습니다. 이제 http://127.0.0.1:31280/ui/playground 또는 http://localhost:31280/ui/playground 에 접속해보겠습니다.
+GraphQL URL은 `appsettings.local.json`에서 `127.0.0.1:31280`으로 설정했습니다. 이제 http://127.0.0.1:31280/ui/playground 에 접속해보겠습니다.
 
 ![Empty GraphQL Playground](/graphql-playground-01.png)
 

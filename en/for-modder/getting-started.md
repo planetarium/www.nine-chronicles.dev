@@ -9,7 +9,7 @@ Existing libraries developed by teams in the Planetarium community already exist
 
 We provide detailed guides for each area, so please refer to the links below.
 
-- If you want to mod the client, refer to the [Bepenix Guide](./guide/bepenix-guide.md).
+- If you want to mod the client, refer to the [Bepenix Guide](./guide/bepinex-guide.md).
 - If you want to mod without needing signatures, refer to the [Avatar Information Page Creation Guide](./guide/avatar-information-dapp-guide.md).
 - If you want to mod with signatures, refer to the [Transfer Page Creation Guide](./guide/transfer-ncg-with-chrono.md).
 
