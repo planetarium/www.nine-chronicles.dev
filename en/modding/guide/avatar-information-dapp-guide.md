@@ -1,4 +1,4 @@
-# Avatar Information Page Creation Tutorial
+# Avatar Information Viewer Tutorial
 
 This tutorial will show you how to easily fetch avatar information and create a board using [Mimir](../../general/get-state/get-state-with-mimir-graphql), a service that allows you to easily query the latest state of Nine Chronicles with GraphQL.
 
@@ -20,7 +20,7 @@ npm run start
 
 Once the initialization is confirmed to be successful, you're ready to proceed!
 
-## Modify the Query
+## Modify the QueryTemplate
 
 Since you downloaded the template using create-react-app, most settings required to use Mimir GQL are already configured.
 

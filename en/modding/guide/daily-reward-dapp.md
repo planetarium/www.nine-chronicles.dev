@@ -1,4 +1,4 @@
-# Daily Reward Page Creation Tutorial
+# Daily Reward Page Tutorial
 
 ::: danger :rotating_light:
 This example requires a signature, so you must have a Nine Chronicles account with an avatar that has claimed the Daily Reward (Action Point refill) at least once in order to proceed.
