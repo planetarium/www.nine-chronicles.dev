@@ -24,7 +24,7 @@ Once the initialization is confirmed to be successful, you're ready to proceed!
 
 Since you downloaded the template using create-react-app, most settings required to use Mimir GQL are already configured.
 
-If you want to modify the query fetched by GQL, you can edit the `src/graphql/api.graphql` file. To fetch more information related to the avatar, let's modify the query to include the list of equipments in the inventory as shown below.
+If you want to modify the query fetched by GQL, you can edit the `src/graphql/api.graphql` file. To fetch more information related to the avatar, let's modify the query to include the action point as shown below.
 
 ```graphql
 query GetAvatarInformation($avatarAddress: Address!) {
@@ -32,20 +32,8 @@ query GetAvatarInformation($avatarAddress: Address!) {
     address
     name
     level
-    inventory {
-      equipments {
-        count
-        elementalType
-        exp
-        grade
-        itemSheetId
-        itemSubType
-        itemType
-        level
-        mainStatType
-      }
-    }
   }
+  actionPoint(address: $avatarAddress)
 }
 ```
 
@@ -59,7 +47,7 @@ npm run codegen
 
 Now that we have updated the query and the client, it's time to modify the `src/App.tsx` code.
 
-We will use the previously updated `GetAvatarInformation` query via the `useGetAvatarInformationQuery` function to make the actual request. Since we have updated the client, the response from this function will now include inventory-related information, which we can display as a list.
+We will use the previously updated `GetAvatarInformation` query via the `useGetAvatarInformationQuery` function to make the actual request. Since we have updated the client, the response from this function will now include action point information, which we can display it.
 
 ```typescript
 import { useState } from 'react';
@@ -100,19 +88,8 @@ function App() {
               <>
                 <p>Avatar Name: {data.avatar.name}</p>
                 <p>Avatar Level: {data.avatar.level}</p>
-                <h2>Equipment List</h2>
-                // 장비 목록을 불러옵니다.
-                <ul>
-                  {data.avatar.inventory?.equipments?.map((equipment, index) => (
-                    <li key={index} className="equipment-item">
-                      <p>Item SubType: {equipment.itemSubType}</p>
-                      <p>Elemental Type: {equipment.elementalType}</p>
-                      <p>Grade: {equipment.grade}</p>
-                      <p>Level: {equipment.level}</p>
-                      <p>Count: {equipment.count}</p>
-                    </li>
-                  ))}
-                </ul>
+                {/* Action Point Data */}
+                <p>Action Point: {data.actionPoint}</p>
               </>
             ) : (
               <p>No data available</p>
@@ -125,22 +102,6 @@ function App() {
 }
 
 export default App;
-```
-
-Also, add styles for the newly added `equipment-item` class at the end of the `App.css` file.
-
-```css
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.equipment-item {
-    background-color: #e2e8f0;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 10px 0;
-}
 ```
 
 ## Completion

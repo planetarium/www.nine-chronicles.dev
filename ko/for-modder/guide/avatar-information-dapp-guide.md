@@ -20,7 +20,7 @@ npm run start
 ## 쿼리 수정
 create-react-app을 통해 템플릿을 다운받았기 때문에 Mimir GQL을 사용하기 위한 대부분의 세팅이 되어있는 상태입니다.
 
-GQL에서 불러오는 쿼리를 수정하고 싶다면 `src/graphql/api.graphql` 파일을 수정하면 됩니다. 아바타와 관련된 더 많은 정보를 불러보기 위해 inventory에 장비 목록을 불러오도록 아래와 같이 쿼리를 수정해봅니다.
+GQL에서 불러오는 쿼리를 수정하고 싶다면 `src/graphql/api.graphql` 파일을 수정하면 됩니다. 아바타와 관련된 더 많은 정보를 불러보기 위해 action point를 불러오도록 아래와 같이 쿼리를 수정해봅니다.
 
 ```graphql
 query GetAvatarInformation($avatarAddress: Address!) {
@@ -28,20 +28,8 @@ query GetAvatarInformation($avatarAddress: Address!) {
     address
     name
     level
-    inventory {
-      equipments {
-        count
-        elementalType
-        exp
-        grade
-        itemSheetId
-        itemSubType
-        itemType
-        level
-        mainStatType
-      }
-    }
   }
+  actionPoint(address: $avatarAddress)
 }
 ```
 
@@ -53,7 +41,7 @@ npm run codegen
 ## App.tsx 수정
 쿼리와 Client를 수정했으니 `src/App.tsx` 코드를 수정할 차례입니다.
 
-아까 수정했던 쿼리인 `GetAvatarInformation`를 `useGetAvatarInformationQuery` 함수를 통해 실제로 요청을 하고 있습니다. 아까 Client를 업데이트 했으므로 해당 함수Response에 inventory 관련 정보들이 생겨있으니 해당 정보를 List로 표현합니다.
+아까 수정했던 쿼리인 `GetAvatarInformation`를 `useGetAvatarInformationQuery` 함수를 통해 실제로 요청을 하고 있습니다. 아까 Client를 업데이트 했으므로 해당 함수 Response에 action point 정보가 생겼으니 해당 정보를 불러옵니다.
 ```typescript
 import { useState } from 'react';
 import { useGetAvatarInformationQuery } from "./graphql/generated/graphql";
@@ -93,19 +81,8 @@ function App() {
               <>
                 <p>Avatar Name: {data.avatar.name}</p>
                 <p>Avatar Level: {data.avatar.level}</p>
-                <h2>Equipment List</h2>
-                // 장비 목록을 불러옵니다.
-                <ul>
-                  {data.avatar.inventory?.equipments?.map((equipment, index) => (
-                    <li key={index} className="equipment-item">
-                      <p>Item SubType: {equipment.itemSubType}</p>
-                      <p>Elemental Type: {equipment.elementalType}</p>
-                      <p>Grade: {equipment.grade}</p>
-                      <p>Level: {equipment.level}</p>
-                      <p>Count: {equipment.count}</p>
-                    </li>
-                  ))}
-                </ul>
+                {/* Action Point를 추가로 보여줍니다. */}
+                <p>Action Point: {data.actionPoint}</p>
               </>
             ) : (
               <p>No data available</p>
@@ -118,21 +95,6 @@ function App() {
 }
 
 export default App;
-```
-
-`App.css` 파일 맨 끝에도 추가된 `equipment-item` class에 대한 style을 추가해줍니다.
-```css
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.equipment-item {
-    background-color: #e2e8f0;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 10px 0;
-}
 ```
 
 ## 완성
