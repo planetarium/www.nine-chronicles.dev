@@ -43,7 +43,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: 'Forum Trunk',
-      link: '/forum-trunk/about-the-key-store',
+      link: '/forum-trunk/0-what-is-forum-trunk',
       activeMatch: '/forum-trunk/'
     }
   ];
@@ -119,6 +119,7 @@ function sidebarForumTrunk(): DefaultTheme.SidebarItem[] {
       text: 'Forum Trunk',
       collapsed: false,
       items: [
+        { text: 'What is forum trunk?', link: '0-what-is-forum-trunk' },
         { text: 'About the key store', link: 'about-the-key-store' },
         { text: 'How to select filtered inventory items in the Nine Chronicles Unity project', link: 'how-to-select-filtered-inventory-items-in-the-nine-chronicles-unity-project' },
         { text: 'How to use my own RPC server, not Planetarium’s', link: 'how-to-use-my-own-rpc-server-not-planetariums' },

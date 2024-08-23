@@ -43,7 +43,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: '포럼 트렁크',
-      link: '/forum-trunk/about-the-key-store',
+      link: '/forum-trunk/0-what-is-forum-trunk',
       activeMatch: '/forum-trunk/'
     }
   ];
