@@ -7,14 +7,14 @@ hero:
   tagline: 당신의 나인크로니클을 만드세요
   actions:
     - theme: brand
+      text: 모딩 시작하기
+      link: /ko/modding/getting-started
+    - theme: brand
       text: 나인크로니클은 무엇인가?
       link: /ko/general/what-is-nine-chronicles
     - theme: alt
-      text: 빠르게 시작하기
+      text: 네트워크 시작하기
       link: /ko/network/create-network/getting-started
-    - theme: alt
-      text: 모딩 시작하기
-      link: /ko/modding/getting-started
 
 features:
   - icon: 🔗

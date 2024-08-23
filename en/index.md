@@ -7,14 +7,14 @@ hero:
   tagline: Build your Nine Chronicles
   actions:
     - theme: brand
+      text: Start Modding
+      link: /modding/getting-started
+    - theme: alt
       text: What is Nine Chronicles?
       link: /general/what-is-nine-chronicles
     - theme: alt
-      text: Quick Start
+      text: Start Network
       link: /network/create-network/getting-started
-    - theme: alt
-      text: Start Modding
-      link: /modding/getting-started
 
 features:
   - icon: 🔗
