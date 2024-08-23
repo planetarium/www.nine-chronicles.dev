@@ -8,13 +8,16 @@ hero:
   actions:
     - theme: brand
       text: 나인크로니클은 무엇인가?
-      link: /ko/introduce/what-is-nine-chronicles
+      link: /ko/general/what-is-nine-chronicles
     - theme: alt
       text: 빠르게 시작하기
       link: /ko/guide/create-network/getting-started
     - theme: alt
       text: 모딩 시작하기
-      link: /ko/for-modder/getting-started
+      link: /ko/modding/getting-started
+    - theme: alt
+      text: 네트워크 시작하기
+      link: /ko/network/create-network/getting-started
 
 features:
   - icon: 🔗
