@@ -59,6 +59,13 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
         { text: '네트워크', link: 'general/networks' },
         { text: '멀티플라네타리', link: 'general/multiplanetary' },
         { text: '개발자 생태계', link: 'general/developer-ecosystem' },
+        {
+          text: '크로노',
+          collapsed: false,
+          items: [
+            { text: '사용법', link: 'general/chrono/how-to-use-chrono' }
+          ]
+        },
       ]
     }
   ];
@@ -115,7 +122,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '시작하기', link: 'modding/getting-started' },
         { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide.md' },
-        { text: '송금 웹사이트', link: 'modding/guide/transfer-ncg-with-chrono.md' },
+        { text: '데일리 리워드 웹사이트', link: 'modding/guide/daily-reward-dapp.md' },
         { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide.md' },
       ]
     }
