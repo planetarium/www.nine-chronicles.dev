@@ -14,6 +14,7 @@ export const ko = defineConfig({
       '/ko/general/': { base: '/ko/', items: sidebarGeneral() },
       '/ko/network/': { base: '/ko/', items: sidebarNetwork() },
       '/ko/modding/': { base: '/ko/', items: sidebarModding() },
+      '/ko/contributing/': { base: '/ko/', items: sidebarContributing() },
       '/forum-trunk/': { base: '/forum-trunk/', items: sidebarForumTrunk() },
     },
 
@@ -42,6 +43,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/ko/modding/'
     },
     {
+      text: '기여',
+      link: '/contributing/repositories',
+      activeMatch: '/contributing/'
+    },
+    {
       text: '포럼 트렁크',
       link: '/forum-trunk/0-what-is-forum-trunk',
       activeMatch: '/forum-trunk/'
@@ -51,31 +57,25 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarGeneral(): DefaultTheme.SidebarItem[] {
   return [
+    { text: '나인크로니클은 무엇인가?', link: 'general/what-is-nine-chronicles' },
+    { text: '네트워크', link: 'general/networks' },
+    { text: '멀티플라네타리', link: 'general/multiplanetary' },
+    { text: '개발자 생태계', link: 'general/developer-ecosystem' },
     {
-      text: '소개',
+      text: '크로노',
       collapsed: false,
       items: [
-        { text: '나인크로니클은 무엇인가?', link: 'general/what-is-nine-chronicles' },
-        { text: '네트워크', link: 'general/networks' },
-        { text: '멀티플라네타리', link: 'general/multiplanetary' },
-        { text: '개발자 생태계', link: 'general/developer-ecosystem' },
-        {
-          text: '크로노',
-          collapsed: false,
-          items: [
-            { text: '사용법', link: 'general/chrono/how-to-use-chrono' }
-          ]
-        },
-        {
-          text: '상태 조회하기',
-          collapsed: false,
-          items: [
-            { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
-            { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
-          ]
-        },
+        { text: '사용법', link: 'general/chrono/how-to-use-chrono' }
       ]
-    }
+    },
+    {
+      text: '상태 조회하기',
+      collapsed: false,
+      items: [
+        { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
+        { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
+      ]
+    },
   ];
 }
 
@@ -124,16 +124,16 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
 
 function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
-    {
-      text: '모딩 가이드',
-      collapsed: false,
-      items: [
-        { text: '시작하기', link: 'modding/getting-started' },
-        { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide.md' },
-        { text: '데일리 리워드 웹사이트', link: 'modding/guide/daily-reward-dapp.md' },
-        { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide.md' },
-      ]
-    }
+    { text: '시작하기', link: 'modding/getting-started' },
+    { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide.md' },
+    { text: '데일리 리워드 웹사이트', link: 'modding/guide/daily-reward-dapp.md' },
+    { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide.md' },
+  ];
+}
+
+function sidebarContributing(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: '저장소 목록', link: 'contributing/repositories' },
   ];
 }
 

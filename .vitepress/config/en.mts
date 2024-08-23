@@ -14,6 +14,7 @@ export const en = defineConfig({
       '/general/': { base: '/', items: sidebarGeneral() },
       '/network/': { base: '/', items: sidebarNetwork() },
       '/modding/': { base: '/', items: sidebarModding() },
+      '/contributing/': { base: '/contributing/', items: sidebarContributing() },
       '/forum-trunk/': { base: '/forum-trunk/', items: sidebarForumTrunk() },
     },
 
@@ -42,6 +43,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/modding/'
     },
     {
+      text: 'Contributing',
+      link: '/contributing/repositories',
+      activeMatch: '/contributing/'
+    },
+    {
       text: 'Forum Trunk',
       link: '/forum-trunk/0-what-is-forum-trunk',
       activeMatch: '/forum-trunk/'
@@ -51,31 +57,25 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarGeneral(): DefaultTheme.SidebarItem[] {
   return [
+    { text: 'What is Nine Chronicles?', link: 'general/what-is-nine-chronicles' },
+    { text: 'Networks', link: 'general/networks' },
+    { text: 'Multiplanetary', link: 'general/multiplanetary' },
+    { text: 'Developer Ecosystem', link: 'general/developer-ecosystem' },
     {
-      text: 'Introduction',
+      text: 'Chrono',
       collapsed: false,
       items: [
-        { text: 'What is Nine Chronicles?', link: 'general/what-is-nine-chronicles' },
-        { text: 'Networks', link: 'general/networks' },
-        { text: 'Multiplanetary', link: 'general/multiplanetary' },
-        { text: 'Developer Ecosystem', link: 'general/developer-ecosystem' },
-        {
-          text: 'Chrono',
-          collapsed: false,
-          items: [
-            { text: 'How to use', link: 'general/chrono/how-to-use-chrono' }
-          ]
-        },
-        {
-          text: 'Get State',
-          collapsed: false,
-          items: [
-            { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
-            { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
-          ]
-        },
+        { text: 'How to use', link: 'general/chrono/how-to-use-chrono' }
       ]
-    }
+    },
+    {
+      text: 'Get State',
+      collapsed: false,
+      items: [
+        { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
+        { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
+      ]
+    },
   ];
 }
 
@@ -115,16 +115,16 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
 
 function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
-    {
-      text: 'Modding',
-      collapsed: false,
-      items: [
-        { text: 'Getting Started', link: 'modding/getting-started' },
-        { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
-        { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
-        { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
-      ]
-    }
+    { text: 'Getting Started', link: 'modding/getting-started' },
+    { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
+    { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
+    { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
+  ]
+}
+
+function sidebarContributing(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: 'Repositories', link: 'contributing/repositories' },
   ];
 }
 

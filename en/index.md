@@ -10,11 +10,11 @@ hero:
       text: What is Nine Chronicles?
       link: /general/what-is-nine-chronicles
     - theme: alt
-      text: Getting Started with Modding
-      link: /modding/getting-started
-    - theme: alt
-      text: Getting Started with Network
+      text: Quick Start
       link: /network/create-network/getting-started
+    - theme: alt
+      text: Start Modding
+      link: /modding/getting-started
 
 features:
   - icon: 🔗
