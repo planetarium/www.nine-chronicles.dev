@@ -9,7 +9,7 @@ First, you need to install .NET SDK 6. The .NET SDK is available for various ope
 https://dotnet.microsoft.com/download/dotnet/6.0
 
 After the installation is complete, open your terminal or command prompt and enter the following command to verify that the installation was successful:
-```bash
+```shell
 dotnet --version
 ```
 

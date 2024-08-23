@@ -15,7 +15,8 @@ First, clone the [GitHub repository](https://github.com/planetarium/NineChronicl
 
 ::: code-group
 ```shell [git]
-git clone --recursive https://github.com/planetarium/NineChronicles.Headless.git
+git clone https://github.com/planetarium/NineChronicles.Headless.git
+git submodule update --init --recursive
 ```
 
 ```shell [gh(GitHub)]
@@ -64,6 +65,7 @@ Now let's create a configuration file in the path `NineChronicles.Headless.Execu
 We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
 :::
 
+::: details Description of the `config.json` file
 ```json
 {
     "$schema": "../config.schema.json",
@@ -104,6 +106,45 @@ We're exposing the private key here for illustrative purposes, but you should ne
     "initialMeadConfigs": [
         {
             // Set the administrator's address.
+            "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+            "amount": "1000000"
+        }
+    ],
+    "initialPledgeConfigs": []
+}
+```
+:::
+
+```json
+{
+    "$schema": "../config.schema.json",
+    "data": {
+        "tablePath": "../Lib9c/Lib9c/TableCSV"
+    },
+    "admin": {
+        "activate": true,
+        "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+        "validUntil": 1000000
+    },
+    "currency": {
+        "initialMinter": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+        "initialCurrencyDeposit": [
+            {
+                "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
+                "amount": 1000000,
+                "start": 0,
+                "end": 0
+            }
+        ]
+    },
+    "initialValidatorSet": [
+        {
+            "publicKey": "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14",
+            "power": 1
+        }
+    ],
+    "initialMeadConfigs": [
+        {
             "address": "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159",
             "amount": "1000000"
         }

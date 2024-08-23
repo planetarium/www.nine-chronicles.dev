@@ -19,7 +19,7 @@
 ::: details 저장소 배포 버전을 내려받기
 1. `크로노`의 [GitHub 저장소](https://github.com/planetarium/chrono)에서 배포하는 [최신 버전](https://github.com/planetarium/chrono/releases)을 내려받습니다.
     ```shell
-    curl -L -o chrono_v1.0.5.zip https://github.com/planetarium/chrono/releases/download/1.0.5/chrono_v1.0.5.zip
+    curl -L -o chrono_v1.0.5.zip https://github.com/planetarium/chrono/releases/download/v1.0.5/chrono-extension.zip
     ```
 2. 내려받은 압축파일을 해제합니다.
 3. 이제 [다음 단계](#load-unpacked-in-chrome-extensions)로 넘어갑니다.
@@ -39,9 +39,9 @@
     :::
 
     ::: info :bulb:
-    본 문서에서는 `1.0.5` 태그를 기준으로 진행했습니다.
+    본 문서에서는 `v1.0.5` 태그를 기준으로 진행했습니다.
     ```shell
-    git checkout 1.0.5
+    git checkout v1.0.5
     ```
     :::
 
