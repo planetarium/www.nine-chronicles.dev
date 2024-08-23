@@ -94,8 +94,6 @@
 
 ### 2. 개인 키 등록하기 {#register-private-key}
 
-우리는 [앞에서](../create-network/create-a-private-key) 개인 키를 생성해봤습니다. 이제 이 개인 키를 `크로노`에 추가해보겠습니다.
-
 ::: danger :rotating_light:
 여기서는 예를 들기 위해서 개인 키를 노출합니다만, 이외의 목적으로 사용하는 개인 키는 절대로 노출해서는 안 됩니다.
 :::

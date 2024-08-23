@@ -97,8 +97,6 @@ Never share your password and Seed Phrase with anyone. They can be used to acces
 
 ### 2. Registering a Private Key {#register-private-key}
 
-[Previously](../create-network/create-a-private-key), we created a private key. Now, let's add this private key to `Chrono`.
-
 ::: danger :rotating_light:
 In this example, we expose the private key for demonstration purposes only. Never expose your private key if it's used for any other purpose.
 :::
