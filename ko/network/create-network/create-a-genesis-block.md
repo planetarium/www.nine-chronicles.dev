@@ -66,7 +66,6 @@ Options:
 :::
 
 ::: details `config.json` 파일에 대한 설명
-
 ```json
 {
     "$schema": "../config.schema.json",

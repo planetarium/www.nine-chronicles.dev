@@ -105,26 +105,39 @@ Create a file in the path `NineChronicles.Headless.Executable/appsettings.local.
 We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
 :::
 
+```json
+// Enter the absolute path or URL of the genesis block file. e.g., the absolute path to the custom genesis block file you created earlier
+"GenesisBlockPath": "path-of-genesis-block",
+// Set the tag version to 200200 to match the version of the tag.
+"AppProtocolVersionString": "200200/AB2da648b9154F2cCcAFBD85e0Bc3d51f97330Fc/MEUCIQCaK89fzl+RWPKD28zCFYUJvWFrcqsBizZ3k5HYLMcsogIgMtXiuZZlp.C3OSZIyYRHbcV263F2nh2CJhFwP1NY85I=/ZHU5OnRpbWVzdGFtcHUxMDoyMDI0LTA3LTA5ZQ==",
+"StoreType": "rocksdb",
+// Set the absolute path to the blockchain store. e.g., "/Users/{username}/nine-chronicles/store"
+"StorePath": "path-of-blockchain-store",
+// Set to false to mine the block.
+"NoMiner": false,
+// Set the private key for signing the block to the private key we created in the previous example.
+"MinerPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+// Set the private key for block consensus to the private key we created in the previous example.
+"ConsensusPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
+"ConsensusSeedStrings": [
+    // Set the public key for the private key we created in the previous example.
+    "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14,127.0.0.1,31588"
+],
+```
+
 ::: details `appsettings.local.json` file
 ```json
 {
     "$schema": "./appsettings-schema.json",
     "Headless": {
-        // Enter the absolute path or URL of the genesis block file. e.g., the absolute path to the custom genesis block file you created earlier
         "GenesisBlockPath": "path-of-genesis-block",
-        // Set the tag version to 200200 to match the version of the tag.
         "AppProtocolVersionString": "200200/AB2da648b9154F2cCcAFBD85e0Bc3d51f97330Fc/MEUCIQCaK89fzl+RWPKD28zCFYUJvWFrcqsBizZ3k5HYLMcsogIgMtXiuZZlp.C3OSZIyYRHbcV263F2nh2CJhFwP1NY85I=/ZHU5OnRpbWVzdGFtcHUxMDoyMDI0LTA3LTA5ZQ==",
         "StoreType": "rocksdb",
-        // Set the absolute path to the blockchain store. e.g., "/Users/{username}/nine-chronicles/store"
         "StorePath": "path-of-blockchain-store",
-        // Set to false to mine the block.
         "NoMiner": false,
-        // Set the private key for signing the block to the private key we created in the previous example.
         "MinerPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
-        // Set the private key for block consensus to the private key we created in the previous example.
         "ConsensusPrivateKeyString": "9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102",
         "ConsensusSeedStrings": [
-            // Set the public key for the private key we created in the previous example.
             "033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14,127.0.0.1,31588"
         ],
         "ConsensusPort": 31588,

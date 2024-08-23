@@ -9,8 +9,7 @@
 https://dotnet.microsoft.com/download/dotnet/6.0
 
 설치가 끝난 후에는 터미널이나 명령 프롬프트를 열고 `dotnet --version` 명령어를 입력하여 설치가 제대로 되었는지 확인하세요.
-
-```bash
+```shell
 dotnet --version
 ```
 

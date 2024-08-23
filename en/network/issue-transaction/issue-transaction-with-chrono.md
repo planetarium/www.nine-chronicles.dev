@@ -19,7 +19,7 @@ To install `Chrono` manually, you need to obtain the build files. You can choose
 ::: details Downloading the repository release version
 1. Download the [latest version](https://github.com/planetarium/chrono/releases) from `Chrono`’s [GitHub repository](https://github.com/planetarium/chrono).
     ```shell
-    curl -L -o chrono_v1.0.5.zip https://github.com/planetarium/chrono/releases/download/1.0.5/chrono_v1.0.5.zip
+    curl -L -o chrono_v1.0.5.zip https://github.com/planetarium/chrono/releases/download/v1.0.5/chrono-extension.zip
     ```
 2. Unzip the downloaded file.
 3. Proceed to the [next step](#load-unpacked-in-chrome-extensions).
@@ -39,9 +39,9 @@ To install `Chrono` manually, you need to obtain the build files. You can choose
     :::
 
     ::: info :bulb:
-    This document is based on the `1.0.5` tag.
+    This document is based on the `v1.0.5` tag.
     ```shell
-    git checkout 1.0.5
+    git checkout v1.0.5
     ```
     :::
 
