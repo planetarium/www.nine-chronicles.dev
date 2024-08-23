@@ -103,8 +103,12 @@ export default App;
 npm run start
 ```
 
+![alt text](/make-avatar-information-website-result.png)
+
 아바타 주소는 [9cscan](https://9cscan.com/)에서 확인이 가능하며 예시 아바타 주소는 "0x2E2dDdf0adC57b3C88E3ce3dBf2d3Eb5b9C41227"가 있습니다.
-모든 내용은 [9c-examples](https://github.com/planetarium/9c-examples/tree/main/avatar-information) 레포에 있으니 참고 바랍니다.
+
 Mimir GQL에는 9c에 관련된 정보를 쿼리해볼 수 있는 많은 type들이 존재하니 활용하여 여러분만의 어플을 만들어보세요!
 
-![alt text](/make-avatar-information-website-result.png)
+::: info
+제작된 예제는 [9c-examples](https://github.com/planetarium/9c-examples/tree/main/avatar-information) 레포에 있으니 참고 바랍니다.
+:::

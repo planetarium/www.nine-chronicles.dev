@@ -59,6 +59,13 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
         { text: 'Networks', link: 'general/networks' },
         { text: 'Multiplanetary', link: 'general/multiplanetary' },
         { text: 'Developer Ecosystem', link: 'general/developer-ecosystem' },
+        {
+          text: 'Chrono',
+          collapsed: false,
+          items: [
+            { text: 'How to use', link: 'general/chrono/how-to-use-chrono' }
+          ]
+        },
       ]
     }
   ];
@@ -106,7 +113,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Getting Started', link: 'modding/getting-started' },
         { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
-        { text: 'Transfer NCG Website', link: 'modding/guide/transfer-ncg-with-chrono' },
+        { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
         { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
       ]
     }
