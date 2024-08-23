@@ -11,7 +11,7 @@
 
 - 서명이 필요 없는 모딩을 하고 싶다면 [아바타 정보 페이지 제작 가이드](./guide/avatar-information-dapp-guide.md)를 참고하세요.
 - 서명이 필요한 모딩을 하고 싶다면 [Daily Reward 페이지 제작 가이드](./guide/daily-reward-dapp.md)를 참고하세요.
-- 클라이언트 모딩을 하고 싶다면 [Bepenix 가이드](./guide/bepinex-guide.md)를 참고하세요.
+- 클라이언트 모딩을 하고 싶다면 [BepInEx 가이드](./guide/bepinex-guide.md)를 참고하세요.
 
 ## 관련 라이브러리
 
