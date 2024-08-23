@@ -10,12 +10,10 @@ export const ko = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/ko/guide/': { base: '/ko/', items: sidebarGuide() },
-      '/ko/introduce/': { base: '/ko/', items: sidebarGuide() },
-
-      '/ko/examples/': { base: '/ko/', items: sidebarReference() },
-      '/ko/for-modder/': { base: '/ko/', items: sidebarReference() },
-
+      '/ko/introduce/': { base: '/ko/', items: sidebarGeneral() },
+      '/ko/general/': { base: '/ko/', items: sidebarGeneral() },
+      '/ko/network/': { base: '/ko/', items: sidebarNetwork() },
+      '/ko/modding/': { base: '/ko/', items: sidebarModding() },
       '/forum-trunk/': { base: '/forum-trunk/', items: sidebarForumTrunk() },
     },
 
@@ -29,14 +27,19 @@ export const ko = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '가이드',
-      link: '/ko/introduce/what-is-nine-chronicles',
-      activeMatch: '/ko/introduce/'
+      text: '일반',
+      link: '/ko/general/what-is-nine-chronicles',
+      activeMatch: '/ko/general/'
     },
     {
-      text: '참조',
-      link: '/ko/for-modder/getting-started',
-      activeMatch: '/ko/for-modder/'
+      text: '네트워크',
+      link: '/ko/network/create-network/getting-started',
+      activeMatch: '/ko/network/'
+    },
+    {
+      text: '모딩',
+      link: '/ko/modding/getting-started',
+      activeMatch: '/ko/modding/'
     },
     {
       text: '포럼 트렁크',
@@ -46,30 +49,34 @@ function nav(): DefaultTheme.NavItem[] {
   ];
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function sidebarGeneral(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '소개',
       collapsed: false,
       items: [
-        { text: '나인크로니클은 무엇인가?', link: 'introduce/what-is-nine-chronicles' },
-        { text: '네트워크', link: 'introduce/networks' },
-        { text: '멀티플라네타리', link: 'introduce/multiplanetary' },
-        { text: '개발자 생태계', link: 'introduce/developer-ecosystem' },
+        { text: '나인크로니클은 무엇인가?', link: 'general/what-is-nine-chronicles' },
+        { text: '네트워크', link: 'general/networks' },
+        { text: '멀티플라네타리', link: 'general/multiplanetary' },
+        { text: '개발자 생태계', link: 'general/developer-ecosystem' },
       ]
-    },
+    }
+  ];
+}
+
+function sidebarNetwork(): DefaultTheme.SidebarItem[] {
+  return [
     {
       text: '네트워크 만들기',
       collapsed: false,
       items: [
-        { text: '시작하기', link: 'guide/create-network/getting-started' },
-        { text: '개인 키 만들기', link: 'guide/create-network/create-a-private-key' },
-        { text: '제네시스 블록 만들기', link: 'guide/create-network/create-a-genesis-block' },
+        { text: '시작하기', link: 'network/create-network/getting-started' },
+        { text: '개인 키 만들기', link: 'network/create-network/create-a-private-key' },
+        { text: '제네시스 블록 만들기', link: 'network/create-network/create-a-genesis-block' },
         {
           text: '블록체인 노드 실행하기',
           items: [
-            { text: '.NET 프로젝트', link: 'guide/create-network/running-a-blockchain-node-with-dotnet-project' },
-            // { text: 'Docker' }
+            { text: '.NET 프로젝트', link: 'network/create-network/running-a-blockchain-node-with-dotnet-project' },
           ]
         },
       ]
@@ -78,15 +85,14 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: '상태 조회하기',
       collapsed: false,
       items: [
-        { text: 'GraphQL(Headless)', link: 'guide/get-state/get-state-with-headless-graphql' },
-        // { text: 'GraphQL(Mimir)' },
+        { text: 'GraphQL(Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
       ]
     },
     {
       text: '트랜젝션 발행하기',
       collapsed: false,
       items: [
-        { text: '크로노', link: 'guide/issue-transaction/issue-transaction-with-chrono' }
+        { text: '크로노', link: 'network/issue-transaction/issue-transaction-with-chrono' }
       ]
     },
     // {
@@ -101,34 +107,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-function sidebarReference(): DefaultTheme.SidebarItem[] {
+function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: '모딩 가이드',
       collapsed: false,
       items: [
-        { text: '시작하기', link: 'for-modder/getting-started' },
-        { text: '아바타 정보 웹사이트', link: 'for-modder/guide/avatar-information-dapp-guide.md' },
-        { text: '송금 웹사이트', link: 'for-modder/guide/transfer-ncg-with-chrono.md' },
-        { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'for-modder/guide/bepinex-guide.md' },
-        // {
-        //   text: 'NineChronicles의 시스템 이해하기',
-        //   items: [
-        //     { text: 'TableSheet' },
-        //     { text: 'Hit 계산 공식' },
-        //   ]
-        // },
+        { text: '시작하기', link: 'modding/getting-started' },
+        { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide.md' },
+        { text: '송금 웹사이트', link: 'modding/guide/transfer-ncg-with-chrono.md' },
+        { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide.md' },
       ]
-    },
-    {
-      text: '예제',
-      collapsed: false,
-      items: [
-        { text: 'Getting Started', link: 'examples/getting-started' },
-        // { text: 'Transfer NCG(Chrono)', link: '/examples/transfer-ncg-with-chrono' },
-        // { text: 'Daily Reward DApp', link: '/examples/daily-reward-dapp' }
-      ]
-    },
+    }
   ];
 }
 

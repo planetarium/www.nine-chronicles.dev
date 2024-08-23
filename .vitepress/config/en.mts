@@ -10,12 +10,10 @@ export const en = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/guide/': { base: '', items: sidebarGuide() },
-      '/introduce/': { base: '', items: sidebarGuide() },
-
-      '/examples/': { base: '', items: sidebarReference() },
-      '/for-modder/': { base: '', items: sidebarReference() },
-
+      '/introduce/': { base: '/', items: sidebarGeneral() },
+      '/general/': { base: '/', items: sidebarGeneral() },
+      '/network/': { base: '/', items: sidebarNetwork() },
+      '/modding/': { base: '/', items: sidebarModding() },
       '/forum-trunk/': { base: '/forum-trunk/', items: sidebarForumTrunk() },
     },
 
@@ -29,14 +27,19 @@ export const en = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: 'Guide',
-      link: '/introduce/what-is-nine-chronicles',
-      activeMatch: '/introduce/'
+      text: 'General',
+      link: '/general/what-is-nine-chronicles',
+      activeMatch: '/general/'
     },
     {
-      text: 'Reference',
-      link: '/for-modder/getting-started',
-      activeMatch: '/for-modder/'
+      text: 'Network',
+      link: '/network/create-network/getting-started',
+      activeMatch: '/network/'
+    },
+    {
+      text: 'Modding',
+      link: '/modding/getting-started',
+      activeMatch: '/modding/'
     },
     {
       text: 'Forum Trunk',
@@ -46,30 +49,34 @@ function nav(): DefaultTheme.NavItem[] {
   ];
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function sidebarGeneral(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduce',
+      text: 'Introduction',
       collapsed: false,
       items: [
-        { text: 'Nine Chronicles?', link: '/introduce/what-is-nine-chronicles' },
-        { text: 'Networks', link: '/introduce/networks' },
-        { text: 'Multiplanetary', link: '/introduce/multiplanetary' },
-        { text: 'Developer Ecosystem', link: '/introduce/developer-ecosystem' },
+        { text: 'What is Nine Chronicles?', link: 'general/what-is-nine-chronicles' },
+        { text: 'Networks', link: 'general/networks' },
+        { text: 'Multiplanetary', link: 'general/multiplanetary' },
+        { text: 'Developer Ecosystem', link: 'general/developer-ecosystem' },
       ]
-    },
+    }
+  ];
+}
+
+function sidebarNetwork(): DefaultTheme.SidebarItem[] {
+  return [
     {
       text: 'Create Network',
       collapsed: false,
       items: [
-        { text: 'Getting Started', link: '/guide/create-network/getting-started' },
-        { text: 'Create a Private Key', link: '/guide/create-network/create-a-private-key' },
-        { text: 'Create a Genesis Block', link: '/guide/create-network/create-a-genesis-block' },
+        { text: 'Getting Started', link: 'network/create-network/getting-started' },
+        { text: 'Create a Private Key', link: 'network/create-network/create-a-private-key' },
+        { text: 'Create a Genesis Block', link: 'network/create-network/create-a-genesis-block' },
         {
           text: 'Running a Blockchain Node',
           items: [
-            { text: '.NET Project', link: '/guide/create-network/running-a-blockchain-node-with-dotnet-project' },
-            // { text: 'Docker' }
+            { text: '.NET Project', link: 'network/create-network/running-a-blockchain-node-with-dotnet-project' },
           ]
         },
       ]
@@ -78,57 +85,31 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Get State',
       collapsed: false,
       items: [
-        { text: 'GraphQL(Headless)', link: '/guide/get-state/get-state-with-headless-graphql' },
-        // { text: 'GraphQL(Mimir)' },
+        { text: 'GraphQL (Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
       ]
     },
     {
       text: 'Issue Transaction',
       collapsed: false,
       items: [
-        { text: 'Chrono', link: '/guide/issue-transaction/issue-transaction-with-chrono' }
+        { text: 'Chrono', link: 'network/issue-transaction/issue-transaction-with-chrono' }
       ]
     },
-    // {
-    //   text: 'Join Mainnet',
-    //   collapsed: false,
-    //   items: [
-    //     { text: 'Play Nine Chronicles', link: '/guide/join-mainnet/play-nc' },
-    //     { text: 'Operating a Blockchain Node', link: '/guide/join-mainnet/operating-a-blockchain-node' },
-    //     { text: 'Modding', link: '/guide/join-mainnet/modding' },
-    //   ]
-    // },
   ];
 }
 
-function sidebarReference(): DefaultTheme.SidebarItem[] {
+function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Modding',
       collapsed: false,
       items: [
-        { text: 'Getting started', link: '/for-modder/getting-started' },
-        { text: 'Avatar information website', link: '/for-modder/guide/avatar-information-dapp-guide' },
-        { text: 'Transfer NCG website', link: '/for-modder/guide/transfer-ncg-with-chrono' },
-        { text: 'Client modding with Bepinex', link: '/for-modder/guide/bepinex-guide' },
-        // {
-        //   text: 'NineChronicles의 시스템 이해하기',
-        //   items: [
-        //     { text: 'TableSheet' },
-        //     { text: 'Hit 계산 공식' },
-        //   ]
-        // },
+        { text: 'Getting Started', link: 'modding/getting-started' },
+        { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
+        { text: 'Transfer NCG Website', link: 'modding/guide/transfer-ncg-with-chrono' },
+        { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
       ]
-    },
-    {
-      text: 'Examples',
-      collapsed: false,
-      items: [
-        { text: 'Getting Started', link: '/examples/getting-started' },
-        { text: 'Transfer NCG(Chrono)', link: '/examples/transfer-ncg-with-chrono' },
-        { text: 'Daily Reward DApp', link: '/examples/daily-reward-dapp' }
-      ]
-    },
+    }
   ];
 }
 
