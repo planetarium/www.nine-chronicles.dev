@@ -1,173 +1,118 @@
-# Creating an NCG Transfer Page
+# Daily Reward Page Creation Tutorial
 
-In this document, we will create a web application that allows users to input the recipient and amount, sign through Chrono, and transfer NCG.
+::: danger :rotating_light:
+This example requires a signature, so you must have a Nine Chronicles account with an avatar that has claimed the Daily Reward (Action Point refill) at least once in order to proceed.
+:::
 
-## 1. Clone Repository
+This tutorial walks you through creating a website to receive the Daily Reward using Nine Chronicles' signature tool, [Chrono](../../general/chrono/how-to-use-chrono).
 
-Create a React project that uses the Vite bundler through `create-vite` and install dependencies such as `@planetarium/lib9c`, `@planetarium/account`, `@planetarium/tx`, and `@planetarium/chrono-sdk`.
+Before starting, please check the [Chrono](../../general/chrono/how-to-use-chrono) documentation, install the extension, and import a private key with a playable avatar.
 
-To facilitate this, a template repository has been prepared. You can create a repository using the `Use this template` button on GitHub or directly clone it and work locally: https://github.com/planetarium/chrono-webapp-template
+# Project Setup
 
+We'll use [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/) to quickly set up the front end of the project.
+
+```sh
+npx create-react-app some-app-name --template @planetarium/9c-chrono
 ```
-gh repo clone planetarium/chrono-webapp-template
-git clone https://github.com/planetarium/chrono-webapp-template
-```
+First, we fetch the basic project settings via [Create React App](https://create-react-app.dev/) and run it.
 
-We will start creating `App.tsx`.
-
-```tsx
-function App() {
-  return <p>Template</p>
-}
-
-export default App
-```
-
-## 2. Display Connect Button
-
-If you've used dApps often, you're probably familiar with seeing a Connect button for linking MetaMask with a website. Chrono also requires a connection process to prevent unauthorized signing on any website. Let's display the Connect button to facilitate this.
-
-The template repository already includes a `ConnectButton`.
-
-```tsx
-import { useConnect } from "@planetarium/chrono-sdk/hooks";
-
-export function ConnectButton() {
-    const { connectAsync, isPending } = useConnect();
-
-    return <button onClick={() => connectAsync()} disabled={isPending}>
-      Connect
-    </button>
-}
+```sh
+cd some-app-name
+npm run codegen
+npm run start
 ```
 
-Let's import and use it.
+Once the project runs successfully, you're all set!
 
-```tsx
-import { ConnectButton } from "./ConnectButton";
+## Claiming the Daily Reward
 
-function App() {
-    return <ConnectButton />
-}
+First, connect the site to your wallet.  
+![alt text](/images/modding/guide/daily-reward-dapp/connect-chrono.png)
+
+Afterward, retrieve the playable address, and once the avatar is displayed, you're good to go. Click the Refill button, sign the transaction, and claim your Daily Reward.  
+![alt text](/images/modding/guide/daily-reward-dapp/refill-buttons.png)
+
+## Key Code Explanation
+
+Since we downloaded the template through create-react-app, most of the settings to use Chrono are already in place.
+
+### Loading the SDK
+
+```ts
+// App.tsx
+const chronoWallet = getChronoSdk();
 ```
 
-Now, when you click the Connect button, a Chrono popup will appear and prompt you to proceed with the connection.
+You can load the SDK to communicate with Chrono using `getChronoSdk`.
 
-## 3. Creating the Form
+### Fetching Various Wallet Information
 
-The purpose of this example is to send NCG to a specific person. Therefore, we will create a form that allows us to configure this.
+```ts
+// App.tsx
+const {
+  data: accountsData,
+  isLoading: accountsLoading,
+  isSuccess: accountsSuccess,
+  error: accountsError,
+} = useAccounts();
+const { connectAsync, isPending } = useConnect();
+const {
+  data: networksData,
+  isLoading: networksLoading,
+  isSuccess: networksSuccess,
+} = useNetwork();
+```
 
-The required elements are the following three:
+You can use various React Hooks to fetch account information or details about the network your wallet is connected to.
 
-- `sender`: The address from which the NCG will be withdrawn and sent.
-- `recipient`: The address to which the NCG will be sent.
-- `amount`: The amount of NCG to be sent.
+### Signing a Transaction
 
-Since `recipient` and `amount` are parts that the user inputs, you don't need to worry too much about them. However, `sender` needs special handling because it has to display Chrono accounts. To retrieve the accounts connected through Chrono, you can use `useAccounts`.
+```ts
+// RefillButton.tsx
+import { DailyReward } from "@planetarium/lib9c";
 
-`useAccounts` provides `isConnected: boolean` and `accounts: Address[]` as its data type. Depending on whether `isConnected` is true or false, we need to show the Connect button. Therefore, `useAccounts` will be used externally to display the necessary interface.
-
-```tsx
-import { Address } from "@planetarium/account";
-import { getChronoSdk } from "@planetarium/chrono-sdk";
-import { useAccounts } from "@planetarium/chrono-sdk/hooks";
-import { NCG, TransferAsset, fav } from "@planetarium/lib9c";
-import { useState } from "react";
-import { useStageTransactionMutation } from "./generated/graphql";
-
-interface AccountSelectorProps {
-  account: Address,
-  accounts: Address[],
-  onSelect: (value: Address) => void;
+function createDailyRewardAction(avatarAddress: Address): DailyReward {
+  return new DailyReward({
+    avatarAddress,
+  });
 }
 
-function AccountSelector({ account, accounts, onSelect }: AccountSelectorProps) {
-  return <select value={account.toString()} onChange={e => onSelect(accounts[Number(e.target.value)])}>
-    {accounts.map((acc, index) => <option key={acc.toString()} value={index}>{acc.toString()}</option>)}
-  </select>
-}
+...
 
-interface SendButtonProps {
-  sender: Address,
-  recipient: Address,
-  amount: number,
+const [stage] = useStageTransactionMutation();
+const action = useMemo(() => {
+  return createDailyRewardAction(avatarAddress);
+}, [avatarAddress]);
 
-  setTxId: (id: string | null) => void;
-}
+...
 
-function SendButton({
-  sender, recipient, amount, setTxId
-}: SendButtonProps) {
-  const [stage] = useStageTransactionMutation();
-  const chronoSdk = getChronoSdk()!;
-  function onClick() {
-    chronoSdk.sign(sender, new TransferAsset({
-      // @ts-ignore
-      sender,
-      // @ts-ignore
-      recipient,
-      amount: fav(NCG, amount)
-    })).then(tx => {
-      console.log(tx.toString("hex"))
-      return stage({
-        variables: {
-          tx: tx.toString('hex'),
-        }
-      });
-    }).then(({ data }) => {
-      console.log(data);
+chronoWallet
+  .sign(signer, action)
+  .then((tx) => {
+    setProgress("Staging");
+    return stage({
+      variables: { tx: tx.toString("hex") },
+    }).then(({ data, errors }) => {
+      setProgress("Done");
       setTxId(data?.stageTransaction || null);
-    }).catch(console.error);
-  }
-
-  return <button onClick={e => {
-    e.preventDefault();
-    onClick();
-  }}>Send</button>
-}
-
-interface FormProps {
-  accounts: Address[],
-}
-
-function Form({
-  accounts,
-}: FormProps) {
-  const [sender, setSender] = useState<Address>(accounts[0]);
-  const [recipient, setRecipient] = useState<string>("");
-  const [amount, setAmount] = useState<number>(0);
-  const [txId, setTxId] = useState<string | null>(null);
-  return <form>
-      <label>Sender</label>
-      <AccountSelector accounts={accounts} onSelect={setSender} account={sender} />
-      <br/>
-
-      <label>Recipient</label>
-      <input type='text' value={recipient} onChange={e => setRecipient(e.target.value)} />
-      <br/>
-
-      <label>Amount</label>
-      <input type='number' value={amount} onChange={e => setAmount(Number(e.target.value))} />
-      <br/>
-
-      {recipient.length === 42 && <SendButton sender={sender} recipient={Address.fromHex(recipient, true)} amount={amount} setTxId={setTxId} />}
-      <br/>
-
-      {txId && <a href={`https://9cscan.com/tx/${txId}`}>9cscan link</a>}
-  </form>
-}
-
-function App() {
-  const { data, isSuccess, error } = useAccounts();
-  if (!isSuccess) {
-    return <p>Failed to run 'useAccounts' hook: {error === null ? "null" : error.message}</p>
-  }
-
-  const { accounts, isConnected } = data;
-  if (!isConnected) {
-    return <ConnectButton />
-  }
-
-  return <Form accounts={accounts}/>
-}
+    });
+  })
+  .catch((e: unknown) => {
+    setProgress("None");
+  });
 ```
+
+The signing process can be done in the following steps:
+1. Use the lib9c library to create the action you want to send.
+2. Wrap the action into a transaction and sign it using Chrono.
+3. Send the signed transaction through the headless API.
+4. The network (blockchain) will review the transaction, add it to a block, and apply the requested action.
+
+## Conclusion
+
+By using Chrono for signing, you can create websites that support various features like transferring funds, participating in arena battles, and more. Build your own app using Chrono!
+
+::: info
+The completed example can be found in the [9c-examples](https://github.com/planetarium/9c-examples/tree/main/daily-reward) repository.
+:::
