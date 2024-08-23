@@ -93,6 +93,7 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'GraphQL (Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
+        { text: 'GraphQL (Mimir)', link: 'network/get-state/get-state-with-mimir-graphql' },
       ]
     },
     {
