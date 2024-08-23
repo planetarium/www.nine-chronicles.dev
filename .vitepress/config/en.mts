@@ -66,6 +66,14 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
             { text: 'How to use', link: 'general/chrono/how-to-use-chrono' }
           ]
         },
+        {
+          text: 'Get State',
+          collapsed: false,
+          items: [
+            { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
+            { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
+          ]
+        },
       ]
     }
   ];
@@ -89,11 +97,10 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
       ]
     },
     {
-      text: 'Get State',
+      text: 'Get State From Headless',
       collapsed: false,
       items: [
         { text: 'GraphQL (Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
-        { text: 'GraphQL (Mimir)', link: 'network/get-state/get-state-with-mimir-graphql' },
       ]
     },
     {

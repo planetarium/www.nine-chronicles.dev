@@ -1,5 +1,5 @@
 # 아바타 정보 페이지 제작 튜토리얼 
-나인크로니클의 최신 상태를 GraphQL로 쉽게 조회해볼 수 있는 서비스인 [Mimir](../../network/get-state/get-state-with-mimir-graphql)를 통해 간단하게 아바타 정보를 받아와 보드를 만들어보는 튜토리얼 입니다.
+나인크로니클의 최신 상태를 GraphQL로 쉽게 조회해볼 수 있는 서비스인 [Mimir](../../general/get-state/get-state-with-mimir-graphql)를 통해 간단하게 아바타 정보를 받아와 보드를 만들어보는 튜토리얼 입니다.
 
 # 프로젝트 세팅
 프로젝트는 빠르게 프론트를 만들어볼 수 있는 [React](https://react.dev/)와 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.

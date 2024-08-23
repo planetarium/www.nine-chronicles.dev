@@ -66,6 +66,14 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
             { text: '사용법', link: 'general/chrono/how-to-use-chrono' }
           ]
         },
+        {
+          text: '상태 조회하기',
+          collapsed: false,
+          items: [
+            { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
+            { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
+          ]
+        },
       ]
     }
   ];
@@ -92,8 +100,7 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
       text: '상태 조회하기',
       collapsed: false,
       items: [
-        { text: 'GraphQL(Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
-        { text: 'GraphQL(Mimir)', link: 'network/get-state/get-state-with-mimir-graphql' },
+        { text: 'Headless에서 상태 조회하기', link: 'network/get-state/get-state-with-headless-graphql' },
       ]
     },
     {
