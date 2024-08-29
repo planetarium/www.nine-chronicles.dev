@@ -1,29 +1,17 @@
 # 트랜젝션 발행하기: `크로노`
 
-나인크로니클 블록체인 네트워크에 트랜젝션을 발행하는 여러 방법 중에서 `크로노`를 사용하는 방법을 알아 보겠습니다. `크로노`는 `메타마스크`와 비슷한 기능을 제공하는 크롬 브라우저의 확장입니다. 사용자는 `크로노`에 개인 키를 등록하고 원하는 네트워크를 설정할 수 있고, 웹앱으로부터 요청 받은 트랜젝션을 크로노로 서명하고 전파할 수 있습니다.
+나인크로니클 블록체인 네트워크에 트랜젝션을 발행하는 여러 방법 중에서 `크로노`를 사용해 트랜잭션을 발행하는 방법을 알아 보겠습니다. `크로노`는 `메타마스크`와 비슷한 기능을 제공하는 크롬 브라우저의 확장입니다. 사용자는 `크로노`에 개인 키를 등록하고 원하는 네트워크를 설정할 수 있고, 웹앱으로부터 요청 받은 트랜젝션을 크로노로 서명하고 전파할 수 있습니다.
 
 ## 크로노 설치
-[이 글](../../general/chrono/how-to-use-chrono)을 참고해 크로노를 설치합니다.
-
-## `크로노`에 네트워크 추가하기
-
-이제 `크로노`가 통신할 나인크로니클 블록체인 네트워크를 등록해보겠습니다. `크로노`를 열고, 좌상단의 `odin` 버튼을 선택하고, `Add New` 버튼을 선택합니다.
-![Add network to "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/add-network.png){width=360}
-
-아래 이미지와 같이 네트워크 정보를 입력하는 UI가 나타납니다. 여기서 네트워크 정보를 입력하고 `Import` 버튼을 클릭합니다.
-![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-network-empty.png){width=360}
+[해당 가이드](../../general/chrono/how-to-use-chrono)를 참고해 크로노를 설치합니다.
 
 ### 로컬 노드를 네트워크로 추가하기
 
-우리는 [이 글](../create-network/running-a-blockchain-node-with-dotnet-project)에서 로컬 네트워크를 만들고 실행하는 방법을 알아봤는데요. 이 네트워크 정보를 `크로노`에 추가해보겠습니다.
-
-1. [이 글](../create-network/running-a-blockchain-node-with-dotnet-project)을 참고해서 로컬 노드를 실행합니다. 아래는 예시입니다.
-    ```shell
-    dotnet run --config=./appsettings.local.json --arena-participants-sync=false
+1. 먼저 로컬 노드를 다시 실행해주세요.
+    ```sh
+    9crun run --version=v200220 --planet=Single
     ```
-2. [이 글](../get-state/get-state-with-headless-graphql)을 참고해서 GraphQL Playground에 접속합니다. 아래는 예시입니다.
-    http://127.0.0.1:31280/ui/playground
-3. GraphQL Playground에서 다음 정보를 입력해 제네시스 블록의 해시를 조회해보겠습니다.
+2. [GraphQL Playground](http://127.0.0.1:31280/ui/playground)에서 다음 정보를 입력해 제네시스 블록의 해시를 조회해보겠습니다.
     ::: code-group
     ```graphql [Query]
     query {
@@ -58,11 +46,20 @@
 - Is Mainnet: false
 ```
 
-이제 위 정보를 `크로노`의 UI에 입력하고 `Import` 버튼을 클릭합니다.
-![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-my-local-network.png){width=360}
+Planet ID는 식별자이며 자리수만 동일하다면 다른 값으로 넣어주어도 무방합니다.
+
+### `크로노`에 네트워크 추가하기
+
+이제 `크로노`에 가동했던 로컬 네트워크를 등록해보겠습니다. `크로노`를 열고, 좌상단의 `odin` 버튼을 선택하고, `Add New` 버튼을 선택합니다.
+![Add network to "Chrono"](/images/en/guide/issue-transaction/issue-transaction-with-chrono/add-network.png){width=360}
+
+아래 이미지와 같이 네트워크 정보를 입력하는 UI가 나타납니다. 여기서 네트워크 정보를 입력하고 `Import` 버튼을 클릭합니다.
+![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/import-network-empty.png){width=360}
 
 잠시 기다리면, `My local` 네트워크가 성공적으로 추가됩니다.
 ![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/my-local-network.png){width=360}
+
+이후 [해당 가이드](../../general/chrono/how-to-use-chrono#register-private-key)를 참고해 생성했던 private key를 import 해옵니다.
 
 > 위의 이미지를 다시 보면, `크로노`에서 선택되어 있는 계정에 3,920 NCG가 있는 것을 확인할 수 있습니다. 로컬 노드를 실행할 때 사용한 개인 키에 블록 채굴 보상이 꾸준히 쌓였는데, 이 개인 키와 같은 계정을 `크로노`에서 선택했기 때문에 NCG 잔액이 이렇게 표시되는 것입니다.
 
@@ -95,13 +92,13 @@
 
 ### 상태 조회
 
-마지막으로 로컬 노드의 GraphQL Playground에서 새로 추가한 아바타 정보를 조회해보겠습니다.
+마지막으로 로컬 노드의 [GraphQL Playground](http://127.0.0.1:31280/ui/playground)에서 새로 추가한 아바타 정보를 조회해보겠습니다.
 
 ::: code-group
 ```graphql [Query]
 query {
   stateQuery {
-     agent(address: "0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159") {
+     agent(address: "{your address}") {
       avatarStates {
         address
         name
@@ -132,5 +129,6 @@ query {
 이렇게 새로 생성한 아바타의 상태를 확인할 수 있습니다. 위의 GraphQL 쿼리를 통해 아바타의 주소와 이름을 조회할 수 있으며, 이를 통해 아바타가 성공적으로 생성되었음을 확인할 수 있습니다.
 
 ::: tip :tada:
-수고하셨습니다! 이제 여러분은 `크로노`를 사용해서 계정과 네트워크를 설정할 수 있고, `크로노`를 사용하는 웹앱을 통해 트랜젝션을 발행하는 방법을 배웠습니다. 앞으로 다양하고 재밌는 웹앱을 만들어보세요!
+수고하셨습니다! 이제 여러분은 `크로노`를 사용해서 계정과 네트워크를 설정할 수 있고, `크로노`를 사용하는 웹앱을 통해 트랜젝션을 발행하는 방법을 배웠습니다.  
+이제 튜토리얼도 거의 막바지입니다. 크로노를 활용해 Transaction을 발행해보았다면 충분히 활용할 수 있겠지만 마지막으로 로컬 네트워크를 실제 Game Client에서 가동해보는 방법을 배워봅니다.
 :::

@@ -34,7 +34,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: 'Network',
-      link: '/network/create-network/getting-started',
+      link: '/network/local-network-tutorial/getting-started',
       activeMatch: '/network/'
     },
     {
@@ -82,34 +82,20 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
 function sidebarNetwork(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Create Network',
+      text: 'Running the Network',
       collapsed: false,
       items: [
-        { text: 'Getting Started', link: 'network/create-network/getting-started' },
-        { text: 'Create a Private Key', link: 'network/create-network/create-a-private-key' },
-        { text: 'Create a Genesis Block', link: 'network/create-network/create-a-genesis-block' },
-        {
-          text: 'Running a Blockchain Node',
-          items: [
-            { text: '.NET Project', link: 'network/create-network/running-a-blockchain-node-with-dotnet-project' },
-          ]
-        },
+        { text: 'Getting Started', link: 'network/local-network-tutorial/getting-started' },
+        { text: 'Running a Blockchain Node', link: 'network/local-network-tutorial/running-node-with-executor' },
+        { text: 'Querying State', link: 'network/local-network-tutorial/get-state-with-headless-graphql' },
+        { text: 'Creating a Private Key', link: 'network/local-network-tutorial/create-a-private-key' },
+        { text: 'Creating a Genesis Block', link: 'network/local-network-tutorial/create-a-genesis-block' },
+        { text: 'Running a Node with Your Own Key', link: 'network/local-network-tutorial/running-node-with-own-private-key' },
+        { text: 'Issuing a Transaction', link: 'network/local-network-tutorial/issue-transaction-with-chrono' },
+        { text: 'Running the Client with a Local Node', link: 'network/local-network-tutorial/run-client-with-local-node' }
       ]
-    },
-    {
-      text: 'Get State From Headless',
-      collapsed: false,
-      items: [
-        { text: 'GraphQL (Headless)', link: 'network/get-state/get-state-with-headless-graphql' },
-      ]
-    },
-    {
-      text: 'Issue Transaction',
-      collapsed: false,
-      items: [
-        { text: 'Chrono', link: 'network/issue-transaction/issue-transaction-with-chrono' }
-      ]
-    },
+    }
+    
   ];
 }
 

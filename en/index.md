@@ -14,7 +14,7 @@ hero:
       link: /general/what-is-nine-chronicles
     - theme: alt
       text: Start Network
-      link: /network/create-network/getting-started
+      link: /network/local-network-tutorial/getting-started
 
 features:
   - icon: 🔗

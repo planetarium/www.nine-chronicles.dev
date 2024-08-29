@@ -1,39 +1,45 @@
-# Create a private key
+# Creating a Private Key
 
-In order to participate in a blockchain network, that is, to issue transactions, we need to create a private key. A private key allows us to secure our account and perform transactions using our own independent key.
+To participate in a blockchain network, such as issuing transactions, you need to create a private key. This private key allows you to secure your account and perform transactions using your unique key.
 
-[Libplanet][libplanet], the blockchain technology behind Nine Chronicles, provides a cli called `planet` through the [Libplanet.Tools][libplanet-tools] project. Let's use it to create a private key.
+In Nine Chronicles, the blockchain technology is powered by [Libplanet][libplanet]. Through the [Libplanet.Tools][libplanet-tools] project, you can use the `planet` CLI to create a private key.
 
 [libplanet]: https://github.com/planetarium/libplanet
 [libplanet-tools]: https://github.com/planetarium/libplanet/tree/main/tools/Libplanet.Tools
 
-## Install the `planet` cli
+## Installing the `planet` CLI
 
-First, install the `planet` cli by referring to the [README documentation][readme] of `Libplanet.Tools`.
+First, refer to the [README documentation][readme] for `Libplanet.Tools` to install the `planet` CLI.
 
 [readme]: https://github.com/planetarium/libplanet/blob/main/tools/Libplanet.Tools/README.md
 
 ::: info :bulb:
-This document uses the `planet` cli version 5.0.0.
+This tutorial uses version 5.0.0 of the `planet` CLI.
 :::
 
-## `planet key`
+## Using `planet key`
 
-Let's create a private key using the `planet key` command. First, let's run the `planet key` command to see the list of managed keys.
+Let's create a private key using the `planet key` command. First, run the `planet key` command to see the list of managed keys.
 
 ```shell
 planet key
 ```
+
+You should see something like this:
+
 ```console
 Key ID                               Address                                   
 ------------------------------------ ------------------------------------------
 ```
 
-We can see that we don't have the key yet. Next, let's run the `planet key --help` command to see what we can do.
+Since no keys exist yet, the list is empty. Next, let's check out the options available by running the `planet key --help` command.
 
 ```shell
 planet key --help
 ```
+
+You'll see the following output:
+
 ```console {7}
 Usage: planet key [command]
 Usage: planet key [--path <String>] [--help]
@@ -54,15 +60,18 @@ Options:
   -h, --help         Show help message
 ```
 
-Now let's generate a new private key using the `planet key create` command.
+Now, let's use the `planet key create` command to generate a new private key.
 
 ::: danger :rotating_light:
-When create your private key, you should use a strong passphrase.
+When creating a private key for actual use, make sure to use a strong passphrase.
 :::
 
 ```shell
 planet key create
 ```
+
+You'll be prompted to enter a passphrase:
+
 ```console
 Passphrase: ***************
 Retype passphrase: ***************
@@ -71,11 +80,14 @@ Key ID                               Address
 1fd94a3e-2273-489b-bd44-b62036e2c07d 0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159
 ```
 
-After entering the passphrase, a new private key was created. This key is represented by the `Key ID` and `Address` at the `planet` cli level. Below, we'll see the private and public keys from this key. Let's use the `planet key export --help` command to see how to use it.
+After entering a passphrase, a new private key is created. The key is represented by a `Key ID` and an `Address` within the `planet` CLI. Next, let's export the private and public keys from this `Key ID`. Run `planet key export --help` to see the available options.
 
 ```shell
 planet key export --help
 ```
+
+You'll see the following output:
+
 ```console {9}
 Usage: planet key export [--passphrase <PASSPHRASE>] [--passphrase-file <FILE>] [--public-key] [--bytes] [--json] [--path <String>] [--help] key-id
 
@@ -94,29 +106,35 @@ Options:
   -h, --help                       Show help message
 ```
 
-Let's verify the private key by entering the passphrase we entered above in the `--passphrase` option.
+Let's retrieve the private key using the `--passphrase` option with the passphrase you previously entered.
 
 ::: danger :rotating_light:
-We're exposing the private key here for illustrative purposes, but you should never expose a private key for any other purpose.
+For demonstration purposes, we will expose the private key here, but never expose your private key in any other context.
 :::
 
 ```shell
 planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=***************
 ```
+
+The output will be:
+
 ```console
 9fe5f7c309495d284ca36b948fdeca0e65b21a019e2f8a03efd849df88fab102
 ```
 
-Let's check the public key by adding the `--public-key` option.
+Now, let's export the public key using the `--public-key` option.
 
 ```shell
 planet key export 1fd94a3e-2273-489b-bd44-b62036e2c07d --passphrase=*************** --public-key
 ```
+
+The output will be:
+
 ```console
 033dafc7bf6d603578a8c51b04430b738aeeead8a012e1dcbd8c75cf18a625cf14
 ```
 
-Here is the information for the key we created above.
+Here’s a summary of the key information we’ve generated:
 
 ```
 Key ID: 1fd94a3e-2273-489b-bd44-b62036e2c07d
@@ -126,5 +144,5 @@ Address: 0xb4179Ad0d7565A6EcFA70d2a0f727461039e0159
 ```
 
 ::: tip :tada:
-Congratulations! You've now learned some of the ways to create and use a private key using the `planet` cli. Next, we'll utilize this key to create a genesis block.
+Great work! You’ve just learned how to create and manage a private key using the `planet` CLI. Next, we'll use this key to create a genesis block.
 :::

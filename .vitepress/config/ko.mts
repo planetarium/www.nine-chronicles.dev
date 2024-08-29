@@ -34,7 +34,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: '네트워크',
-      link: '/ko/network/create-network/getting-started',
+      link: '/ko/network/local-network-tutorial/getting-started',
       activeMatch: '/ko/network/'
     },
     {
@@ -82,32 +82,17 @@ function sidebarGeneral(): DefaultTheme.SidebarItem[] {
 function sidebarNetwork(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '네트워크 만들기',
+      text: '네트워크 실행하기',
       collapsed: false,
       items: [
-        { text: '시작하기', link: 'network/create-network/getting-started' },
-        { text: '개인 키 만들기', link: 'network/create-network/create-a-private-key' },
-        { text: '제네시스 블록 만들기', link: 'network/create-network/create-a-genesis-block' },
-        {
-          text: '블록체인 노드 실행하기',
-          items: [
-            { text: '.NET 프로젝트', link: 'network/create-network/running-a-blockchain-node-with-dotnet-project' },
-          ]
-        },
-      ]
-    },
-    {
-      text: '상태 조회하기',
-      collapsed: false,
-      items: [
-        { text: 'Headless에서 상태 조회하기', link: 'network/get-state/get-state-with-headless-graphql' },
-      ]
-    },
-    {
-      text: '트랜젝션 발행하기',
-      collapsed: false,
-      items: [
-        { text: '크로노', link: 'network/issue-transaction/issue-transaction-with-chrono' }
+        { text: '시작하기', link: 'network/local-network-tutorial/getting-started' },
+        { text: '블록체인 노드 실행하기',link: 'network/local-network-tutorial/running-node-with-executor.md' },
+        { text: '상태 조회하기',link: 'network/local-network-tutorial/get-state-with-headless-graphql.md' },
+        { text: '개인 키 만들기', link: 'network/local-network-tutorial/create-a-private-key' },
+        { text: '제네시스 블록 만들기', link: 'network/local-network-tutorial/create-a-genesis-block' },
+        { text: '자신의 key로 노드 실행하기',link: 'network/local-network-tutorial/running-node-with-own-private-key.md' },
+        { text: '트랜잭션 발행하기', link: 'network/local-network-tutorial/issue-transaction-with-chrono' },
+        { text: '로컬 네트워크로 client 실행하기', link: 'network/local-network-tutorial/run-client-with-local-node' }
       ]
     },
     // {
