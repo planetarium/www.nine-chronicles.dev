@@ -14,7 +14,7 @@ hero:
       link: /ko/general/what-is-nine-chronicles
     - theme: alt
       text: 네트워크 시작하기
-      link: /ko/network/create-network/getting-started
+      link: /ko/network/local-network-tutorial/getting-started
 
 features:
   - icon: 🔗
