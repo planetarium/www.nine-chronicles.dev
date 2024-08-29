@@ -44,7 +44,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: '기여',
-      link: '/contributing/repositories',
+      link: '/contributing/getting-started',
       activeMatch: '/contributing/'
     },
     {
