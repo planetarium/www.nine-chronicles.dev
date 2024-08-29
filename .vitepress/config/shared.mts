@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress';
 import footnote from 'markdown-it-footnote';
+import { withMermaid } from "vitepress-plugin-mermaid";
 
-export const shared = defineConfig({
+export const shared = withMermaid({
     title: 'Nine Chronicles Developer Portal',
     description: 'A comprehensive guide for Nine Chronicles developers.',
 
@@ -14,7 +14,7 @@ export const shared = defineConfig({
 
     markdown: {
         config: (md) => {
-            md.use(footnote)
+            md.use(footnote);
         },
         linkify: true,
         typographer: true,

@@ -133,6 +133,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
 
 function sidebarContributing(): DefaultTheme.SidebarItem[] {
   return [
+    { text: '시작하기', link: 'contributing/getting-started' },
     { text: '저장소 목록', link: 'contributing/repositories' },
   ];
 }

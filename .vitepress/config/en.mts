@@ -124,7 +124,8 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
 
 function sidebarContributing(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'Repositories', link: 'contributing/repositories' },
+    { text: 'Getting Started', link: 'getting-started' },
+    { text: 'Repositories', link: 'repositories' },
   ];
 }
 
