@@ -44,8 +44,8 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: '기여',
-      link: '/contributing/getting-started',
-      activeMatch: '/contributing/'
+      link: '/ko/contributing/getting-started',
+      activeMatch: '/ko/contributing/'
     },
     {
       text: '포럼 트렁크',
