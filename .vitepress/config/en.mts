@@ -95,16 +95,40 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
         { text: 'Issuing a Transaction', link: 'network/local-network-tutorial/issue-transaction-with-chrono' }
       ]
     }
-    
+
   ];
 }
 
 function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
     { text: 'Getting Started', link: 'modding/getting-started' },
-    { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
-    { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
-    { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
+    {
+      text: 'Tutorials',
+      collapsed: false,
+      items: [
+        { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
+        { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
+        { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
+      ]
+    },
+    {
+      text: 'System Guide',
+      collapsed: false,
+      items: [
+        { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
+        { text: 'Agent', link: 'modding/system-guide/agent' },
+        {
+          text: 'Avatar',
+          link: 'modding/system-guide/avatar/0-avatar',
+          collapsed: false,
+          items: [
+            { text: 'Inventory', link: 'modding/system-guide/avatar/inventory' },
+            { text: 'WorldInformation', link: 'modding/system-guide/avatar/world-information' },
+            { text: 'QuestList', link: 'modding/system-guide/avatar/quest-list' },
+          ]
+        },
+      ]
+    },
   ]
 }
 
