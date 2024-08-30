@@ -63,5 +63,5 @@ If you've played Nine Chronicles before, you should see a screen like the one ab
 Once you log in with your newly created account, you’ll be able to start playing. Since the Nine Chronicles client is running without external services (such as the Market Service or DataProvider), you won’t be able to access market or ranking information.
 
 ::: tip :tada:
-Congratulations! You’ve successfully run the game on a local network. Now, explore the DevForum documentation to learn more about modding, network participation, and contributing to open-source projects. Enjoy your adventure!
+Congratulations! You’re almost at the end of the tutorial. As a final step, let’s issue a transaction using Chrono, but this time in an environment outside of the game client.
 :::

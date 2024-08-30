@@ -91,8 +91,8 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
         { text: 'Creating a Private Key', link: 'network/local-network-tutorial/create-a-private-key' },
         { text: 'Creating a Genesis Block', link: 'network/local-network-tutorial/create-a-genesis-block' },
         { text: 'Running a Node with Your Own Key', link: 'network/local-network-tutorial/running-node-with-own-private-key' },
-        { text: 'Issuing a Transaction', link: 'network/local-network-tutorial/issue-transaction-with-chrono' },
-        { text: 'Running the Client with a Local Node', link: 'network/local-network-tutorial/run-client-with-local-node' }
+        { text: 'Running the Client with a Local Node', link: 'network/local-network-tutorial/run-client-with-local-node' },
+        { text: 'Issuing a Transaction', link: 'network/local-network-tutorial/issue-transaction-with-chrono' }
       ]
     }
     

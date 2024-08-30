@@ -91,8 +91,8 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
         { text: '개인 키 만들기', link: 'network/local-network-tutorial/create-a-private-key' },
         { text: '제네시스 블록 만들기', link: 'network/local-network-tutorial/create-a-genesis-block' },
         { text: '자신의 key로 노드 실행하기',link: 'network/local-network-tutorial/running-node-with-own-private-key.md' },
-        { text: '트랜잭션 발행하기', link: 'network/local-network-tutorial/issue-transaction-with-chrono' },
-        { text: '로컬 네트워크로 client 실행하기', link: 'network/local-network-tutorial/run-client-with-local-node' }
+        { text: '로컬 네트워크로 client 실행하기', link: 'network/local-network-tutorial/run-client-with-local-node' },
+        { text: '트랜잭션 발행하기', link: 'network/local-network-tutorial/issue-transaction-with-chrono' }
       ]
     },
     // {

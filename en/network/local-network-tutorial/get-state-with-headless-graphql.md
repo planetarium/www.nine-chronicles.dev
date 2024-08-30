@@ -1,15 +1,16 @@
-# Querying Blockchain State with GraphQL (Headless)
+# Querying the Main Network Status
 
-[NineChronicles.Headless][nc-headless], the blockchain node implementation for Nine Chronicles, provides a GraphQL API that allows you to query various types of information.  
-In this guide, we'll learn how to query the blockchain state on the main network using Headless and explore the available data.
+In this guide, we’ll learn how to query the blockchain status on the main network where the actual game is running using Headless, and explore what kind of data is available.
 
 [nc-headless]: https://github.com/planetarium/NineChronicles.Headless
 
-### Trying It Out in GraphQL Playground
+## Querying Status in the GraphQL Playground
 
-Let’s revisit the query we ran [earlier](./running-node-with-executor) and try it out in the Mainnet (Odin) GraphQL Playground.
+Let’s revisit the query we used [earlier](./running-node-with-executor) and try it on one of the main networks, the [Odin network](../../general/multiplanetary), by accessing its GraphQL Playground.
 
-- **GraphQL Playground URL (Mainnet)**: [https://9c-main-rpc-1.nine-chronicles.com/ui/playground](https://9c-main-rpc-1.nine-chronicles.com/ui/playground)
+- [Odin GraphQL Playground URL](https://9c-main-rpc-1.nine-chronicles.com/ui/playground)
+
+Enter the following query to check the current status of the node:
 
 ```graphql
 query {
@@ -23,7 +24,7 @@ query {
 }
 ```
 
-This query will retrieve the current status of the node:
+Here’s what the response might look like:
 
 ```json
 {
@@ -40,22 +41,58 @@ This query will retrieve the current status of the node:
 }
 ```
 
-## Querying Game Data
+Just like querying a locally running network, you can easily use GraphQL to query the state of the network where the actual game is running.
 
-In `libplanet`, blockchain data is stored in a key-value database (DB). If you have the address of the DB and the key you want to query, you can retrieve the stored value.
+## Understanding the Concept of Accounts
 
-Try running the following GraphQL query in the Playground:
+In `libplanet`, the concept of an `Account` functions similarly to a table in an RDB (Relational Database) to categorize blockchain data by purpose. Many pieces of data are stored separately in different `Accounts`, each identified by an `AccountAddress`. Each `Account` has its own key-value database where the data is stored.
+
+```mermaid
+erDiagram
+    ROOT ||--o{ AvatarAccount : contains
+    ROOT ||--o{ ArenaAccount : contains
+    ROOT ||--o{ "..." : "..."
+
+    AvatarAccount ||--|{ "KEY-VALUE DATABASE1" : stores
+    AvatarAccount {
+        address accountAddress
+    }
+    "KEY-VALUE DATABASE1" {
+        key value
+        key value
+        key value
+    }
+    
+    ArenaAccount ||--|{ "KEY-VALUE DATABASE2" : stores
+    ArenaAccount {
+        address accountAddress
+    }
+    "KEY-VALUE DATABASE2" {
+        key value
+        key value
+        key value
+    }
+
+```
+> [!NOTE]
+> The diagram above represents a simplified concept to help you understand how data is stored.
+
+## Querying ActionPoint Account Data
+
+Now, let’s query the `ActionPoint`, which functions like stamina in the game. You can find the address of the `Account` you’ll be querying at [this link](https://github.com/planetarium/lib9c/blob/main/Lib9c/Addresses.cs#L50).
 
 ```graphql
 query {
   state(
+    # Address of the ActionPoint Account
     accountAddress: "0000000000000000000000000000000000000021"
+    # Address of the avatar playing the game
     address: "0xc106714d1bf09c37bcff24362eea5508d925f37a"
   )
 }
 ```
 
-You should see a result similar to this:
+The response should look something like this:
 
 ```json
 {
@@ -66,16 +103,17 @@ You should see a result similar to this:
 }
 ```
 
-The data retrieved here pertains to `ActionPoint`. This information is stored in the DB at the `AccountAddress`, and the data fetched corresponds to the user at `0xc106714d1bf09c37bcff24362eea5508d925f37a`. This address represents an avatar of a player in the game, and data is saved here when an [action](https://github.com/planetarium/lib9c/blob/development/Lib9c/Action/DailyReward.cs#L83) is performed.
+With this GraphQL query, you can easily retrieve the `ActionPoint` of an avatar.
 
-We'll delve deeper into actions and states later, but for now, it’s enough to understand that blockchain data is stored and can be retrieved for use.
+Since the data is in `hex` format, it needs to be converted. Let’s use this [conversion site](https://www.rapidtables.com/convert/number/hex-to-ascii.html) for a quick conversion.
 
-The value `6931323065` might not make sense at first glance since it’s a `hex` value. To make it readable, you need to convert it. For example, you can use this [hex-to-ASCII conversion site](https://www.rapidtables.com/convert/number/hex-to-ascii.html) to decode the data.
+![Hex Conversion Example](/images/network/state-hex.png){width=480}
 
-![Hex Conversion Example](/images/network/state-hex.png)
+The converted value is `i120e`, which is encoded in Bencodex format. This encoding occurs because `libplanet` uses [Bencodex](https://github.com/planetarium/bencodex) for data encoding. Once you decode the value, it translates to `120`.
 
-In `libplanet`, data is encoded using [Bencodex](https://github.com/planetarium/bencodex), which is why the value is surrounded by `i` and `e`. After conversion, you’ll see that the data represents `120`.
+> [!NOTE]
+> The `i` and `e` are added during the Bencodex encoding process.
 
 ::: tip :tada:
-Well done! You’ve just learned how to query real game data using Headless and gained an understanding of how blockchain data flows. Don’t worry if some concepts seem complex; it’s okay not to grasp everything immediately. Next, we’ll cover how to work with private keys.
+Well done! You’ve successfully used Headless to query actual game data and gain insight into the structure of blockchain data. Don’t worry if some concepts seem complex—it's okay not to grasp everything right away. Next, we’ll dive into working with private keys.
 :::
