@@ -87,5 +87,5 @@ query {
 쿼리 결과에서 `miner` 항목에 각자 수정해서 입력한 private key의 address가 표시되는 것을 확인할 수 있습니다.
 
 ::: tip :tada:
-축하합니다! 이제 유니크한 자신의 private key로 Node를 가동하는 방법을 배웠습니다. 다음 단계에서는 Chrono를 활용해 자신의 네트워크에 Transaction을 발행해보겠습니다.
+축하합니다! 이제 유니크한 자신의 private key로 Node를 가동하는 방법을 배웠습니다. 다음 단계에서는 로컬 네트워크로 게임 클라이언트를 실행해보겠습니다.
 :::

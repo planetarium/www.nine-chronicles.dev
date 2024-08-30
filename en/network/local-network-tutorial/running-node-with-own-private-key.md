@@ -88,5 +88,6 @@ query {
 In the query result, check that the `miner` field shows the address corresponding to the private key you provided.
 
 ::: tip :tada:
-Congratulations! You’ve successfully learned how to run a node using your unique private key. Next, we’ll explore how to issue transactions on your network using Chrono.
+Congratulations! You've successfully learned how to run a node using your unique private key.  
+The next step is to launch the game client on your local network.
 :::
