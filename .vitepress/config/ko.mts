@@ -124,6 +124,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '주소와 상태', link: 'modding/system-guide/0-address-and-state' },
+        { text: '에이전트', link: 'modding/system-guide/agent' },
       ]
     },
   ];

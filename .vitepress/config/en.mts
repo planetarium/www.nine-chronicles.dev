@@ -116,6 +116,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
+        { text: 'Agent', link: 'modding/system-guide/agent' },
       ]
     },
   ]
