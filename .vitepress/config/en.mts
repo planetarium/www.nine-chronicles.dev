@@ -95,16 +95,29 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
         { text: 'Issuing a Transaction', link: 'network/local-network-tutorial/issue-transaction-with-chrono' }
       ]
     }
-    
+
   ];
 }
 
 function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
     { text: 'Getting Started', link: 'modding/getting-started' },
-    { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
-    { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
-    { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
+    {
+      text: 'Tutorials',
+      collapsed: false,
+      items: [
+        { text: 'Avatar Information Website', link: 'modding/guide/avatar-information-dapp-guide' },
+        { text: 'Daily Reward Website', link: 'modding/guide/daily-reward-dapp' },
+        { text: 'Client Modding with Bepinex', link: 'modding/guide/bepinex-guide' },
+      ]
+    },
+    {
+      text: 'System Guide',
+      collapsed: false,
+      items: [
+        { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
+      ]
+    },
   ]
 }
 

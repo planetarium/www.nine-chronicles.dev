@@ -86,11 +86,11 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '시작하기', link: 'network/local-network-tutorial/getting-started' },
-        { text: '블록체인 노드 실행하기',link: 'network/local-network-tutorial/running-node-with-executor.md' },
-        { text: '상태 조회하기',link: 'network/local-network-tutorial/get-state-with-headless-graphql.md' },
+        { text: '블록체인 노드 실행하기', link: 'network/local-network-tutorial/running-node-with-executor.md' },
+        { text: '상태 조회하기', link: 'network/local-network-tutorial/get-state-with-headless-graphql.md' },
         { text: '개인 키 만들기', link: 'network/local-network-tutorial/create-a-private-key' },
         { text: '제네시스 블록 만들기', link: 'network/local-network-tutorial/create-a-genesis-block' },
-        { text: '자신의 key로 노드 실행하기',link: 'network/local-network-tutorial/running-node-with-own-private-key.md' },
+        { text: '자신의 key로 노드 실행하기', link: 'network/local-network-tutorial/running-node-with-own-private-key.md' },
         { text: '로컬 네트워크로 client 실행하기', link: 'network/local-network-tutorial/run-client-with-local-node' },
         { text: '트랜잭션 발행하기', link: 'network/local-network-tutorial/issue-transaction-with-chrono' }
       ]
@@ -110,9 +110,22 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
 function sidebarModding(): DefaultTheme.SidebarItem[] {
   return [
     { text: '시작하기', link: 'modding/getting-started' },
-    { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide.md' },
-    { text: '데일리 리워드 웹사이트', link: 'modding/guide/daily-reward-dapp.md' },
-    { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide.md' },
+    {
+      text: '튜토리얼',
+      collapsed: false,
+      items: [
+        { text: '아바타 정보 웹사이트', link: 'modding/guide/avatar-information-dapp-guide' },
+        { text: '데일리 리워드 웹사이트', link: 'modding/guide/daily-reward-dapp' },
+        { text: 'Bepinex를 활용한 클라이언트 모딩', link: 'modding/guide/bepinex-guide' },
+      ]
+    },
+    {
+      text: '시스템 가이드',
+      collapsed: false,
+      items: [
+        { text: '주소와 상태', link: 'modding/system-guide/0-address-and-state' },
+      ]
+    },
   ];
 }
 
