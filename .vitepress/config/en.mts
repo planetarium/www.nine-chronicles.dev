@@ -117,6 +117,10 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
         { text: 'Agent', link: 'modding/system-guide/agent' },
+        {
+          text: 'Avatar',
+          link: 'modding/system-guide/avatar/0-avatar',
+        },
       ]
     },
   ]

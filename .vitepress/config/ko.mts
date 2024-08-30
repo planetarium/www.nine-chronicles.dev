@@ -125,6 +125,10 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '주소와 상태', link: 'modding/system-guide/0-address-and-state' },
         { text: '에이전트', link: 'modding/system-guide/agent' },
+        {
+          text: '아바타',
+          link: 'modding/system-guide/avatar/0-avatar',
+        },
       ]
     },
   ];
