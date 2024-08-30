@@ -132,6 +132,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
           items: [
             { text: '인벤토리', link: 'modding/system-guide/avatar/inventory' },
             { text: 'WorldInformation', link: 'modding/system-guide/avatar/world-information' },
+            { text: 'QuestList', link: 'modding/system-guide/avatar/quest-list' },
           ]
         },
       ]
