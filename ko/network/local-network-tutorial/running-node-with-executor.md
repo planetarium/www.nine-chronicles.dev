@@ -7,13 +7,13 @@
 :::
 
 ## NineChronicles.Headless.Executor 설치
-먼저 Headless를 쉽게 설치 및 실행하는 cli 도구인 NineChronicles.Headless.Executor를 설치합니다.
+먼저 Headless를 쉽게 설치하고 실행할 수 있는 cli 도구인 NineChronicles.Headless.Executor를 설치합니다.
 
 ```sh
 dotnet tool install --global NineChronicles.Headless.Executor
 ```
 
-`9crun`을 통해 사용할 수 있으며 `install`명령어와 `versions` 명령어를 통해 잘 설치되었는지 확인합니다.
+`9crun`을 통해 사용할 수 있으며 `install`명령어를 통해 `Headless`를 설치하고 `versions` 명령어를 통해 잘 설치되었는지 확인합니다.
 ```sh
 9crun install v200220
 9crun versions
@@ -25,12 +25,12 @@ Installed versions:
 v200220
 ```
 
-`9crun`에는 실행에 필요한 설정을 미리 넣어둔 템플릿들이 존재합니다. 지금은 단독 노드를 돌릴 것이기 때문에 `Single` 모드로 실행합니다.
+`9crun`에는 실행에 필요한 설정을 미리 넣어둔 템플릿들이 존재합니다. 지금은 테스트용도의 로컬 노드를 돌릴 것이기 때문에 `Single` 모드로 실행합니다.
 ```sh
 9crun run --version=v200220 --planet=Single
 ```
 
-아래처럼 많은 로그들과 함께 노드가 실행되면 성공입니다.
+사양에 따라 오래걸릴 수 있으며 아래처럼 많은 로그들과 함께 노드가 실행되면 성공입니다.
 ```
 [19:00:51 INF] The workstation garbage collector is running.
 [19:00:52 DBG] Secp256K1CryptoBackend initialized.
@@ -85,13 +85,14 @@ v200220
     └── ...
 ```
 
-블록체인 저장소가 정상적으로 생성되었음을 확인할 수 있습니다. 이는 나인크로니클 블록체인 노드가 정상적으로 동작하고 있는 증거이며 해당 store에 모든 블록체인 데이터가 적재됩니다.
+블록체인 저장소가 정상적으로 생성되었음을 확인할 수 있습니다. 이는 나인크로니클 블록체인 노드가 정상적으로 동작하고 있는 증거이며 해당 store에 모든 블록체인 데이터가 저장됩니다.
 
-## 상태 확인하기
-Headless에는 [Graphql](https://graphql.org/)을 통해 블록체인 상태를 확인할 수 있는 기능들이 있습니다.  
-Graphql을 통해 블록체인의 상태들을 조회해보겠습니다. [Local Headless](http://127.0.0.1:31280/ui/playground) 에 접속해 playground를 실행합니다.
+## 현재 노드의 상태 확인하기
+Headless에는 [Graphql](https://graphql.org/)을 통해 블록체인 상태를 확인할 수 있는 기능이 있습니다.  
+Graphql을 통해 블록체인의 상태들을 조회해보겠습니다. 9crun을 통해 실행했던 Headless의 [GQL Playground](http://127.0.0.1:31280/ui/playground) 에 접속합니다.
 
-Playground 우측의 `DOCS`와 `SCHEMA` 버튼을 클릭해서 다양한 정보를 확인할 수 있으며 여러 쿼리들 중에서 `nodeStatus`를 사용해서 최신 블록의 정보를 조회해보겠습니다.  
+Playground 우측의 `DOCS`와 `SCHEMA` 버튼을 클릭해서 다양한 정보를 확인할 수 있습니다.  
+이번엔 여러 쿼리들 중에서 `nodeStatus` query를 사용해서 최신 블록의 정보를 조회해보겠습니다.  
 Playground의 좌측 영역에 아래와 같이 GraphQL 쿼리를 작성하고, 화면 중앙의 :arrow_forward: 버튼을 클릭합니다.
 
 ```graphql
@@ -105,10 +106,23 @@ query {
   }
 }
 ```
-![alt text](/images/network/nodestatus-query.png)
+```json
+{
+  "data": {
+    "nodeStatus": {
+      "tip": {
+        "miner": "0xb287F295d2C4e875Bde83A36F11B60d8d12b7976", // 해당 블록을 mining했던 주소
+        "hash": "a88ded5a592503f2986d9288386af4c30669a8b82390fc46fa2fe29cb3b2fdc4", // 해당 블록의 블록 해시
+        "index": 32 // 해당 블록의 index
+      }
+    }
+  },
+  "extensions": {}
+}
+```
 
 이렇게 로컬에서 직접 나인크로니클 노드를 실행해보고 최신 block index와 hash 상태 정보를 확인해볼 수 있었습니다.
 
 ::: tip :tada:
-수고하셨습니다! 이제 여러분은 나인크로니클의 블록체인 노드를 실행하는 방법을 배웠습니다. 다음으론 실제 메인네트워크의 상태를 조회해보고 게임 데이터가 어떻게 이루어져 있는지 살펴보겠습니다.
+수고하셨습니다! 이제 여러분은 나인크로니클의 블록체인 노드를 실행하는 방법을 배웠습니다. 다음으론 실제 게임이 구동되고 있는 메인 네트워크의 상태를 조회해보고 게임 데이터가 어떻게 이루어져 있는지 살펴보겠습니다.
 :::

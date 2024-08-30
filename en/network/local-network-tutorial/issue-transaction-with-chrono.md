@@ -131,6 +131,6 @@ query {
 You can now confirm the state of the newly created avatar. The above GraphQL query allows you to retrieve the avatar's address and name, confirming that the avatar was successfully created.
 
 ::: tip :tada:
-Great job! You’ve now learned how to configure accounts and networks with `Chrono` and how to issue transactions through web apps using `Chrono`.  
-We’re nearing the end of this tutorial. Although you’ve already gained a lot of hands-on experience with transactions, the final step will be to run the local network in the actual Game Client. Let’s proceed!
+Congratulations! You’ve now learned how to set up accounts and networks using `Chrono`, as well as how to issue transactions through web apps that use `Chrono`.  
+Be sure to explore the documentation on the DevForum to dive into modding, network participation, contributing to open-source projects, and much more!
 :::
