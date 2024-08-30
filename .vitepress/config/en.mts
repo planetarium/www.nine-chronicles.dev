@@ -123,6 +123,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
           collapsed: false,
           items: [
             { text: 'Inventory', link: 'modding/system-guide/avatar/inventory' },
+            { text: 'WorldInformation', link: 'modding/system-guide/avatar/world-information' },
           ]
         },
       ]

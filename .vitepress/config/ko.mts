@@ -131,6 +131,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
           collapsed: false,
           items: [
             { text: '인벤토리', link: 'modding/system-guide/avatar/inventory' },
+            { text: 'WorldInformation', link: 'modding/system-guide/avatar/world-information' },
           ]
         },
       ]
