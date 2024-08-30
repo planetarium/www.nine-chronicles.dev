@@ -128,6 +128,10 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
         {
           text: '아바타',
           link: 'modding/system-guide/avatar/0-avatar',
+          collapsed: false,
+          items: [
+            { text: '인벤토리', link: 'modding/system-guide/avatar/inventory' },
+          ]
         },
       ]
     },

@@ -120,6 +120,10 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
         {
           text: 'Avatar',
           link: 'modding/system-guide/avatar/0-avatar',
+          collapsed: false,
+          items: [
+            { text: 'Inventory', link: 'modding/system-guide/avatar/inventory' },
+          ]
         },
       ]
     },
