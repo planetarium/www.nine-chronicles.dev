@@ -71,7 +71,7 @@ query {
 
 ![hex 변환 예시](/images/network/state-hex.png)
 
-`libplanet`에서는 데이터를 [Bencodex](https://github.com/planetarium/bencodex)를 통해 압축하므로, 앞뒤로 `i`와 `e`가 붙어 있으며, 변환 후 `120`이라는 데이터를 확인할 수 있습니다.
+`libplanet`에서는 데이터를 [Bencodex](https://github.com/planetarium/bencodex)로 인코딩하므로, 앞뒤로 `i`와 `e`가 붙어 있으며, 변환 후 `120`이라는 데이터를 확인할 수 있습니다.
 
 ::: tip :tada:
 수고하셨습니다! Headless를 사용해 실제 게임 데이터를 조회하며 블록체인 데이터 흐름을 이해해보았습니다. 어려운 개념들이 나왔지만, 모든 내용을 완벽히 이해하지 못해도 괜찮습니다. 다음으로는 private key에 대해 다루겠습니다.

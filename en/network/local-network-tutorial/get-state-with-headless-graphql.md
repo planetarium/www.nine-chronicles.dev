@@ -74,7 +74,7 @@ The value `6931323065` might not make sense at first glance since it’s a `hex`
 
 ![Hex Conversion Example](/images/network/state-hex.png)
 
-In `libplanet`, data is compressed using [Bencodex](https://github.com/planetarium/bencodex), which is why the value is surrounded by `i` and `e`. After conversion, you’ll see that the data represents `120`.
+In `libplanet`, data is encoded using [Bencodex](https://github.com/planetarium/bencodex), which is why the value is surrounded by `i` and `e`. After conversion, you’ll see that the data represents `120`.
 
 ::: tip :tada:
 Well done! You’ve just learned how to query real game data using Headless and gained an understanding of how blockchain data flows. Don’t worry if some concepts seem complex; it’s okay not to grasp everything immediately. Next, we’ll cover how to work with private keys.
