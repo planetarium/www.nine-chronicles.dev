@@ -83,7 +83,7 @@ public IAccount Add(IAccount account, Address address, int value)
         null => account.SetState(address, (Bencodex.Types.Integer)value),
         Bencodex.Types.Null => account.SetState(address, (Bencodex.Types.Integer)value),
         Bencodex.Types.Integer i => account.SetState(address, i + value),
-        _ => throw new UnexpactedTypeException();
+        _ => throw new UnexpectedTypeException();
     }
 }
 ```
