@@ -13,19 +13,21 @@ First, clone the [NineChronicles.Headless GitHub repository](https://github.com/
 
 ### CLI Commands
 
-```shell
+:::code-group
+```shell (git)
 git clone https://github.com/planetarium/NineChronicles.Headless.git
+cd NineChronicles.Headless
 git submodule update --init --recursive
 ```
 
-Alternatively, using GitHub CLI:
-
-```shell
+```shell (gh)
 gh repo clone planetarium/NineChronicles.Headless -- --recurse-submodules
 ```
+:::
 
 ::: tip
-This tutorial assumes you are working with the `development` branch.
+The generate config script has not been merged into the `main` branch yet, so for this tutorial, you need to check out the `development` branch, create the `config.json`, and then switch back to the `main` branch.  
+Please start by checking out the `development` branch.
 ```shell
 git checkout development
 ```
@@ -116,6 +118,15 @@ If you need more complex configurations, refer to the [Structure of genesis bloc
 
 [structure-of-genesis-block]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#structure-of-genesis-block
 [config-schema-json]: https://github.com/planetarium/NineChronicles.Headless/blob/development/config.schema.json
+
+::: tip
+As mentioned above, in this tutorial, you need to check out the `development` branch, create the config, and then switch back to the `main` branch.  
+Now, please check out the `main` branch.
+```shell
+git checkout main
+git submodule update --recursive
+```
+:::
 
 Now, let's use the generated `config.json` to create the genesis block:
 

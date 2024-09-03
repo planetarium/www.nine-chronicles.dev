@@ -26,11 +26,11 @@
 ## 2. 제네시스 블록 대체하기
 
 다음으로, `~/.planetarium/headless/genesis-block/genesis-block-for-single` 경로에 자동으로 생성된 제네시스 블록이 있습니다.  
-이전 실습에서 생성한 제네시스 블록을 이 경로에 있는 `genesis-block-for-single` 파일을 삭제하고, 동일한 이름으로 새 파일을 옮겨줍니다.
+경로에 있는 `genesis-block-for-single` 파일을 삭제하고, 이전 실습에서 생성한 제네시스 블록을 동일한 이름으로 수정한 후 옮겨줍니다.
 
 ## 3. 기존 스토어 삭제하기
 
-이미 실행을 해보면서 다른 private key로 node가 설정되어있습니다. 이를 초기화해주기 위해 store 폴더를 삭제해줍니다. 
+이전 실습에서 노드를 실행했기 때문에 이미 private key로 node가 설정되어있습니다. 이를 초기화해주기 위해 store 폴더를 삭제해줍니다. 
 `~/.planetarium/headless/store/v200220` 해당 폴더를 삭제합니다.
 
 ## 4. 노드 실행하기

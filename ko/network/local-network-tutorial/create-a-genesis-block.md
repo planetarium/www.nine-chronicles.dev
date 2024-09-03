@@ -13,17 +13,21 @@
 
 ### CLI 명령어
 
-```shell
+:::code-group
+```shell (git)
 git clone https://github.com/planetarium/NineChronicles.Headless.git
+cd NineChronicles.Headless
 git submodule update --init --recursive
 ```
 
-```shell
+```shell (gh)
 gh repo clone planetarium/NineChronicles.Headless -- --recurse-submodules
 ```
+:::
 
 ::: tip
-이 튜토리얼에서는 `development` 브랜치를 기준으로 진행합니다.
+아직 config 생성 스크립트가 main 브랜치에 머지되지 않아 이 튜토리얼에서는 `development` 브랜치를 체크아웃 해 config.json 생성 후 `main` 브랜치를 사용해야합니다.  
+일단 development 브랜치로 체크아웃 해주세요.
 ```shell
 git checkout development
 ```
@@ -31,7 +35,8 @@ git checkout development
 
 ## `NineChronicles.Headless.Executable genesis` 명령어
 
-이제 `NineChronicles.Headless.Executable` 프로젝트의 `genesis` 명령어로 어떤 작업을 수행할 수 있는지 확인해보겠습니다.
+이제 `NineChronicles.Headless.Executable` 프로젝트의 `genesis` 명령어로 어떤 작업을 수행할 수 있는지 확인해보겠습니다.  
+빌드가 되는데 시간이 걸릴 수 있습니다.
 
 ```shell
 dotnet run --project=NineChronicles.Headless.Executable -- genesis --help
@@ -53,7 +58,8 @@ Options:
 
 이 명령어를 사용하여 새로운 제네시스 블록을 생성할 수 있습니다. 
 
-먼저 제네시스 블록 생성을 위한 `config.json` 파일을 만들어보겠습니다. 단독 노드에서 사용할 제네시스 블록을 생성할 것이므로, 모든 권한이 한 private key에 할당된 설정을 생성하겠습니다. 이를 위해 `create-config-for-single` 스크립트를 사용합니다. 이때, private key는 [이전 단계](./create-a-private-key)에서 생성한 것을 사용하세요.
+먼저 제네시스 블록 생성을 위한 `config.json` 파일을 만들어보겠습니다. 단독 노드에서 사용할 제네시스 블록을 생성할 것이므로, 모든 권한이 한 private key에 할당된 설정을 생성하겠습니다. 이를 위해 `create-config-for-single` 스크립트를 사용합니다.  
+이때, private key는 [이전 단계](./create-a-private-key)에서 생성한 것을 사용하세요.
 
 ```shell
 sh scripts/create-config-for-single.sh
@@ -112,6 +118,15 @@ config.json has been created successfully.
 
 [structure-of-genesis-block]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#structure-of-genesis-block
 [config-schema-json]: https://github.com/planetarium/NineChronicles.Headless/blob/development/config.schema.json
+
+::: tip
+위에서 언급한대로 이 튜토리얼에서는 `development` 브랜치를 체크아웃 해 config 생성 후 `main` 브랜치를 사용해야합니다.  
+이제 main 브랜치로 체크아웃 해주세요.
+```shell
+git checkout main
+git submodule update --recursive
+```
+:::
 
 이제 생성된 `config.json` 파일을 사용해 제네시스 블록을 생성해보겠습니다.
 
