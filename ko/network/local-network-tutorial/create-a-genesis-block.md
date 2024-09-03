@@ -26,7 +26,8 @@ gh repo clone planetarium/NineChronicles.Headless -- --recurse-submodules
 :::
 
 ::: tip
-이 튜토리얼에서는 `development` 브랜치를 기준으로 진행합니다.
+아직 config 생성 스크립트가 main 브랜치에 머지되지 않아 이 튜토리얼에서는 `development` 브랜치를 체크아웃 해 config.json 생성 후 `main` 브랜치를 사용해야합니다.  
+일단 development 브랜치로 체크아웃 해주세요.
 ```shell
 git checkout development
 ```
@@ -117,6 +118,15 @@ config.json has been created successfully.
 
 [structure-of-genesis-block]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#structure-of-genesis-block
 [config-schema-json]: https://github.com/planetarium/NineChronicles.Headless/blob/development/config.schema.json
+
+::: tip
+위에서 언급한대로 이 튜토리얼에서는 `development` 브랜치를 체크아웃 해 config 생성 후 `main` 브랜치를 사용해야합니다.  
+이제 main 브랜치로 체크아웃 해주세요.
+```shell
+git checkout main
+git submodule update --recursive
+```
+:::
 
 이제 생성된 `config.json` 파일을 사용해 제네시스 블록을 생성해보겠습니다.
 
