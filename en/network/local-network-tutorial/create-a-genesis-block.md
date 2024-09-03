@@ -13,16 +13,17 @@ First, clone the [NineChronicles.Headless GitHub repository](https://github.com/
 
 ### CLI Commands
 
-```shell
+:::code-group
+```shell (git)
 git clone https://github.com/planetarium/NineChronicles.Headless.git
+cd NineChronicles.Headless
 git submodule update --init --recursive
 ```
 
-Alternatively, using GitHub CLI:
-
-```shell
+```shell (gh)
 gh repo clone planetarium/NineChronicles.Headless -- --recurse-submodules
 ```
+:::
 
 ::: tip
 The generate config script has not been merged into the `main` branch yet, so for this tutorial, you need to check out the `development` branch, create the `config.json`, and then switch back to the `main` branch.  
