@@ -9,9 +9,9 @@ Existing libraries developed by teams in the Planetarium community already exist
 
 We provide detailed guides for each area, so please refer to the links below.
 
-- If you want to mod without needing signatures, refer to the [Avatar Information Viewer Tutorial](./guide/avatar-information-dapp-guide.md).
-- If you want to mod with signatures, refer to the [Daily Reward Website Tutorial](./guide/daily-reward-dapp.md).
-- If you want to mod the client, refer to the [BepInEx Guide](./guide/bepinex-guide.md).
+- If you want to mod without needing signatures, refer to the [Avatar Information Viewer Tutorial](./guide/avatar-information-dapp-guide).
+- If you want to mod with signatures, refer to the [Daily Reward Website Tutorial](./guide/daily-reward-dapp).
+- If you want to mod the client, refer to the [BepInEx Guide](./guide/bepinex-guide).
 
 ## Related Libraries
 ### JavaScript/TypeScript
