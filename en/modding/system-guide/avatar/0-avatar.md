@@ -2,7 +2,7 @@
 
 An avatar is a state that corresponds to a character, containing their name, level, and more.
 
-- [AvatarState](https://github.com/planetarium/lib9c/blob/main/Lib9c/Model/State/AvatarState.cs)
+- [AvatarState](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/State/AvatarState.cs)
 
 ### State
 

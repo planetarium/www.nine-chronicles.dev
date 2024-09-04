@@ -88,7 +88,7 @@ public CurrencyAccount Foo(
     // balance: 0.0 $
 
     FungibleAssetValue amount = new FungibleAssetValue(currency, 1, 0);
-    currencyAccount = currencyAccount.MintAsset(sender, ammount);
+    currencyAccount = currencyAccount.MintAsset(sender, amount);
     balance = currencyAccount.GetBalance(sender, currency);
     // balance: 1.0 $
 
