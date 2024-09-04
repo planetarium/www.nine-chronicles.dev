@@ -2,7 +2,7 @@
 
 아바타는 캐릭터에 해당하는 상태로, 이름과 레벨 등을 포함하고 있습니다.
 
-- [Nekoyume.Model.State.AvatarState](https://github.com/planetarium/lib9c/blob/main/Lib9c/Model/State/AvatarState.cs)
+- [Nekoyume.Model.State.AvatarState](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/State/AvatarState.cs)
 
 ## 상태 {#state}
 
