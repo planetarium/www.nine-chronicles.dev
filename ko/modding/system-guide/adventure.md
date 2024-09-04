@@ -92,7 +92,7 @@
 4. 우선순위가 가장 높은 즉, **100 / SPD 스탯**이 가장 작은 캐릭터에게 턴을 부여합니다.
 5. (4)에서 턴을 부여 받은 캐릭터는 턴을 진행합니다.
 6. (4)에서 턴을 부여 받지 못한 캐릭터들의 우선순위를 높입니다.
-   - 캐릭터가 플레이어이고 이전 턴에서 **기본공격**이 아닌 스킬을 사용했다면 `0.9`를 곱합니다.
+   - 캐릭터가 플레이어이고 이전 턴에서 **기본 공격**이 아닌 스킬을 사용했다면 `0.9`를 곱합니다.
    - 이외의 경우에는 `0.6`을 곱합니다.
 7. (4)에서 턴을 부여 받은 캐릭터는 다시 **100 / 캐릭터 SPD 스탯**의 우선순위를 갖습니다.
 8. 플레이어 아바타가 죽거나 웨이브를 클리어할 때까지 (2)부터 (7)까지의 과정을 반복합니다.
@@ -100,7 +100,7 @@
 
 ### 스킬 발동 {#battle-skill-activation}
 
-아바타나 적을 포함한 모든 캐릭터는 스킬을 발동할 수 있습니다. 스킬에는 **기본공격**을 포함해서 다양한 공격 스킬과 버프 스킬들이 있는데요. 어떤 스킬이 발동되는지는 각 스킬이 갖고 있는 발동 확률에 따라 결정됩니다.
+아바타나 적을 포함한 모든 캐릭터는 스킬을 발동할 수 있습니다. 스킬에는 **기본 공격**을 포함해서 다양한 공격 스킬과 버프 스킬들이 있는데요. 어떤 스킬이 발동되는지는 각 스킬이 갖고 있는 발동 확률에 따라 결정됩니다.
 
 ```mermaid
 flowchart TB
@@ -108,13 +108,13 @@ flowchart TB
       direction TB
       select-cooldown-0[쿨다운이 0인 스킬들만 선택] --> zero-cooldown-skills
       zero-cooldown-skills[/**Zero Cooldown Skills**/] --> check-normal-attack-only
-      check-normal-attack-only{**기본공격**만 남아 있나?} -->|Yes| check-normal-attack-only-yes
+      check-normal-attack-only{**기본 공격**만 남아 있나?} -->|Yes| check-normal-attack-only-yes
       check-normal-attack-only -->|No| check-normal-attack-only-no
    end
    subgraph SG_B[확률 처리]
       direction TB
-      select-skills-without-normal-attack[**기본공격**을 제외한 스킬들을 선택] --> skills-with-out-normal-attack
-      skills-with-out-normal-attack[/**Skills w/o 기본공격**/] --> sum-skills-probabilities
+      select-skills-without-normal-attack[**기본 공격**을 제외한 스킬들을 선택] --> skills-with-out-normal-attack
+      skills-with-out-normal-attack[/**Skills w/o 기본 공격**/] --> sum-skills-probabilities
       sum-skills-probabilities[스킬들의 발동 확률을 합산] --> total-chance
       total-chance[/**총 발동 확률**/] --> check-total-chance-100
       check-total-chance-100{**총 발동 확률**이 100 이상인가?} -->|Yes| input-skills-without-normal-attack
@@ -126,17 +126,17 @@ flowchart TB
    end
    turn-start([턴 시작]) --> skills
    skills[/**Skills**/] --> SG_A
-   check-normal-attack-only-yes[/**기본공격**/] --> result([스킬 선택 완료])
+   check-normal-attack-only-yes[/**기본 공격**/] --> result([스킬 선택 완료])
    check-normal-attack-only-no[/**Zero Cooldown Skills**/] --> SG_B
-   input-skills-without-normal-attack[/**Skills w/o 기본공격**/]
+   input-skills-without-normal-attack[/**Skills w/o 기본 공격**/]
    input-skills-without-normal-attack --> weighted-selector
-   check-total-chance-100-no-yes[/**기본공격**/] --> result
+   check-total-chance-100-no-yes[/**기본 공격**/] --> result
    input-selected-skill --> result
 ```
 
 **스킬 종류**
 
-- [Nekoyume.Model.BattleStatus.NormalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/NormalAttack.cs): **기본공격**입니다.
+- [Nekoyume.Model.BattleStatus.NormalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/NormalAttack.cs): **기본 공격**입니다.
 - [Nekoyume.Model.BattleStatus.BlowAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BlowAttack.cs)
 - [Nekoyume.Model.BattleStatus.DoubleAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/DoubleAttack.cs)
 - [Nekoyume.Model.BattleStatus.DoubleAttackWithCombo](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/DoubleAttackWithCombo.cs)
@@ -145,6 +145,26 @@ flowchart TB
 - [Nekoyume.Model.BattleStatus.HealSkill](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/HealSkill.cs)
 - [Nekoyume.Model.BattleStatus.BuffRemovalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BuffRemovalAttack.cs)
 - ...
+
+### 기본 공격의 명중 {#battle-normal-attack-hit}
+
+나인 크로니클에서는 **기본 공격** 또한 스킬로 다루고 있습니다. 그리고 **기본 공격**의 명중 여부는 대체로 공격자와 방어자의 레벨과 명중(HIT) 스탯에 의해서 결정되고, 일부 다른 공식을 따르기도 합니다.
+
+- [Nekoyume.Model.Skill.AttackSkill.ProcessDamage](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Skill/AttackSkill.cs#L62) 메서드에서 **기본 공격**의 명중 여부를 얻습니다: `target.IsHit(caster)`
+- 위의 `IsHit` 메서드는 [Nekoyume.Model.CharacterBase.IsHit(CharacterBase)](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/CharacterBase.cs#L508)를 가리키고, 이 메서드는 플레이어 캐릭터([Nekoyume.Model.Player](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/Player.cs)) 등에서 override 합니다.
+- 모험에서의 명중 로직을 간단하게 살펴 본다면:
+   - 방어자가 플레이어 캐릭터일 때에는 공격자의 공격을 피할 수 없습니다.
+   - 공격자가 집중 버프([Nekoyume.Model.Buff.Focus](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Buff/Focus.cs))의 효과를 얻고 있다면 100% 명중합니다.
+      - 그렇지 않다면 [Nekoyume.Battle.HitHelper.IsHit](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/HitHelper.cs#L23) 메서드의 결과에 따라 명중을 처리합니다.
+
+**Nekoyume.Battle.HitHelper.IsHit**
+
+1. `(공격자의 레벨 - 방어자의 레벨)`로 `-5 ~ 50` 사이의 값 `A`를 얻습니다.
+2. `(공격자의 HIT 스탯 * 10000 - 방어자의 HIT 스탯 * 10000 / 3) / 방어자의 HIT 스탯 / 100`로 `0 ~ 50` 사이의 값 `B`를 얻습니다.
+   - 이때 공격자와 방어자의 HIT 스탯이 0 이하라면 1로 보정해서 계산합니다.
+3. `A + B`로 `10 ~ 90` 사이의 값 `C`를 얻습니다.
+4. `0 ~ 99` 사이의 무작위 숫자 `D`를 구합니다.
+5. 마지막으로 `C`가 `D` 이상이면 명중으로 처리합니다.
 
 ### 콤보 {#battle-combo}
 
@@ -155,19 +175,19 @@ flowchart TB
 
 **콤보 증가** {#battle-combo-increase}
 
-- 기본공격을 성공한다.
+- 기본 공격을 성공한다.
 - `SkillSheet.Combo` 필드가 `true`인 스킬을 성공시킨다.
 
 **콤보 초기화** {#battle-combo-reset}
 
-- 기본공격을 실패한다.
+- 기본 공격을 실패한다.
 
 **콤보 효과** {#battle-combo-effect}
 
-- 기본공격이나 `SkillSheet.Combo` 필드가 `true`인 스킬의 데미지를 증가시킨다.
+- 기본 공격이나 `SkillSheet.Combo` 필드가 `true`인 스킬의 데미지를 증가시킨다.
    - [Nekoyume.Model.CharacterBase.GetDamage](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/CharacterBase.cs#L524)
    - [Nekoyume.Battle.AttackCountHelper.GetDamageMultiplier](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/AttackCountHelper.cs#L23)
-- 조건데 따라 추가 치명타 확률을 얻는다.
+- 조건에 따라 추가 치명타 확률을 얻는다.
    - [Nekoyume.Model.CharacterBase.IsCritical](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/CharacterBase.cs#L490)
    - [Nekoyume.Battle.AttackCountHelper.GetAdditionalCriticalChance](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/AttackCountHelper.cs#L37)
 
