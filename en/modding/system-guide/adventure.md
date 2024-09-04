@@ -102,6 +102,40 @@ When a wave starts, a formula is used to give the highest priority character a t
 
 All characters, including avatars and enemies, can activate skills. Skills include a variety of offensive and buff skills, including **Normal Attack**. Which skill is activated is determined by the activation chance of each skill.
 
+```mermaid
+flowchart TB
+   subgraph SG_A[Handling Cooldowns]
+      direction TB
+      select-cooldown-0[Select only skills with 0 cooldowns] --> zero-cooldown-skills
+      zero-cooldown-skills[/**Zero Cooldown Skills**/] --> check-normal-attack-only
+      check-normal-attack-only{Is there only a **Normal Attack** left?} -->|Yes| check-normal-attack-only-yes
+      check-normal-attack-only -->|No| check-normal-attack-only-no
+   end
+   subgraph SG_B[Handling Chances]
+      direction TB
+      select-skills-without-normal-attack[Select all skills except **Normal Attack**.] --> skills-with-out-normal-attack
+      skills-with-out-normal-attack[/**Skills w/o Normal Attack**/] --> sum-skills-probabilities
+      sum-skills-probabilities[Combining Skills' Trigger Chances] --> total-chance
+      total-chance[/**Total Chance**/] --> check-total-chance-100
+      check-total-chance-100{Is the **Total Chance** greater than or equal to 100?} -->|Yes| input-skills-without-normal-attack
+      check-total-chance-100 -->|No| check-total-chance-100-no
+      check-total-chance-100-no{Is the random number above the **Total Chance**?} -->|Yes| check-total-chance-100-no-yes
+      check-total-chance-100-no -->|No| input-skills-without-normal-attack
+      weighted-selector[Randomly select one skill] --> input-selected-skill
+      input-selected-skill[/**Randomly Selected Skill**/]
+   end
+   turn-start([Turn Starts]) --> skills
+   skills[/**Skills**/] --> SG_A
+   check-normal-attack-only-yes[/**Normal Attack**/] --> result([Skill selection complete])
+   check-normal-attack-only-no[/**Zero Cooldown Skills**/] --> SG_B
+   input-skills-without-normal-attack[/**Skills w/o Normal Attack**/]
+   input-skills-without-normal-attack --> weighted-selector
+   check-total-chance-100-no-yes[/**Normal Attack**/] --> result
+   input-selected-skill --> result
+```
+
+**Skill Types**
+
 - [Nekoyume.Model.BattleStatus.NormalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/NormalAttack.cs): This is the **Normal Attack**.
 - [Nekoyume.Model.BattleStatus.BlowAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BlowAttack.cs)
 - [Nekoyume.Model.BattleStatus.DoubleAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/DoubleAttack.cs)
