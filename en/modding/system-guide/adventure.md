@@ -70,7 +70,6 @@ Adventures can be repeated, and AP potions can be used to do so.
 
 ## Battle(StageSimulator) {#battle}
 
-전투는 턴제 방식으로 진행되며, 플레이어는 자신의 아바타와 함께 다양한 아이템을 사용하여 적을 물리칠 수 있습니다. 모험에서는 [StageSimulator](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/StageSimulator.cs) 클래스를 활용해서 전투를 진행합니다. 이 클래스는 전투의 흐름을 관리하고, 각 턴마다 발생하는 이벤트를 처리합니다.
 Battle is turn-based, and players can use various items with their avatars to defeat enemies. Adventures utilize the [StageSimulator](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/StageSimulator.cs) class to run battle. This class manages the flow of battle and handles the events that occur on each turn.
 
 When a battle begins, it creates a player avatar.
