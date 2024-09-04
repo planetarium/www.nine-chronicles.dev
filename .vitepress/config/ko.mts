@@ -125,7 +125,15 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: '주소와 상태', link: 'modding/system-guide/0-address-and-state' },
         { text: '트랜젝션과 액션', link: 'modding/system-guide/1-transaction-and-action' },
-        { text: '에이전트', link: 'modding/system-guide/agent' },
+        {
+          text: '에이전트',
+          link: 'modding/system-guide/agent/0-agent',
+          // collapsed: false,
+          // items: [
+          //   { text: '서약', link: 'modding/system-guide/agent/pledge' },
+          //   { text: '스테이킹', link: 'modding/system-guide/agent/staking' },
+          // ]
+        },
         {
           text: '아바타',
           link: 'modding/system-guide/avatar/0-avatar',

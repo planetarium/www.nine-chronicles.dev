@@ -117,7 +117,15 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
         { text: 'Transaction and Action', link: 'modding/system-guide/1-transaction-and-action' },
-        { text: 'Agent', link: 'modding/system-guide/agent' },
+        {
+          text: 'Agent',
+          link: 'modding/system-guide/agent/0-agent',
+          // collapsed: false,
+          // items: [
+          //   { text: 'Pledge', link: 'modding/system-guide/agent/pledge' },
+          //   { text: 'Staking', link: 'modding/system-guide/agent/staking' },
+          // ]
+        },
         {
           text: 'Avatar',
           link: 'modding/system-guide/avatar/0-avatar',
