@@ -102,6 +102,40 @@
 
 아바타나 적을 포함한 모든 캐릭터는 스킬을 발동할 수 있습니다. 스킬에는 **기본공격**을 포함해서 다양한 공격 스킬과 버프 스킬들이 있는데요. 어떤 스킬이 발동되는지는 각 스킬이 갖고 있는 발동 확률에 따라 결정됩니다.
 
+```mermaid
+flowchart TB
+   subgraph SG_A[쿨다운 처리]
+      direction TB
+      select-cooldown-0[쿨다운이 0인 스킬들만 선택] --> zero-cooldown-skills
+      zero-cooldown-skills[/**Zero Cooldown Skills**/] --> check-normal-attack-only
+      check-normal-attack-only{**기본공격**만 남아 있나?} -->|Yes| check-normal-attack-only-yes
+      check-normal-attack-only -->|No| check-normal-attack-only-no
+   end
+   subgraph SG_B[확률 처리]
+      direction TB
+      select-skills-without-normal-attack[**기본공격**을 제외한 스킬들을 선택] --> skills-with-out-normal-attack
+      skills-with-out-normal-attack[/**Skills w/o 기본공격**/] --> sum-skills-probabilities
+      sum-skills-probabilities[스킬들의 발동 확률을 합산] --> total-chance
+      total-chance[/**총 발동 확률**/] --> check-total-chance-100
+      check-total-chance-100{**총 발동 확률**이 100 이상인가?} -->|Yes| input-skills-without-normal-attack
+      check-total-chance-100 -->|No| check-total-chance-100-no
+      check-total-chance-100-no{무작위 숫자가 **총 발동 확률** 이상인가?} -->|Yes| check-total-chance-100-no-yes
+      check-total-chance-100-no -->|No| input-skills-without-normal-attack
+      weighted-selector[무작위로 하나의 스킬 선택] --> input-selected-skill
+      input-selected-skill[/**무작위로 선택한 하나의 스킬**/]
+   end
+   turn-start([턴 시작]) --> skills
+   skills[/**Skills**/] --> SG_A
+   check-normal-attack-only-yes[/**기본공격**/] --> result([스킬 선택 완료])
+   check-normal-attack-only-no[/**Zero Cooldown Skills**/] --> SG_B
+   input-skills-without-normal-attack[/**Skills w/o 기본공격**/]
+   input-skills-without-normal-attack --> weighted-selector
+   check-total-chance-100-no-yes[/**기본공격**/] --> result
+   input-selected-skill --> result
+```
+
+**스킬 종류**
+
 - [Nekoyume.Model.BattleStatus.NormalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/NormalAttack.cs): **기본공격**입니다.
 - [Nekoyume.Model.BattleStatus.BlowAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BlowAttack.cs)
 - [Nekoyume.Model.BattleStatus.DoubleAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/DoubleAttack.cs)
