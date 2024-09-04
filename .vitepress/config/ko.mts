@@ -136,6 +136,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
             { text: 'QuestList', link: 'modding/system-guide/avatar/quest-list' },
           ]
         },
+        { text: '모험', link: 'modding/system-guide/adventure' },
       ]
     },
   ];
