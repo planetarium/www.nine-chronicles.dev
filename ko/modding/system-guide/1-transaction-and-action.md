@@ -22,7 +22,7 @@
 ### 잔액 조회: {#mead-get-balance}
 
 - 통화: [Lib9c.Currencies.Mead](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Currencies.cs#L66)
-- 잔액 주소: [에이전트](./agent)의 주소를 그대로 사용합니다.
+- 잔액 주소: [에이전트](./agent/0-agent)의 주소를 그대로 사용합니다.
 
 ```cs
 public FungibleAssetValue? GetMead(IWorld world, Address address)
