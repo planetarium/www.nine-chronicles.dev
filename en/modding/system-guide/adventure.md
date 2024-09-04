@@ -146,6 +146,26 @@ flowchart TB
 - [Nekoyume.Model.BattleStatus.BuffRemovalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BuffRemovalAttack.cs)
 - ...
 
+### Normal Attack Hits {#battle-normal-attack-hit}
+
+Normal Attack is also treated as skills in Nine Chronicles, and whether or not they hit is largely determined by the attacker's and defender's levels and HIT stats, with a few other formulas.
+
+- In the [Nekoyume.Model.Skill.AttackSkill.ProcessDamage](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Skill/AttackSkill.cs#L62) method, get the hit status of the **Normal Attack**: `target.IsHit(caster)`.
+- The `IsHit` method above points to [Nekoyume.Model.CharacterBase.IsHit(CharacterBase)](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/CharacterBase.cs#L508), which is overridden by the player character ([Nekoyume.Model.Player](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/Player.cs)) and so on.
+- A quick look at the logic of hits in adventures:
+   - When the defender is a player character, they cannot dodge an attacker's attack.
+   - If the attacker is under the effect of a Focus buff([Nekoyume.Model.Buff.Focus](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Buff/Focus.cs)), it will hit 100% of the time.
+      - Otherwise, the hit is handled according to the result of the [Nekoyume.Battle.HitHelper.IsHit](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/HitHelper.cs#L23) method.
+
+**Nekoyume.Battle.HitHelper.IsHit**
+
+1. Get a value `A` between `-5 ~ 50` with `(attacker's level - defender's level)`.
+2. Use `(Attacker's HIT stat * 10000 - Defender's HIT stat * 10000 / 3) / Defender's HIT stat / 100` to get a value `B` between `0 ~ 50`.
+   - If the attacker's and defender's HIT stats are less than or equal to 0, then it is scaled by 1.
+3. Use `A + B` to get a value `C` between `10 ~ 90`.
+4. Find a random number `D` between `0 ~ 99`.
+5. finally, if `C` is greater than or equal to `D`, treat it as a hit.
+
 ### Combo {#battle-combo}
 
 Avatar's attacks can have combo effects.

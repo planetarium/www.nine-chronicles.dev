@@ -146,6 +146,26 @@ flowchart TB
 - [Nekoyume.Model.BattleStatus.BuffRemovalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BuffRemovalAttack.cs)
 - ...
 
+### 기본 공격의 명중 {#battle-normal-attack-hit}
+
+나인 크로니클에서는 **기본 공격** 또한 스킬로 다루고 있습니다. 그리고 **기본 공격**의 명중 여부는 대체로 공격자와 방어자의 레벨과 명중(HIT) 스탯에 의해서 결정되고, 일부 다른 공식을 따르기도 합니다.
+
+- [Nekoyume.Model.Skill.AttackSkill.ProcessDamage](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Skill/AttackSkill.cs#L62) 메서드에서 **기본 공격**의 명중 여부를 얻습니다: `target.IsHit(caster)`
+- 위의 `IsHit` 메서드는 [Nekoyume.Model.CharacterBase.IsHit(CharacterBase)](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/CharacterBase.cs#L508)를 가리키고, 이 메서드는 플레이어 캐릭터([Nekoyume.Model.Player](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Character/Player.cs)) 등에서 override 합니다.
+- 모험에서의 명중 로직을 간단하게 살펴 본다면:
+   - 방어자가 플레이어 캐릭터일 때에는 공격자의 공격을 피할 수 없습니다.
+   - 공격자가 집중 버프([Nekoyume.Model.Buff.Focus](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Buff/Focus.cs))의 효과를 얻고 있다면 100% 명중합니다.
+      - 그렇지 않다면 [Nekoyume.Battle.HitHelper.IsHit](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/HitHelper.cs#L23) 메서드의 결과에 따라 명중을 처리합니다.
+
+**Nekoyume.Battle.HitHelper.IsHit**
+
+1. `(공격자의 레벨 - 방어자의 레벨)`로 `-5 ~ 50` 사이의 값 `A`를 얻습니다.
+2. `(공격자의 HIT 스탯 * 10000 - 방어자의 HIT 스탯 * 10000 / 3) / 방어자의 HIT 스탯 / 100`로 `0 ~ 50` 사이의 값 `B`를 얻습니다.
+   - 이때 공격자와 방어자의 HIT 스탯이 0 이하라면 1로 보정해서 계산합니다.
+3. `A + B`로 `10 ~ 90` 사이의 값 `C`를 얻습니다.
+4. `0 ~ 99` 사이의 무작위 숫자 `D`를 구합니다.
+5. 마지막으로 `C`가 `D` 이상이면 명중으로 처리합니다.
+
 ### 콤보 {#battle-combo}
 
 아바타의 공격은 콤보 효과를 얻을 수 있습니다.
