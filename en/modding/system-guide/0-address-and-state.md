@@ -7,23 +7,6 @@ This document is based on Libplanet `5.2.2`, Lib9c `1.17.3`, and Bencodex `0.16.
 - [Bencodex 0.16.0](https://github.com/planetarium/bencodex.net/tree/0.16.0)
 :::
 
-## World(IWorld) {#iworld}
-
-In Libplanet, a world is a blockchain state and consists of multiple [accounts] (#iaccount). In Libplanet, you can manage worlds through the `IWorld` interface, which provides methods to retrieve and update accounts.
-
-- [Libplanet.Action.State.IWorld](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IWorld.cs)
-- [Libplanet.Action.State.IWorldState](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IWorldState.cs)
-
-```cs
-public IWorld Foo(IWorld world)
-{
-    Address address = new PrivateKey().Address;
-    IAccount account = world.GetAccount(address);
-    world = world.SetAccount(address, account);
-    return world;
-}
-```
-
 ## Address {#address}
 
 In Libplanet, an address represents a specific location on the blockchain, and is primarily used to identify accounts and their [state](#ivalue). Libplanet has a class `Address` that acts as an address and is usually derived from a public key[^public-key] or generated as a hexadecimal string of 40 or 42 digits.
@@ -42,9 +25,32 @@ Address addressViaHexString1 = new Address("1234567890abcdef1234567890abcdef1234
 Address addressViaHexString2 = new Address("0x1234567890abcdef1234567890abcdef12345678");
 ```
 
+
+## World(IWorld) {#iworld}
+
+In Libplanet, blockchain state can be managed through the `IWorld` interface, which provides methods to retrieve and update accounts ([IAccount](#iaccount), [CurrencyAccount](#currency-account)). In this context, an account is a bundle of states associated with a particular address in the world.
+
+- [Libplanet.Action.State.IWorld](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IWorld.cs)
+- [Libplanet.Action.State.IWorldState](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IWorldState.cs)
+
+```cs
+public IWorld Foo(IWorld world)
+{
+    Address address = new PrivateKey().Address;
+    IAccount account = world.GetAccount(address);
+    world = world.SetAccount(address, account);
+
+    Currency currency = Currency.Uncapped("$", 0, null);
+    CurrencyAccount currencyAccount = world.GetCurrencyAccount(currency);
+    world = world.SetCurrencyAccount(currency, currencyAccount);
+
+    return world;
+}
+```
+
 ## Account(IAccount) {#iaccount}
 
-In Libplanet, an account represents a set of [states](#ivalue) associated with a particular address in the world. In Libplanet, accounts can be managed through the `IAccount` interface.
+In Libplanet, you can manage status through the `IAccount` interface.
 
 - [Libplanet.Action.State.IAccount](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IAccount.cs)
 - [Libplanet.Action.State.IAccountState](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/IAccountState.cs)
@@ -67,9 +73,44 @@ public IAccount Foo(IAccount account)
 }
 ```
 
-## State(IValue) {#ivalue}
+## CurrencyAccount {#currency-account}
 
-In Libplanet, all state is managed through the `IValue` interface. The `IValue` means `Bencodex.Types.IValue` and contains many different types. For example, `Bencodex.Types.Binary`, `Bencodex.Types.Integer`, `Bencodex.Types.Text`, `Bencodex.Types.List`, `Bencodex.Types.Dictionary`, etc.
+CurrencyAccount represents an account associated with a specific currency, and is primarily used to manage balance status.
+
+- [Libplanet.Action.State.CurrencyAccount](https://github.com/planetarium/libplanet/blob/5.2.2/src/Libplanet.Action/State/CurrencyAccount.cs)
+
+```cs
+public CurrencyAccount Foo(
+    CurrencyAccount currencyAccount,
+    Address sender,
+    Address recipient)
+{
+    Currency currency = Currency.Uncapped("$", 0, null);
+    FungibleAssetValue balance = currencyAccount.GetBalance(sender, currency);
+    // balance: 0.0 $
+
+    FungibleAssetValue amount = new FungibleAssetValue(currency, 1, 0);
+    currencyAccount = currencyAccount.MintAsset(sender, ammount);
+    balance = currencyAccount.GetBalance(sender, currency);
+    // balance: 1.0 $
+
+    currencyAccount = currencyAccount.TransferAsset(sender, recipient, amount);
+    balance = currencyAccount.GetBalance(sender, currency);
+    // balance: 0.0 $
+    balance = currencyAccount.GetBalance(recipient, currency);
+    // balance: 1.0 $
+
+    currencyAccount = currencyAccount.BurnAsset(recipient, amount);
+    balance = currencyAccount.GetBalance(recipient, currency);
+    // balance: 0.0 $
+
+    balance = currencyAccount.GetBalance(sender, currency);
+}
+```
+
+## IValue
+
+Libplanet stores all state serialized in the `Bencodex.Types.IValue` interface type. There are many different implementations, including `Bencodex.Types.Binary`, `Bencodex.Types.Integer`, `Bencodex.Types.Text`, `Bencodex.Types.List`, and `Bencodex.Types.Dictionary`.
 
 - [Bencodex.Types](https://github.com/planetarium/bencodex.net/tree/0.16.0/Bencodex/Types)
 - [Bencodex.Types.IValue](https://github.com/planetarium/bencodex.net/blob/0.16.0/Bencodex/Types/IValue.cs)
@@ -83,7 +124,7 @@ public IAccount Add(IAccount account, Address address, int value)
         null => account.SetState(address, (Bencodex.Types.Integer)value),
         Bencodex.Types.Null => account.SetState(address, (Bencodex.Types.Integer)value),
         Bencodex.Types.Integer i => account.SetState(address, i + value),
-        _ => throw new UnexpactedTypeException();
+        _ => throw new UnexpectedTypeException();
     }
 }
 ```

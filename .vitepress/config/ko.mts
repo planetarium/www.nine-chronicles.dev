@@ -124,6 +124,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '주소와 상태', link: 'modding/system-guide/0-address-and-state' },
+        { text: '트랜젝션과 액션', link: 'modding/system-guide/1-transaction-and-action' },
         { text: '에이전트', link: 'modding/system-guide/agent' },
         {
           text: '아바타',
@@ -135,6 +136,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
             { text: 'QuestList', link: 'modding/system-guide/avatar/quest-list' },
           ]
         },
+        { text: '모험', link: 'modding/system-guide/adventure' },
       ]
     },
   ];

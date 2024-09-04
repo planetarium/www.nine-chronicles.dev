@@ -114,7 +114,7 @@ config.json has been created successfully.
 }
 ```
 
-이 `config.json` 파일은 입력한 private key를 admin으로 지정하고, validator 권한과 초기 재화를 설정합니다. 더 복잡한 설정이 필요하다면, [Structure of genesis block][structure-of-genesis-block]과 [config.schema.json][config-schema-json]을 참조할 수 있습니다.
+이 `config.json` 파일은 입력한 private key를 admin으로 지정하고, validator 권한과 초기 통화를 설정합니다. 더 복잡한 설정이 필요하다면, [Structure of genesis block][structure-of-genesis-block]과 [config.schema.json][config-schema-json]을 참조할 수 있습니다.
 
 [structure-of-genesis-block]: https://github.com/planetarium/NineChronicles.Headless?tab=readme-ov-file#structure-of-genesis-block
 [config-schema-json]: https://github.com/planetarium/NineChronicles.Headless/blob/development/config.schema.json

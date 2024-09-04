@@ -116,6 +116,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Address and State', link: 'modding/system-guide/0-address-and-state' },
+        { text: 'Transaction and Action', link: 'modding/system-guide/1-transaction-and-action' },
         { text: 'Agent', link: 'modding/system-guide/agent' },
         {
           text: 'Avatar',
@@ -127,6 +128,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
             { text: 'QuestList', link: 'modding/system-guide/avatar/quest-list' },
           ]
         },
+        { text: 'Adventure', link: 'modding/system-guide/adventure' },
       ]
     },
   ]

@@ -2,14 +2,14 @@
 
 에이전트는 플레이어의 계정에 해당하는 상태로, 소유하고 있는 아바타들의 주소 목록을 포함합니다.
 
-- [AgentState](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/State/AgentState.cs)
+- [Nekoyume.Model.State.AgentState](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/State/AgentState.cs)
 
-### 상태
+## 상태 {#state}
 
-- 어카운트 주소: [Addresses.Agent](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Addresses.cs#L43)
+- 어카운트 주소: [Nekoyume.Addresses.Agent](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Addresses.cs#L43)
 - 상태 주소: 게임 플레이에 사용하는 개인 키의 주소
 
-##### 상태 조회:
+### 상태 조회: {#get-state}
 
 ```cs
 public AgentState? GetAgentState(IWorld world, Address address)
