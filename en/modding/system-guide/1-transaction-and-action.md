@@ -22,7 +22,7 @@ For more information, check out [this article](https://docs.nine-chronicles.com/
 ### Get Balance: {#mead-get-balance}
 
 - Currency: [Lib9c.Currencies.Mead](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Currencies.cs#L66)
-- Balance Address: Use the address of [agent](./agent) as it is.
+- Balance Address: Use the address of [agent](./agent/0-agent) as it is.
 
 ```cs
 public FungibleAssetValue? GetMead(IWorld world, Address address)
