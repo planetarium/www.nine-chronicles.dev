@@ -87,14 +87,14 @@ When a battle starts, the first wave begins. If you don't clear the wave, the ba
 When a wave starts, a formula is used to give the highest priority character a turn, which is determined by the character's SPD(Speed) stat.
 
 1. Wave starts.
-2. The player avatar has a priority of `{100[^simulator-turn-priority] / avatar's SPD stat}`.
-3. All enemies in the wave have a priority of `{100 / enemy's SPD stat}`.
-4. Give the turn to the character with the highest priority, i.e., the smallest `{100 / SPD stat}`.
+2. The player avatar has a priority of **100[^simulator-turn-priority] / avatar's SPD stat**.
+3. All enemies in the wave have a priority of **100 / enemy's SPD stat**.
+4. Give the turn to the character with the highest priority, i.e., the smallest **100 / SPD stat**.
 5. The character granted a turn in (4) takes the turn.
 6. Increase the priority of characters that were not granted a turn in (4).
    - Multiply by `0.9` if the character is a player and used a non-Basic Attack skill in the previous turn.
    - Otherwise, multiply by `0.6`.
-7. Characters granted a turn in (4) again have a priority of `{100 / character SPD stat}`.
+7. Characters granted a turn in (4) again have a priority of **100 / character SPD stat**.
 8. Repeat steps (2) through (7) until the player avatar dies or the wave is cleared.
 9. Wave ends. Repeat from (1) for the next wave if one exists.
 
