@@ -145,6 +145,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
           ]
         },
         { text: '모험', link: 'modding/system-guide/adventure' },
+        { text: '아레나', link: 'modding/system-guide/arena' },
       ]
     },
   ];
