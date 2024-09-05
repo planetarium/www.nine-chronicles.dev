@@ -102,6 +102,7 @@ When a wave starts, a formula is used to give the highest priority character a t
 
 All characters, including avatars and enemies, can activate skills. Skills include a variety of offensive and buff skills, including **Normal Attack**. Which skill is activated is determined by the activation chance of each skill.
 
+::: details Skill Activation Flowchart
 ```mermaid
 flowchart TB
    subgraph SG_A[Handling Cooldowns]
@@ -133,6 +134,7 @@ flowchart TB
    check-total-chance-100-no-yes[/**Normal Attack**/] --> result
    input-selected-skill --> result
 ```
+:::
 
 **Skill Types**
 
@@ -146,7 +148,7 @@ flowchart TB
 - [Nekoyume.Model.BattleStatus.BuffRemovalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BuffRemovalAttack.cs)
 - ...
 
-### Normal Attack Hits {#battle-normal-attack-hit}
+### Normal Attack Hits {#battle-normal-attack-hits}
 
 Normal Attack is also treated as skills in Nine Chronicles, and whether or not they hit is largely determined by the attacker's and defender's levels and HIT stats, with a few other formulas.
 

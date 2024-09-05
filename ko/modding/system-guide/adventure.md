@@ -102,6 +102,7 @@
 
 아바타나 적을 포함한 모든 캐릭터는 스킬을 발동할 수 있습니다. 스킬에는 **기본 공격**을 포함해서 다양한 공격 스킬과 버프 스킬들이 있는데요. 어떤 스킬이 발동되는지는 각 스킬이 갖고 있는 발동 확률에 따라 결정됩니다.
 
+::: details 스킬 발동 플로우차트
 ```mermaid
 flowchart TB
    subgraph SG_A[쿨다운 처리]
@@ -133,6 +134,7 @@ flowchart TB
    check-total-chance-100-no-yes[/**기본 공격**/] --> result
    input-selected-skill --> result
 ```
+:::
 
 **스킬 종류**
 
@@ -146,7 +148,7 @@ flowchart TB
 - [Nekoyume.Model.BattleStatus.BuffRemovalAttack](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/BattleStatus/BuffRemovalAttack.cs)
 - ...
 
-### 기본 공격의 명중 {#battle-normal-attack-hit}
+### 기본 공격의 명중 {#battle-normal-attack-hits}
 
 나인 크로니클에서는 **기본 공격** 또한 스킬로 다루고 있습니다. 그리고 **기본 공격**의 명중 여부는 대체로 공격자와 방어자의 레벨과 명중(HIT) 스탯에 의해서 결정되고, 일부 다른 공식을 따르기도 합니다.
 
@@ -156,6 +158,10 @@ flowchart TB
    - 방어자가 플레이어 캐릭터일 때에는 공격자의 공격을 피할 수 없습니다.
    - 공격자가 집중 버프([Nekoyume.Model.Buff.Focus](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Model/Buff/Focus.cs))의 효과를 얻고 있다면 100% 명중합니다.
       - 그렇지 않다면 [Nekoyume.Battle.HitHelper.IsHit](https://github.com/planetarium/lib9c/blob/1.17.3/Lib9c/Battle/HitHelper.cs#L23) 메서드의 결과에 따라 명중을 처리합니다.
+
+### 공격 스킬 데미지
+
+작성중입니다.
 
 **Nekoyume.Battle.HitHelper.IsHit**
 
