@@ -137,6 +137,7 @@ function sidebarModding(): DefaultTheme.SidebarItem[] {
           ]
         },
         { text: 'Adventure', link: 'modding/system-guide/adventure' },
+        { text: 'Arena', link: 'modding/system-guide/arena' },
       ]
     },
   ]
