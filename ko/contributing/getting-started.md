@@ -55,8 +55,29 @@ graph LR
         9c-unity-grpc-client[gRPC Client]
     end
     launcher-graphql-client -- GraphQL <--> headless-graphql-server
-    launcher -- 실행 --> 9c-unity
+    launcher -- Execute --> 9c-unity
+    launcher -- Send NCG to Odin/Heimdall --> 9c-relay-bridge
+    launcher -- Send NCG to Ethereum(WNCG) --> 9c-eth-bridge
+    9c-relay-bridge -- GraphQL --> headless-graphql-server
+    9c-eth-bridge -- GraphQL --> headless-graphql-server
     9c-unity-grpc-client -- gRPC <--> headless-grpc-server
+
+    9c-unity -- Fetch Market --> market-service
+    market-service[Market Service] -- GraphQL --> headless-graphql-server
+
+    9c-unity -- In App Purchase --> iap
+    iap[IAP Service] -- GraphQL --> headless-graphql-server
+    iap -- Send Assets to Heimdall --> 9c-relay-bridge
+
+    9c-unity -- Fetch Arena Ranking Data --> arena-service
+    arena-service[Arena Service] -- GraphQL --> headless-graphql-server
+
+    9c-unity -- Fetch World Boss Ranking Data --> world-boss-service
+    world-boss-service[World Boss Service] -- GraphQL --> headless-graphql-server
+
+    9c-unity -- Request Patrol Reward --> patrol-reward-service
+    patrol-reward-service[Patrol Reward Service] -- GraphQL --> headless-graphql-server
+
 ```
 
 이 런처와 유니티 클라이언트의 구현체들이 `9c-launcher`와 `NineChronicles` 입니다. `9c-launcher`는 GraphQL 클라이언트를 통해 `NineChronicles.Headless`와 상호작용하며, 유니티 클라이언트는 gRPC 클라이언트를 통해 `NineChronicles.Headless`와 상호작용합니다.
