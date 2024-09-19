@@ -11,6 +11,7 @@ export const en = defineConfig({
 
     sidebar: {
       '/introduce/': { base: '/', items: sidebarGeneral() },
+      '/event/': { base: '/', items: sidebarEvent() },
       '/general/': { base: '/', items: sidebarGeneral() },
       '/network/': { base: '/', items: sidebarNetwork() },
       '/modding/': { base: '/', items: sidebarModding() },
@@ -26,6 +27,11 @@ export const en = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
+    {
+      text: 'Event',
+      link: '/event/2024modathon',
+      activeMatch: '/event/'
+    },
     {
       text: 'General',
       link: '/general/what-is-nine-chronicles',
@@ -46,6 +52,12 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/contributing/getting-started',
       activeMatch: '/contributing/'
     },
+  ];
+}
+
+function sidebarEvent(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: '2024 Modathon', link: 'event/2024modathon' }
   ];
 }
 

@@ -11,6 +11,7 @@ export const ko = defineConfig({
 
     sidebar: {
       '/ko/introduce/': { base: '/ko/', items: sidebarGeneral() },
+      '/ko/event/': { base: '/ko/', items: sidebarEvent() },
       '/ko/general/': { base: '/ko/', items: sidebarGeneral() },
       '/ko/network/': { base: '/ko/', items: sidebarNetwork() },
       '/ko/modding/': { base: '/ko/', items: sidebarModding() },
@@ -26,6 +27,11 @@ export const ko = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
+    {
+      text: '이벤트',
+      link: '/ko/event/2024modathon',
+      activeMatch: '/ko/event/'
+    },
     {
       text: '일반',
       link: '/ko/general/what-is-nine-chronicles',
@@ -51,6 +57,12 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/forum-trunk/0-what-is-forum-trunk',
       activeMatch: '/forum-trunk/'
     }
+  ];
+}
+
+function sidebarEvent(): DefaultTheme.SidebarItem[] {
+  return [
+    { text: 'Modathon', link: 'event/2024modathon' }
   ];
 }
 
