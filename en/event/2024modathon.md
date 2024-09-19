@@ -12,7 +12,7 @@ Additionally, since all Nine Chronicles-related products are open-source, we enc
 
 ## **Modathon Detail**
 
-The Nine Chronicles Modathon will primarily take place on the **Planetarium Dev** **Discord** server.
+The Nine Chronicles Modathon will primarily take place on the **[Planetarium Dev Discord](https://discord.gg/48JsEAAvMf)** server.
 However, participants will have `#introduce-mods` on the main Planetarium Discord server to promote their mods, and you can also list your mod in the GitHub repository at [awesome-9c](https://github.com/planetarium/awesome-9c).
 
 For event-related questions, a Q&A channel will be available `#2024modathon` on the **Planetarium Dev** server, and feedback on mods can be shared through the `#introduce-mods` channel. You’re also welcome to use your own Discord or website if you prefer.
