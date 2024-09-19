@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 네트워크 시작하기
       link: /ko/network/local-network-tutorial/getting-started
+    - theme: alt
+      text: 2024 Modathon
+      link: /ko/event/2024modathon
 
 features:
   - icon: 🔗
