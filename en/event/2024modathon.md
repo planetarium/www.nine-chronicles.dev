@@ -31,7 +31,7 @@ While you can work in a team, the rewards—including participation rewards—wi
 If working as a team, any distribution of rewards is an internal matter to be settled between team members.
 
 - Projects created before September 2024 are not eligible unless they include significant new features added after this date.
-- Teams may work on one project together, but only the individual who submits the project will receive the rewards
+- Teams may work on one project together, but only the individual who submits the project will receive the rewards.
 - All submissions must be open-source and use an appropriate license, such as GPL or AGPL.
 - Registrations can be submitted at any time until the end of the competition, but we encourage early registration before October 1 to help ensure a smooth event process.
 
