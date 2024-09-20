@@ -1,6 +1,8 @@
 import footnote from 'markdown-it-footnote';
 import { withMermaid } from "vitepress-plugin-mermaid";
 
+const GATAG = "G-3TF7Q09Y5N"
+
 export const shared = withMermaid({
     title: 'Nine Chronicles Developer Portal',
     description: 'A comprehensive guide for Nine Chronicles developers.',
@@ -29,6 +31,18 @@ export const shared = withMermaid({
         ['meta', { property: 'og:site_name', content: 'Nine Chronicles Developer Portal' }],
         ['meta', { property: 'og:image', content: '/images/share.jpg' }],
         ['meta', { property: 'og:url', content: 'https://nine-chronicles.dev/' }],
+        [
+            'script',
+            { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${GATAG}` }
+        ],
+        [
+            'script',
+            {},
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GATAG}');`
+        ]
     ],
 
     themeConfig: {
