@@ -1,3 +1,5 @@
+![2024modathon](</images/event/2024modathon/2024modathon.png>)
+
 # **Modathon Overview**
 
 [Nine Chronicles](https://docs.nine-chronicles.com/introduction) is a decentralized idle RPG built on blockchain technology.
