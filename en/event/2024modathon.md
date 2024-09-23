@@ -14,7 +14,7 @@ Additionally, since all Nine Chronicles-related products are open-source, we enc
 
 ## **Modathon Detail**
 
-The Nine Chronicles Modathon will primarily take place on the **[Planetarium Dev Discord](https://discord.gg/48JsEAAvMf)** server.
+The Nine Chronicles Modathon will primarily take place on the **[Planetarium Dev Discord](https://bit.ly/3Bf9oer)** server.
 However, participants will have `#introduce-mods` on the main Planetarium Discord server to promote their mods, and you can also list your mod in the GitHub repository at [awesome-9c](https://github.com/planetarium/awesome-9c).
 
 For event-related questions, a Q&A channel will be available `#2024modathon` on the **Planetarium Dev** server, and feedback on mods can be shared through the `#introduce-mods` channel. You’re also welcome to use your own Discord or website if you prefer.
@@ -90,9 +90,8 @@ Here are some mod ideas you can refer to for the Nine Chronicles Modathon:
     - A plugin that shows the probability of clearing a stage.
     - A plugin that displays arena win rates.
 
-## **Developer Resources**
+## Further more
 
-- **Dev Portal** https://nine-chronicles.dev/
-- **Libplanet Docs** https://docs.libplanet.io/
-- **Discord** https://discord.gg/planetarium
-- **Dev Discord** https://discord.gg/48JsEAAvMf
+Are you interested in Modathan :sunglasses:? We recommend to start at [guide to build avatar information website](../modding/guide/avatar-information-dapp-guide.md) and [guide to build daily reward website](../modding/guide/daily-reward-dapp.md). And discover community projects at [awesome-9c](https://github.com/planetarium/awesome-9c) and introduce your projects!!
+
+If you have any questions, join our [Planetarium Dev Discord Server](https://bit.ly/3zuWuZq) and ask anything without pressure.
