@@ -9,7 +9,7 @@ hero:
     - theme: brand
       text: 모딩 시작하기
       link: /ko/modding/getting-started
-    - theme: brand
+    - theme: alt
       text: 나인크로니클은 무엇인가?
       link: /ko/general/what-is-nine-chronicles
     - theme: alt
