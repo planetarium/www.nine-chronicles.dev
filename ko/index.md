@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: 2024 Modathon
       link: /ko/event/2024modathon
+    - theme: alt
+      text: GitHub
+      link: https://github.com/planetarium
 
 features:
   - icon: 🔗
