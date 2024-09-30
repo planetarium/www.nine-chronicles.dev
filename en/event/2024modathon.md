@@ -26,7 +26,7 @@ Seven days before the event concludes, we’ll hold a community vote that will s
 
 ## **Submission Guidelines**
 
-To participate, submit your mod using [this Google form](https://forms.gle/UPXTRkk77QjKkzLc9), including the URL to your Git hosting service's repository (e.g., GitHub, GitLab). The idea for your mod must be clearly described in the repository's `README.md`.
+To participate, submit your mod through [DoraHacks](https://dorahacks.io/hackathon/planetarium-2024modathon/detail), including the URL to your Git hosting service's repository (e.g., GitHub, GitLab). The idea for your mod must be clearly described in the repository's `README.md`.
 
 While you can work in a team, the rewards—including participation rewards—will be given to the individual who submits the project. If there are duplicate mods or suspected abuse, our team will review them and may reject the submissions. Also, you can submit multiple projects, but you can only win a prize for one.
 
