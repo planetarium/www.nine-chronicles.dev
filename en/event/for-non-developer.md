@@ -4,14 +4,14 @@ Hello and welcome to all non-developers who are interested in participating in t
 
 Once you've followed through to the end, if you feel inspired, we encourage you to join the Modathon and submit your project. And if you have a cool mod idea but think it's too challenging, head over to the **#mod-ideas** channel in our Discord to find developers who can help bring your vision to life!
 
-## Step 1: Modding Setup and Goal
+## Modding Setup and Goal
 
 Now let’s explain our goal. You'll be setting up your environment to create a website that can display avatar information from Nine Chronicles.  
 We’ll walk you through the basics, and you can follow the [Avatar Information Dapp Guide](https://modding/guide/avatar-information-dapp-guide) later to build the website step-by-step.
 
 By the end of this guide, you'll have everything set up and ready to dive into that guide!
 
-## Step 2: JavaScript and Setting Up Node.js
+## Step 1: JavaScript and Setting Up Node.js
 
 We’ll be using **JavaScript (JS)**, one of the most popular programming languages for building websites. For this project, we’ll actually be using a slightly enhanced version of JavaScript called **TypeScript (TS)**, which makes development easier and more reliable. Don’t worry, they are almost the same, but TypeScript helps catch errors early and makes coding smoother. You can learn more about TypeScript [here](https://www.typescriptlang.org/).
 
@@ -22,14 +22,15 @@ You can download Node.js (which includes npm) from [here](https://nodejs.org/en)
 Once Node.js and npm are installed, you’ll be ready to move on to the next step!
 ![Install Node JS](/images/event/2024modathon/install-nodejs.png){width=240}
 
-## Step 3: Installing a Code Editor (VS Code)
+## Step 2: Installing a Code Editor (VS Code)
 
 Now we need a text editor to write code. We'll be using **Visual Studio Code (VS Code)** because it's free and super easy to use!
 
 1. Download and install VS Code from [here](https://code.visualstudio.com/).
 2. Once installed, open it up and let’s get started!
 ![Install vscode](/images/event/2024modathon/install-vscode.png)
-## Step 4: Create and Open a New Folder
+
+## Step 3: Create and Open a New Folder
 
 In VS Code, we’ll create a new folder for our project and open it to start working.
 
@@ -38,7 +39,7 @@ In VS Code, we’ll create a new folder for our project and open it to start wor
 
 Great! You’re now ready to start coding!
 
-## Step 5: Verify npm is Working
+## Step 4: Verify npm is Working
 Now, let’s verify that **npm** (the tool we installed earlier) is working properly. In VS Code, open the terminal by clicking on [Terminal > New Terminal](https://code.visualstudio.com/docs/terminal/getting-started).
 
 In the terminal, type:
@@ -50,7 +51,7 @@ npm --version
 If you see a version number, then everything is set up correctly!
 ![npm version](/images/event/2024modathon/npm-version.png)
 
-## Step 6: Creating Your Website
+## Step 5: Creating Your Website
 
 We’re going to use a popular tool called [React](https://react.dev/) to build our website. React is a library that makes creating dynamic websites easier.
 
@@ -80,7 +81,7 @@ Now that everything is set up, you can follow the [Avatar Information Dapp Guide
 
 You might see some technical terms like **GQL** in the guide. Don’t worry about it! Just follow along step by step, and you’ll get the website up and running. After you've completed the guide, take a moment to explore what you've created and understand how it works.
 
-## Step 7: Adding a README File
+## Step 6: Adding a README File
 
 Before we upload your project to GitHub, you need to create a **README.md** file. A README file is used to describe your project and provide important information like what it does, how to use it, and any other relevant details.
 
@@ -105,7 +106,7 @@ This website displays detailed information about Nine Chronicles avatars
 
 Once you’ve written the description of your project, save the file. This README will help others understand your mod and what it does.
 
-## Step 8: Create a GitHub Account and Upload Your Project
+## Step 7: Create a GitHub Account and Upload Your Project
 
 Now that you've built your website, let’s upload it to **GitHub**, a platform where developers store and collaborate on projects. This will allow you to easily share your work and submit it for the Modathon.
 
@@ -132,6 +133,29 @@ Now, to upload your files:
 That’s it! You’ve successfully uploaded your project. Although developers usually use a tool called `git` to commit changes, this method allows you to easily upload your files through your browser.
 
 Now your website is live on GitHub and ready for others to see!
+
+## Step 8: Keep Learning and Explore Further!
+
+While building a simple website that displays avatar information is a great first project, it's important to go beyond this example to grow your skills and develop your own unique ideas. Submitting an entry too close to this example might be flagged as duplicate during judging for the Modathon.
+
+### What Next? Learn the Basics of JavaScript! 📚
+
+We recommend taking the time to study the basics of **JavaScript (JS)**, which is the foundation of many modern web applications. You might also want to explore **TypeScript (TS)** in more detail, as we used it in this guide. Understanding how TS differs from JS and how **React** works will give you a much clearer idea of how websites are built.
+
+Take a closer look at concepts such as:
+- **JavaScript syntax**: The rules and structure of writing JavaScript code.
+- **TypeScript**: A typed superset of JavaScript that helps prevent errors and make development smoother.
+- **React**: The library we used to build the website, which helps create dynamic and interactive web pages.
+
+### Understanding What You Built 🛠️
+
+Try to understand how everything you followed in this guide works. Explore how the website is fetching and displaying Nine Chronicles avatar information. The more you understand, the easier it will be to add unique features later on.
+
+### Final Step: Deploy Your Website!
+
+Once you've made some improvements and you're happy with your project, it’s time to deploy it so others can see it! One simple and effective way to do this is by using **GitHub Pages**. This will allow you to host your website for free and make it accessible to anyone with a web browser.
+
+To learn how to do this, you can search for **"deploy React app to GitHub Pages"** and you’ll find many tutorials that will guide you through the process step by step.
 
 ## Step 9: Join the Modathon!
 While a simple website displaying avatar information is a great learning project, unfortunately, you won’t be able to submit something identical or very similar to the example for the Modathon. Submitting an entry too close to this example might be flagged as abuse during judging.
