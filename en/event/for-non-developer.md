@@ -117,22 +117,54 @@ Now that you've built your website, let’s upload it to **GitHub**, a platform 
 
 ### 2. Upload Your Project to GitHub
 
-Instead of using Git commands (which developers typically use), we'll keep it simple and upload your project via the GitHub website:
+**Create your repository**
 
-1. On GitHub, click the **+** icon at the top right and select **New repository**.
+1. On GitHub, click the **New** button at the top right.  
+   ![Create repo](/images/event/2024modathon/create-repo-button.png)
 2. Give your repository a name (e.g., `my-avatar-website`), add a short description, and make sure the repository is **Public**.
 3. Click **Create repository**.
 
-Now, to upload your files:
+**Setup git**
 
-1. On your computer, locate your project folder and compress it into a `.zip` file.
-2. Go back to your new GitHub repository page.
-3. Click **Upload an existing file** and drag the `.zip` file into the upload area.
-4. Once your files are uploaded, click **Commit changes**.
+To upload your files, you'll need Git installed on your computer. You can download it from [here](https://git-scm.com/).  
 
-That’s it! You’ve successfully uploaded your project. Although developers usually use a tool called `git` to commit changes, this method allows you to easily upload your files through your browser.
+Once Git is installed:
+1. Open a terminal or command prompt and configure your name and email (use the name and email you used for your GitHub account):
 
-Now your website is live on GitHub and ready for others to see!
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+Creating a Personal Access Token (PAT)
+
+Here’s how to create a Personal Access Token:
+
+1. Go to your [GitHub Personal Access Token settings](https://github.com/settings/tokens).
+2. Click **Generate new token (classic)** and select the appropriate scopes (permissions). For general use, you'll need to check `repo` under "scopes" to allow access to your repositories.
+3. Generate the token and copy it. **Make sure to save it somewhere secure**, as you won’t be able to see it again after you leave the page.
+
+Using the Token
+
+1. When Git asks for your username and password during the `git push` step, enter your **GitHub username** as usual. 
+2. For the password, **paste your Personal Access Token** instead of your actual GitHub password.
+
+**Upload your project to GitHub**
+
+![Create repo](/images/event/2024modathon/created-repo.png)
+Make sure to use the **second command** above for setting up the remote repository, as it's better suited for your current setup.
+
+1. Open a terminal or command prompt.
+2. Use the second command like this:
+
+```bash
+git remote add origin git@github.com:{UserName}/{Repository}.git
+git branch -M main
+git push -u origin main
+```
+3. When you run the git push command, Git will ask for your GitHub username and token
+
+Now, your project is live on GitHub and ready for others to see!
 
 ## Step 8: Keep Learning and Explore Further!
 
