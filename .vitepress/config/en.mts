@@ -57,8 +57,7 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarEvent(): DefaultTheme.SidebarItem[] {
   return [
-    { text: '2024 Modathon', link: 'event/2024modathon' },
-    { text: 'Non Developer Guide', link: 'event/for-non-developer' }
+    { text: '2024 Modathon', link: 'event/2024modathon' }
   ];
 }
 
