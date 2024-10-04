@@ -15,7 +15,7 @@ Additionally, since all Nine Chronicles-related products are open-source, we enc
 ## **Modathon Detail**
 
 The Nine Chronicles Modathon will primarily take place on the **[Planetarium Dev Discord](https://bit.ly/3Bf9oer)** server.
-However, participants will have `#introduce-mods` on the main Planetarium Discord server to promote their mods, and you can also list your mod in the GitHub repository at [awesome-9c](https://github.com/planetarium/awesome-9c).
+However, participants will have `#mod-showcase` on the main Planetarium Discord server to promote their mods, and you can also list your mod in the GitHub repository at [awesome-9c](https://github.com/planetarium/awesome-9c).
 
 For event-related questions, a Q&A channel will be available `#2024modathon` on the **Planetarium Dev** server, and feedback on mods can be shared through the `#introduce-mods` channel. You’re also welcome to use your own Discord or website if you prefer.
 
@@ -53,7 +53,7 @@ The Nine Chronicles Modathon will take place from **October 1, 2024 – November
 
 🎖️ **5st Prize**: 5,000NCG with 100 Golden Dust, 50 AP Potion, 10,000 Hourglass
 
-😁 **All participants**: 200 Golden Dust, 100 AP Potion, 20,000 Hourglass
+😁 **All participants**: 100NCG + 200 Golden Dust, 100 AP Potion, 20,000 Hourglass
 
 ::: danger :construction:
 All participants will receive an item reward, but if any form of abuse is detected, the reward may be revoked after internal review.  
