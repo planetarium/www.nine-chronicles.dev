@@ -62,7 +62,8 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarEvent(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'Modathon', link: 'event/2024modathon' }
+    { text: 'Modathon', link: 'event/2024modathon' },
+    { text: '비개발자 가이드', link: 'event/for-non-developer' }
   ];
 }
 
