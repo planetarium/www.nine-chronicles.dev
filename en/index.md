@@ -16,11 +16,11 @@ hero:
       text: Start Network
       link: /network/local-network-tutorial/getting-started
     - theme: alt
-      text: 2024 Modathon
-      link: /event/2024modathon
-    - theme: alt
       text: GitHub
       link: https://github.com/planetarium
+    - theme: brand
+      text: 🎁 Modathon
+      link: /event/2024modathon
 
 features:
   - icon: 🔗
