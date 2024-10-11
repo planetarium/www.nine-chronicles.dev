@@ -14,6 +14,8 @@ Additionally, since all Nine Chronicles-related products are open-source, we enc
 
 ## **Modathon Detail**
 
+The Modathon is a type of hackathon where participants compete by creating mods. Aim for first place by making a mod that players will love!
+
 The Nine Chronicles Modathon will primarily take place on the **[Planetarium Dev Discord](https://bit.ly/3Bf9oer)** server.
 However, participants will have `#mod-showcase` on the main Planetarium Discord server to promote their mods, and you can also list your mod in the GitHub repository at [awesome-9c](https://github.com/planetarium/awesome-9c).
 

@@ -13,6 +13,8 @@ Nine Chronicles 관련 프로젝트는 모두 오픈 소스로 제공되기 때�
 
 ## **Modathon 세부사항**
 
+Modathon은 모드를 만들어 경쟁하는 hackathon의 일종입니다. 유저들이 좋아하는 모드를 만들어 1등을 노려보세요!
+
 Nine Chronicles Modathon은 **[Planetarium Dev Discord](https://bit.ly/3Bf9oer)** 서버에서 진행될 예정입니다.  
 참가자들은 메인 서버인 Planetarium Discord 서버의 `#mod-showcase` 채널에서 자신의 모드를 홍보할 수 있고, [awesome-9c](https://github.com/planetarium/awesome-9c) 레포지토리에도 모드를 등록할 수 있습니다.
 
