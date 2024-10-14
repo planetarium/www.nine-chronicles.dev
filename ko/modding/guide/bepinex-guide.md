@@ -2,7 +2,7 @@
 
 ### 설치
 
-- https://nine-chronicles.com/start에서 나인크로니클을 설치합니다.
+- https://nine-chronicles.com/start 에서 나인크로니클을 설치합니다.
 
 ### 나인크로니클 정상 동작 확인하기 (첫 번째)
 
