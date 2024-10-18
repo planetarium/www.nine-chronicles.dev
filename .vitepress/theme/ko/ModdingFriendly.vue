@@ -8,7 +8,7 @@
                     <a href="/general/get-state/get-state-with-mimir-graphql" class="highlight">Mimir</a>를 사용해 GQL로 게임
                     데이터를 받거나, <a href="/general/chrono/how-to-use-chrono" class="highlight">Chrono</a>를 사용해 웹사이트에서 서명을
                     진행해 보세요.<br />
-                    많은 모드들이 <a href="https://github.com/planetarium/awesome-9c" target="_blank" class="highlight">나인크로니클
+                    많은 모드들이 <a href="https://github.com/planetarium/awesome-9c" target="_blank" class="highlight">나인 크로니클
                         생태계에서 제작</a>되고 있으며 모딩은 언제나 환영하고 있습니다.
                 </p>
             </div>
@@ -33,6 +33,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    word-break: keep-all;
 }
 
 .image-container {

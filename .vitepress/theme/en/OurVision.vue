@@ -36,7 +36,7 @@
                     We are passionately obsessed to deliver scalable, meaningful impact through our gaming experiences,
                     <b>where you can create, share, own & earn.</b><br />
                     If you’re interested in building a game like <a href="https://github.com/planetarium/NineChronicles"
-                        target="_blank" class="highlight">Nine Chronicles</a> , check out libplanet.
+                        target="_blank" class="highlight">Nine Chronicles</a>, check out libplanet.
                 </p>
             </div>
         </div>
@@ -58,6 +58,7 @@
 
     width: 100%;
     gap: 40px;
+    word-break: keep-all;
 }
 
 .buttons-container {

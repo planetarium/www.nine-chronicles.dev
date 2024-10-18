@@ -23,7 +23,7 @@ import JoinCommunity from '../.vitepress/theme/en/JoinCommunity.vue'
 <div class="VPHome">
   <Hero/>
   <WhatIsNineChronicles/>
-  <OurVision/>
   <ModdingFriendly/>
   <JoinCommunity/>
+  <OurVision/>
 </div>

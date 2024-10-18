@@ -12,7 +12,7 @@
                     개발자들과 소통하고 있습니다. 자리는 항상 비어있으니 언제든 들어와주세요.
                 </p>
                 <p>
-                    <a href="/contributing/getting-started" class="highlight">나인크로니클과 관련된 모든 레포지토리</a>는 전부 오픈소스 입니다.<br />
+                    <a href="/contributing/getting-started" class="highlight">나인 크로니클과 관련된 모든 레포지토리</a>는 전부 오픈소스 입니다.<br />
                     Discussions 또는 Issue를 통해 오픈소스에 참가하실 수 있으며 피드백과 질문은 언제나 환영합니다.
                 </p>
             </div>
@@ -33,6 +33,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    word-break: keep-all;
 }
 
 .image-container {

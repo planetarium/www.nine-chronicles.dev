@@ -3,7 +3,7 @@
     <div class="content">
       <img class="logo" src="/logo.png" alt="DevPortal Logo" width="200" height="200" />
 
-      <h1><span class="title">나인크로니클</span>에 오신것을 환영합니다</h1>
+      <h1><span class="title">나인 크로니클</span>에 오신것을 환영합니다</h1>
       <h3>
         각종 튜토리얼과 가이드들을 준비해두었습니다. 오픈소스에 참가해보세요!
       </h3>
@@ -34,6 +34,7 @@
 
 .content {
   max-width: 800px;
+  word-break: keep-all;
 }
 
 .logo {

@@ -5,9 +5,9 @@
                 <img src="/ninechronicles.jpeg" alt="Nine Chronicles Game" class="game-image" />
             </div>
             <div class="text-container">
-                <h1>나인크로니클이란?</h1>
+                <h1>나인 크로니클이란?</h1>
                 <p>
-                    <a href="https://docs.nine-chronicles.com/introduction" target="_blank" class="highlight">나인크로니클</a>은 <b>게이머들과 함께 운영하는 분산형 게임 네트워크</b> 위에서 돌아가는 오픈소스 온라인 RPG 입니다.<br/>
+                    <a href="https://docs.nine-chronicles.com/introduction" target="_blank" class="highlight">나인 크로니클</a>은 <b>게이머들과 함께 운영하는 분산형 게임 네트워크</b> 위에서 돌아가는 오픈소스 온라인 RPG 입니다.<br/>
                     <b>게임 내 모든 정보는 블록체인에 기록되며</b>, 투명성과 보안을 제공합니다.
                 </p>
             </div>
@@ -28,6 +28,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    word-break: keep-all;
 }
 
 .image-container {

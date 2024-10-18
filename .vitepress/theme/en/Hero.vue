@@ -37,6 +37,7 @@
 
 .content {
   max-width: 800px;
+  word-break: keep-all;
 }
 
 .logo {
