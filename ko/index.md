@@ -16,14 +16,16 @@ hero:
 import Hero from '../.vitepress/theme/ko/Hero.vue'
 import WhatIsNineChronicles from '../.vitepress/theme/ko/WhatIsNineChronicles.vue'
 import ModdingFriendly from '../.vitepress/theme/ko/ModdingFriendly.vue'
-import OurVision from '../.vitepress/theme/ko/OurVision.vue'
-import JoinCommunity from '../.vitepress/theme/ko/JoinCommunity.vue'
+import FullyOnChain from '../.vitepress/theme/ko/FullyOnChain.vue'
+import CommunityDriven from '../.vitepress/theme/ko/CommunityDriven.vue'
+import PlanetariumLabs from '../.vitepress/theme/ko/PlanetariumLabs.vue'
 </script>
 
 <div class="VPHome">
   <Hero/>
   <WhatIsNineChronicles/>
   <ModdingFriendly/>
-  <JoinCommunity/>
-  <OurVision/>
+  <CommunityDriven/>
+  <FullyOnChain/>
+  <PlanetariumLabs/>
 </div>

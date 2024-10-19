@@ -28,13 +28,13 @@
             </div>
 
             <div class="description">
-                <h1>플라네타리움 랩스</h1>
+                <h1>풀 블록체인 게임</h1>
                 <p>
-                    <a href="https://docs.nine-chronicles.com/introduction/planetarium-labs/team" target="_blank"
-                        class="highlight">플라네타리움 랩스</a>은 커뮤니티 중심의 Web3 게임 회사입니다.<br />
-                    저희는 플레이어가 창작하고, 공유하며, 소유하고, 보상받을 수 있는 게임 경험을 통해 확장 가능하고 의미 있는 영향을 제공하는 것에 몰두하고 있습니다.<br />
-                    만약 <a href="https://github.com/planetarium/NineChronicles" target="_blank"
-                        class="highlight">나인 크로니클</a> 같은 게임을 만들고 싶으시다면 Libplanet을 확인해보세요.
+                    모든 데이터는 트랜잭션을 통해 <b>블록체인에 기록되어 투명하게 공개</b>하고 있습니다.<br />
+                    트랜잭션들은 <b>검증자들에 의해 검증</b>되며, 탈중앙화된 방식으로 유저와 함께 네트워크를 운영합니다.<br />
+                    자세한 네트워크 프로토콜은 Lib9c 레포지토리를 통해 공개 되어있습니다.<br />
+                    만약 <a href="https://github.com/planetarium/NineChronicles" target="_blank" class="highlight">나인
+                        크로니클</a> 같은 게임을 만들고 싶으시다면 Libplanet을 확인해보세요.
                 </p>
             </div>
         </div>

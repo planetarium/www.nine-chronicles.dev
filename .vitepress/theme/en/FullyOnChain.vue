@@ -14,7 +14,7 @@
 
                     <div class="button-text">
                         <strong>Lib9c</strong>
-                        <p>See the Nine Chronicles protocol</p>
+                        <p>See the Nine Chronicles blockchain protocol</p>
                     </div>
                 </a>
                 <a href="https://github.com/planetarium/NCIPs" target="_blank" class="button">
@@ -28,13 +28,13 @@
             </div>
 
             <div class="description">
-                <h1>Planetarium Labs</h1>
+                <h1>Fully On-Chain</h1>
                 <p>
-                    At <a href="https://docs.nine-chronicles.com/introduction/planetarium-labs/team" target="_blank"
-                        class="highlight">Planetarium Labs</a>, we're expanding the possibilities of gaming with
-                    blockchain technology.<br />
-                    We are passionately obsessed to deliver scalable, meaningful impact through our gaming experiences,
-                    <b>where you can create, share, own & earn.</b><br />
+                    All data is transparently <b>recorded on the blockchain through transactions</b>.<br />
+                    Transactions are <b>validated by validators</b>, and the network is operated in a decentralized
+                    manner
+                    together with users.<br />
+                    Detailed network protocols are available in the Lib9c repository.<br />
                     If you’re interested in building a game like <a href="https://github.com/planetarium/NineChronicles"
                         target="_blank" class="highlight">Nine Chronicles</a>, check out libplanet.
                 </p>
