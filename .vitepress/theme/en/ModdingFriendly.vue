@@ -2,8 +2,8 @@
     <div class="what-is-nine-chronicles">
         <div class="content">
             <div class="text-container">
-                <h1>Modding Friendly</h1>
-                <p>
+                <h1 class="title">Modding Friendly</h1>
+                <div class="description">
                     <b>Nine Chronicles is modding-friendly</b>, making it easier for players and developers to create
                     mods with
                     various tools at their disposal.<br />
@@ -15,7 +15,7 @@
                         href="https://github.com/planetarium/awesome-9c" target="_blank" class="highlight">Nine
                         Chronicles Ecosystem</a>, and we encourage you to
                     try your hand at modding
-                </p>
+                </div>
             </div>
 
             <div class="image-container">
@@ -58,12 +58,13 @@
     flex: 1;
 }
 
-h1 {
+.title {
     font-size: 40px;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-p {
+.description {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 1rem;

@@ -3,14 +3,14 @@
     <div class="content">
       <img class="logo" src="/logo.png" alt="DevPortal Logo" width="200" height="200" />
 
-      <h1><span class="title">나인 크로니클</span>에 오신것을 환영합니다</h1>
-      <h3>
+      <h1 class="title"><span class="highlight">나인 크로니클</span>에 오신것을 환영합니다</h1>
+      <h3 class="sub-title">
         각종 튜토리얼과 가이드들을 준비해두었습니다. 오픈소스에 참가해보세요!
       </h3>
 
       <div class="buttons">
-        <a href="/modding/getting-started" class="btn">시작하기</a>
-        <a href="/event/2024modathon" class="btn btn--outline">
+        <a href="/ko/modding/getting-started" class="btn">시작하기</a>
+        <a href="/ko/event/2024modathon" class="btn btn--outline">
           🎉 Modathon
         </a>
       </div>
@@ -19,8 +19,8 @@
 </template>
 
 <style scoped>
-.title {
-  color: #b81d82
+.highlight {
+  color: #b81d82;
 }
 
 .hero {
@@ -41,13 +41,14 @@
   margin: 0 auto 2rem;
 }
 
-h1 {
+.title {
   font-size: 56px;
   margin-bottom: 1rem;
   line-height: 64px;
+  font-weight: 600;
 }
 
-h3 {
+.sub-title {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 2rem;

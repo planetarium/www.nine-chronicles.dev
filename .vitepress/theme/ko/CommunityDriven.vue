@@ -6,15 +6,15 @@
             </div>
 
             <div class="text-container">
-                <h1>커뮤니티 드리븐</h1>
-                <p>
+                <h1 class="title">커뮤니티 드리븐</h1>
+                <div class="description">
                     커뮤니티는 게임의 미래를 그려나가는데 중요한 역할을 하며, <b>플레이어들의 피드백과 기여가 게임을 이끌어 나갑니다.</b><br />
                     나인크로니클은 커뮤니티를 항상 중시하고 있습니다.
-                </p>
-                <p>
+                </div>
+                <div class="description">
                     <a href="https://bit.ly/4dNfsIz" target="_blank" class="highlight">Discord</a>에서 모더, 오픈소스 기여자 등 많은
                     개발자들과 소통하고 있습니다. 자리는 항상 비어있으니 언제든 들어와주세요.
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -53,12 +53,13 @@
     flex: 1;
 }
 
-h1 {
+.title {
     font-size: 40px;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-p {
+.description {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 1rem;
