@@ -1,9 +1,6 @@
 <template>
   <div class="hero">
     <div class="content">
-      <!-- <div class="modathon-button">
-        <a href="/event/2024modathon" class="btn btn--border-only">🎁 Modathon 2024</a>
-      </div> -->
       <img class="logo" src="/logo.png" alt="DevPortal Logo" width="200" height="200" />
 
       <h1>Welcome to <span class="title">Nine Chronicles</span></h1>
@@ -13,9 +10,8 @@
 
       <div class="buttons">
         <a href="/modding/getting-started" class="btn">Get started</a>
-        <a href="https://github.com/planetarium" target="_blank" class="btn btn--outline">
-          <img src="/github.svg" alt="GitHub logo" class="icon" />
-          GitHub
+        <a href="/event/2024modathon" class="btn btn--outline">
+          🎉 Modathon
         </a>
       </div>
     </div>
@@ -24,7 +20,7 @@
 
 <style scoped>
 .title {
-  color: #b81d82
+  color: #b81d82;
 }
 
 .hero {
@@ -100,27 +96,5 @@ h3 {
 
 .btn--outline:hover .icon {
   fill: white;
-}
-
-.modathon-button {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.btn--border-only {
-  background-color: transparent;
-  color: #000;
-  padding: 2px 30px;
-  border: 1px solid #b81d82;
-  border-radius: 140px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.btn--border-only:hover {
-  color: #000;
 }
 </style>

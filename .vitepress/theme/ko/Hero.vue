@@ -10,9 +10,8 @@
 
       <div class="buttons">
         <a href="/modding/getting-started" class="btn">시작하기</a>
-        <a href="https://github.com/planetarium" target="_blank" class="btn btn--outline">
-          <img src="/github.svg" alt="GitHub logo" class="icon" />
-          GitHub
+        <a href="/event/2024modathon" class="btn btn--outline">
+          🎉 Modathon
         </a>
       </div>
     </div>
