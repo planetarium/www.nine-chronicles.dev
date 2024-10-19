@@ -4,13 +4,13 @@
             <div class="image-container">
                 <img src="/pl-logo.png" alt="GitHub logo" class="icon" />
             </div>
-            <p>
+            <div class="description">
                 At <a href="https://docs.nine-chronicles.com/introduction/planetarium-labs/team" target="_blank"
                     class="highlight">Planetarium Labs</a>, we're expanding the possibilities of gaming with
                 blockchain technology.<br />
                 We are passionately obsessed to deliver scalable, meaningful impact through our gaming experiences,
                 <b>where you can create, share, own & earn.</b>
-            </p>
+            </div>
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@
 }
 
 .content {
-    max-width: 800px;
+    max-width: 1000px;
     word-break: keep-all;
 }
 
@@ -44,15 +44,11 @@
     width: 100%;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 1rem;
-    line-height: 64px;
-}
-
-p {
-    font-size: 18px;
+.description {
+    font-size: 20px;
     color: #555;
+    margin-top: 20px;
+    line-height: 28px;
 }
 
 a.highlight {

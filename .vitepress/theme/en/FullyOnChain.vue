@@ -6,7 +6,7 @@
                     <img src="/github.svg" alt="GitHub logo" class="icon" />
                     <div class="button-text">
                         <strong>Libplanet</strong>
-                        <p>Check the full blockchain game library</p>
+                        <div class="button-description">Check the full blockchain game library</div>
                     </div>
                 </a>
                 <a href="https://github.com/planetarium/lib9c" target="_blank" class="button">
@@ -14,7 +14,7 @@
 
                     <div class="button-text">
                         <strong>Lib9c</strong>
-                        <p>See the Nine Chronicles blockchain protocol</p>
+                        <div class="button-description">See the Nine Chronicles blockchain protocol</div>
                     </div>
                 </a>
                 <a href="https://github.com/planetarium/NCIPs" target="_blank" class="button">
@@ -22,14 +22,14 @@
 
                     <div class="button-text">
                         <strong>NCIP</strong>
-                        <p>Check out Nine Chronicles Improvement Proposals</p>
+                        <div class="button-description">Check out Nine Chronicles Improvement Proposals</div>
                     </div>
                 </a>
             </div>
 
-            <div class="description">
-                <h1>Fully On-Chain</h1>
-                <p>
+            <div class="description-container">
+                <h1 class="title">Fully On-Chain</h1>
+                <div class="description">
                     All data is transparently <b>recorded on the blockchain through transactions</b>.<br />
                     Transactions are <b>validated by validators</b>, and the network is operated in a decentralized
                     manner
@@ -37,7 +37,7 @@
                     Detailed network protocols are available in the Lib9c repository.<br />
                     If you’re interested in building a game like <a href="https://github.com/planetarium/NineChronicles"
                         target="_blank" class="highlight">Nine Chronicles</a>, check out libplanet.
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -101,23 +101,19 @@ strong {
     font-size: 18px;
 }
 
-p {
+.description {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 1rem;
+}
+
+.button-description {
     font-size: 14px;
     margin: 0;
 }
 
-.description {
+.description-container {
     flex: 1;
-}
-
-.description h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.description p {
-    font-size: 20px;
-    line-height: 1.6;
 }
 
 a.highlight {
@@ -127,5 +123,11 @@ a.highlight {
 
 a.highlight:hover {
     text-decoration: underline;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 </style>

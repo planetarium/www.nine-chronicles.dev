@@ -6,18 +6,18 @@
             </div>
 
             <div class="text-container">
-                <h1>Join Our Community</h1>
-                <p>
+                <h1 class="title">Join Our Community</h1>
+                <div class="description">
                     We use <a href="https://bit.ly/4dNfsIz" target="_blank" class="highlight">Discord</a> as
                     our main community hub, and we encourage you to join and be part of the conversation.
-                </p>
-                <p>
+                </div>
+                <div class="description">
                     All repositories <a href="/contributing/getting-started" class="highlight">related to Nine
                         Chronicles are open source</a>, and
                     we welcome your participation through discussions and issues on GitHub. <b>Your feedback and
                         questions
                         are always appreciated, and we're excited to see what ideas you bring!</b>
-                </p>
+                    </div>
             </div>
         </div>
     </div>
@@ -56,12 +56,13 @@
     flex: 1;
 }
 
-h1 {
+.title {
     font-size: 40px;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-p {
+.description {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 1rem;

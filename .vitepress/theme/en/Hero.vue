@@ -3,8 +3,8 @@
     <div class="content">
       <img class="logo" src="/logo.png" alt="DevPortal Logo" width="200" height="200" />
 
-      <h1>Welcome to <span class="title">Nine Chronicles</span></h1>
-      <h3>
+      <h1 class="title">Welcome to <span class="highlight">Nine Chronicles</span></h1>
+      <h3 class="sub-title">
         Dive into our tutorials, guides, and open-source
       </h3>
 
@@ -19,7 +19,7 @@
 </template>
 
 <style scoped>
-.title {
+.highlight {
   color: #b81d82;
 }
 
@@ -41,13 +41,14 @@
   margin: 0 auto 2rem;
 }
 
-h1 {
+.title {
   font-size: 56px;
   margin-bottom: 1rem;
   line-height: 64px;
+  font-weight: 600;
 }
 
-h3 {
+.sub-title {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 2rem;

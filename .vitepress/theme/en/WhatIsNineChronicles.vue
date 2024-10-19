@@ -5,12 +5,14 @@
                 <img src="/ninechronicles.jpeg" alt="Nine Chronicles Game" class="game-image" />
             </div>
             <div class="text-container">
-                <h1>What Is Nine Chronicles?</h1>
-                <p>
-                    <a href="https://docs.nine-chronicles.com/introduction" target="_blank" class="highlight">Nine Chronicles</a> is a fully open-sourced online RPG<br />
-                    Set in a vast fantasy world, it operates on a distributed game network powered by gamers.<br/>
-                    <b>every action in the Nine Chronicles ecosystem is recorded on the blockchain</b>, ensuring transparency and security.
-                </p>
+                <div class="title">What Is Nine Chronicles?</div>
+                <div class="description">
+                    <a href="https://docs.nine-chronicles.com/introduction" target="_blank" class="highlight">Nine
+                        Chronicles</a> is a fully open-sourced online RPG<br />
+                    Set in a vast fantasy world, it operates on a distributed game network powered by gamers.<br />
+                    <b>every action in the Nine Chronicles ecosystem is recorded on the blockchain</b>, ensuring
+                    transparency and security.
+                </div>
             </div>
         </div>
     </div>
@@ -49,12 +51,13 @@
     flex: 1;
 }
 
-h1 {
+.title {
     font-size: 40px;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-p {
+.description {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 1rem;
