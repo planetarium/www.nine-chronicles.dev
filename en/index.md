@@ -2,59 +2,30 @@
 layout: home
 
 hero:
-  name: Nine Chronicles
-  text: Developer Portal
-  tagline: Build your Nine Chronicles
-  actions:
-    - theme: brand
-      text: Start Modding
-      link: /modding/getting-started
-    - theme: alt
-      text: What is Nine Chronicles?
-      link: /general/what-is-nine-chronicles
-    - theme: alt
-      text: Start Network
-      link: /network/local-network-tutorial/getting-started
-    - theme: alt
-      text: GitHub
-      link: https://github.com/planetarium
-    - theme: brand
-      text: 🎁 Modathon
-      link: /event/2024modathon
+  title: Nine Chronicles
+  titleTemplate: Build your Nine Chronicles
 
-features:
-  - icon: 🔗
-    title: Fully On-Chain
-    details: Nine Chronicles operates entirely on the blockchain, ensuring transparency and security for all transactions and interactions within the game.
-  - icon: 🌐
-    title: Decentralized
-    details: The game is governed by its players, with no central authority, allowing for a truly decentralized experience.
-  - icon: 🌟
-    title: Community Driven
-    details: The community plays a crucial role in shaping the game's future, with player feedback and contributions driving development and updates.
-  - icon: 🧩
-    title: Modding Friendly
-    details: Nine Chronicles provides extensive modding tools and support, enabling players to create and share their own content and modifications.
+  layout: home
+  aside: false
+  editLink: false
+  markdownStyles: false
+
 ---
 
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+<script setup>
+import Hero from '../.vitepress/theme/en/Hero.vue'
+import WhatIsNineChronicles from '../.vitepress/theme/en/WhatIsNineChronicles.vue'
+import ModdingFriendly from '../.vitepress/theme/en/ModdingFriendly.vue'
+import FullyOnChain from '../.vitepress/theme/en/FullyOnChain.vue'
+import CommunityDriven from '../.vitepress/theme/en/CommunityDriven.vue'
+import PlanetariumLabs from '../.vitepress/theme/en/PlanetariumLabs.vue'
+</script>
 
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-</style>
+<div class="VPHome">
+  <Hero/>
+  <WhatIsNineChronicles/>
+  <ModdingFriendly/>
+  <CommunityDriven/>
+  <FullyOnChain/>
+  <PlanetariumLabs/>
+</div>
