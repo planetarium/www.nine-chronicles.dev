@@ -10,12 +10,9 @@ export const en = defineConfig({
     nav: nav(),
 
     sidebar: {
-      '/introduce/': { base: '/', items: sidebarGeneral() },
       '/event/': { base: '/', items: sidebarEvent() },
-      '/general/': { base: '/', items: sidebarGeneral() },
-      '/network/': { base: '/', items: sidebarNetwork() },
-      '/modding/': { base: '/', items: sidebarModding() },
-      '/contributing/': { base: '/contributing/', items: sidebarContributing() },
+      '/guide/': { base: '/', items: sidebarGuide() },
+      '/tutorials/': { base: '/', items: sidebarTutorials() },
     },
 
     editLink: {
@@ -33,24 +30,14 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/event/'
     },
     {
-      text: 'General',
-      link: '/general/what-is-nine-chronicles',
-      activeMatch: '/general/'
+      text: 'Guide',
+      link: '/guide/getting-started',
+      activeMatch: '/guide/'
     },
     {
-      text: 'Network',
-      link: '/network/local-network-tutorial/getting-started',
-      activeMatch: '/network/'
-    },
-    {
-      text: 'Modding',
-      link: '/modding/getting-started',
-      activeMatch: '/modding/'
-    },
-    {
-      text: 'Contributing',
-      link: '/contributing/getting-started',
-      activeMatch: '/contributing/'
+      text: 'Tutorials',
+      link: '/tutorials/getting-started',
+      activeMatch: '/tutorials/'
     },
   ];
 }
@@ -62,25 +49,26 @@ function sidebarEvent(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-function sidebarGeneral(): DefaultTheme.SidebarItem[] {
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
-    { text: 'What is Nine Chronicles?', link: 'general/what-is-nine-chronicles' },
-    { text: 'Networks', link: 'general/networks' },
-    { text: 'Multiplanetary', link: 'general/multiplanetary' },
-    { text: 'Developer Ecosystem', link: 'general/developer-ecosystem' },
+    { text: 'Getting Started', link: 'guide/getting-started' },
+    { text: 'What is Nine Chronicles?', link: 'guide/what-is-nine-chronicles' },
+    { text: 'Networks', link: 'guide/networks' },
+    { text: 'Multiplanetary', link: 'guide/multiplanetary' },
+    { text: 'Developer Ecosystem', link: 'guide/developer-ecosystem' },
     {
       text: 'Chrono',
       collapsed: false,
       items: [
-        { text: 'How to use', link: 'general/chrono/how-to-use-chrono' }
+        { text: 'How to use', link: 'guide/chrono/how-to-use-chrono' }
       ]
     },
     {
       text: 'Get State',
       collapsed: false,
       items: [
-        { text: 'GraphQL(Headless)', link: 'general/get-state/get-state-with-headless-graphql' },
-        { text: 'GraphQL(Mimir)', link: 'general/get-state/get-state-with-mimir-graphql' },
+        { text: 'GraphQL(Headless)', link: 'guide/get-state/get-state-with-headless-graphql' },
+        { text: 'GraphQL(Mimir)', link: 'guide/get-state/get-state-with-mimir-graphql' },
       ]
     },
   ];
@@ -106,7 +94,7 @@ function sidebarNetwork(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-function sidebarModding(): DefaultTheme.SidebarItem[] {
+function sidebarTutorials(): DefaultTheme.SidebarItem[] {
   return [
     { text: 'Getting Started', link: 'modding/getting-started' },
     {
