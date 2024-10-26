@@ -17,9 +17,9 @@ Additionally, you can create `CLI` tools or `API` services, which can also be de
 
 We provide detailed tutorials for each field. If you're ready to start, check out the links below:
 
-- If you want to create a mod that **does not require user signatures**, refer to the [Avatar Information Page Guide](./guide/avatar-information-dapp-guide).
-- If you want to create a mod that **requires user signatures**, check out the [Daily Reward Page Guide](./guide/daily-reward-dapp).
-- For **client modding**, refer to the [BepInEx Guide](./guide/bepinex-guide).
+- If you want to create a mod that **does not require user signatures**, refer to the [Avatar Information Page Guide](../../tutorials/modding/avatar-information-dapp-guide.md).
+- If you want to create a mod that **requires user signatures**, check out the [Daily Reward Page Guide](../../tutorials/modding/daily-reward-dapp.md).
+- For **client modding**, refer to the [BepInEx Guide](../../tutorials/modding/bepinex-guide.md).
 
 ::: info
 A signature is required for creating transactions that need user authorization.  
@@ -32,8 +32,8 @@ Building websites or mobile applications is also considered modding by our stand
 
 To facilitate this process, we’ve developed tools like [Mimir](https://github.com/planetarium/mimir) and [Chrono](https://github.com/planetarium/chrono), and you can use various TypeScript libraries to develop your applications.
 
-- **Mimir**: Access real-time game data via GraphQL, such as Arena rankings or avatar information. [Check out the guide here](../guide/general/get-state/get-state-with-mimir-graphql).
-- **Chrono**: A Chrome extension that provides wallet functionality for Nine Chronicles, similar to [Metamask](https://metamask.io/). [See the guide here](../guide/general/how-to-use-chrono).
+- **Mimir**: Access real-time game data via GraphQL, such as Arena rankings or avatar information. [Check out the guide here](../general/get-state/get-state-with-mimir-graphql.md).
+- **Chrono**: A Chrome extension that provides wallet functionality for Nine Chronicles, similar to [Metamask](https://metamask.io/). [See the guide here](../general/how-to-use-chrono.md).
 
 By using Mimir to retrieve data and Chrono to send transactions to the network, modding becomes much simpler. Since Mimir is a GraphQL service, it can also be used in CLI tools or analytics services.
 
@@ -56,7 +56,7 @@ Although we haven’t prepared a guide for the first method yet, we recommend us
 Both methods rely heavily on the [necoyume.dll](https://github.com/planetarium/NineChronicles/tree/development/nekoyume) used within the game client. Therefore, it’s crucial to understand the APIs in the `necoyume` module.  
 Unfortunately, we don’t have a dedicated guide for this yet 😢, but you can refer to our [Mods repository](https://github.com/planetarium/NineChronicles.Mods) for examples of how mods are implemented. For more extensive usage, check the Nine Chronicles repository directly.
 
-We have prepared a simple guide on how to call a notification from the necoyume module and install BepInEx. [Check out the BepInEx Guide](./guide/bepinex-guide).
+We have prepared a simple guide on how to call a notification from the necoyume module and install BepInEx. [Check out the BepInEx Guide](../../tutorials/modding/bepinex-guide.md).
 
 ## **awesome-9c**
 

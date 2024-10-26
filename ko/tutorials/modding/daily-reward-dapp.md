@@ -3,9 +3,9 @@
 해당 예제는 서명이 필요하기 때문에 한번이라도 Daily reward(action point refill)을 했던 아바타를 가지고 있는 나인 크로니클 계정이 있어야 진행이 가능합니다.
 :::
 
-나인크로니클의 서명 도구인 [Chrono](../../general/chrono/how-to-use-chrono)를 활용해 Daily reward를 받는 웹사이트를 제작하는 튜토리얼입니다.
+나인크로니클의 서명 도구인 [Chrono](../../guide/general/how-to-use-chrono.md)를 활용해 Daily reward를 받는 웹사이트를 제작하는 튜토리얼입니다.
 
-본격적으로 시작하기 전에 [Chrono](../../general/chrono/how-to-use-chrono) 문서를 확인한 후 설치 및 플레이 가능한 아바타가 존재하는 private key를 import 해주세요.
+본격적으로 시작하기 전에 [Chrono](../../guide/general/how-to-use-chrono.md) 문서를 확인한 후 설치 및 플레이 가능한 아바타가 존재하는 private key를 import 해주세요.
 
 
 # 프로젝트 세팅

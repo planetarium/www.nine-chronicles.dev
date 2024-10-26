@@ -6,7 +6,7 @@
 
 ## GraphQL Playground에서 상태 조회하기
 
-[앞에서](./running-node-with-executor) 실행해봤던 쿼리를 메인 네트워크 중 하나인 [Odin 네트워크](../../general/multiplanetary)의 GraphQL Playground URL에 접속해서 조회해보겠습니다.
+[앞에서](./running-node-with-executor) 실행해봤던 쿼리를 메인 네트워크 중 하나인 [Odin 네트워크](../../guide/general/multiplanetary.md)의 GraphQL Playground URL에 접속해서 조회해보겠습니다.
 
 - [Odin GraphQL Playground URL](https://9c-main-rpc-1.nine-chronicles.com/ui/playground)
 

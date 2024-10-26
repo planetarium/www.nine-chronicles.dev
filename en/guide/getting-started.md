@@ -32,7 +32,7 @@ This portal provides guides and tutorials tailored to three types of developers:
 
 Modding for Nine Chronicles can include creating websites related to the game, client modifications, or even rebuilding the client itself. For more inspiration, check out the various mods on [awesome-9c](https://github.com/planetarium/awesome-9c).
 
-- If you're interested in modding, explore our [Modding Guide](./modding-guide) for detailed tutorials.
+- If you're interested in modding, explore our [Modding Guide](./modding/getting-started.md) for detailed tutorials.
 
 ### **Network**
 

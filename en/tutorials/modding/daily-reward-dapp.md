@@ -4,9 +4,9 @@
 This example requires a signature, so you must have a Nine Chronicles account with an avatar that has claimed the Daily Reward (Action Point refill) at least once in order to proceed.
 :::
 
-This tutorial walks you through creating a website to receive the Daily Reward using Nine Chronicles' signature tool, [Chrono](../../general/chrono/how-to-use-chrono).
+This tutorial walks you through creating a website to receive the Daily Reward using Nine Chronicles' signature tool, [Chrono](../../guide/general/how-to-use-chrono.md).
 
-Before starting, please check the [Chrono](../../general/chrono/how-to-use-chrono) documentation, install the extension, and import a private key with a playable avatar.
+Before starting, please check the [Chrono](../../guide/general/how-to-use-chrono.md) documentation, install the extension, and import a private key with a playable avatar.
 
 # Project Setup
 

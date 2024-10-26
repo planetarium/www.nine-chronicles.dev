@@ -79,7 +79,7 @@ The judging for the Nine Chronicles Modathon will be conducted by the **Planetar
 
 # **Further more** 💡
 
-Are you interested in the **Modathon**? 😎 We recommend starting with the [guide to build avatar information website](../modding/guide/avatar-information-dapp-guide.md) and [guide to build daily reward website](../modding/guide/daily-reward-dapp.md).  
+Are you interested in the **Modathon**? 😎 We recommend starting with the [guide to build avatar information website](../tutorials/modding/avatar-information-dapp-guide.md) and [guide to build daily reward website](../tutorials/modding/daily-reward-dapp.md).  
 Discover community projects at [awesome-9c](https://github.com/planetarium/awesome-9c) and **introduce your projects**!
 
 If you have any questions, join our [Planetarium Dev Discord Server](https://bit.ly/3zuWuZq) and **ask anything without pressure**. 😄
