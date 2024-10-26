@@ -21,4 +21,4 @@ query GetArenaSheet {
 }
 ```
 
-자세한 사용법은 [링크](https://chillicream.com/docs/bananacakepop/v2/explore-the-ui)를 확인해주세요.
+자세한 사용법은 [링크](https://chillicream.com/docs/nitro/v2/explore-the-ui)를 확인해주세요.
