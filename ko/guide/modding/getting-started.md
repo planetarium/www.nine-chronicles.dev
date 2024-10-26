@@ -27,8 +27,8 @@
 
 쉽게 모딩을 할 수 있도록 [Mimir](https://github.com/planetarium/mimir)와 [Chrono](https://github.com/planetarium/chrono)를 개발해두었으며 각종 TypeScript 라이브러리를 사용해 웹사이트를 제작하실 수 있습니다.  
 
-- Mimir는 GraphQL을 통해 실시간 게임 데이터를 조회할 수 있습니다. 아레나 랭킹을 조회하거나 아바타 정보를 받아보세요. [해당 가이드를 참고해주세요](../guide/general/get-state/get-state-with-mimir-graphql)
-- Chrono는 Chrome의 확장 프로그램입니다. [Metamask](https://metamask.io/)와 비슷하게 나인 크로니클 지갑 기능을 제공합니다. [해당 가이드를 참고해주세요](../guide/general/how-to-use-chrono)
+- Mimir는 GraphQL을 통해 실시간 게임 데이터를 조회할 수 있습니다. 아레나 랭킹을 조회하거나 아바타 정보를 받아보세요. [해당 가이드를 참고해주세요](../general/get-state/get-state-with-mimir-graphql.md)
+- Chrono는 Chrome의 확장 프로그램입니다. [Metamask](https://metamask.io/)와 비슷하게 나인 크로니클 지갑 기능을 제공합니다. [해당 가이드를 참고해주세요](../general/how-to-use-chrono.md)
 
 이렇게 Mimir를 통해 데이터를 읽어오고 Chrono를 통해 Transaction을 네트워크에 전송하는 방식으로 모딩이 가능합니다.  
 Mimir는 GraphQL 서비스이기 때문에 비단 웹사이트 뿐만 아니라 CLI 도구나 분석 서비스에서도 사용할 수 있을겁니다.  

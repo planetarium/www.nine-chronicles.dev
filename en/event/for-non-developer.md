@@ -77,7 +77,7 @@ npm run start
 
 This will open a new tab in your browser where you can see the website running! 🎉
 
-Now that everything is set up, you can follow the [Avatar Information Dapp Guide](../modding/guide/avatar-information-dapp-guide) to finish building your website.
+Now that everything is set up, you can follow the [Avatar Information Dapp Guide](../tutorials/modding/avatar-information-dapp-guide.md) to finish building your website.
 
 You might see some technical terms like **GQL** in the guide. Don’t worry about it! Just follow along step by step, and you’ll get the website up and running. After you've completed the guide, take a moment to explore what you've created and understand how it works.
 

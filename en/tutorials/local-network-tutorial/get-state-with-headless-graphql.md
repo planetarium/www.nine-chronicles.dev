@@ -6,7 +6,7 @@ In this guide, we’ll learn how to query the blockchain status on the main netw
 
 ## Querying Status in the GraphQL Playground
 
-Let’s revisit the query we used [earlier](./running-node-with-executor) and try it on one of the main networks, the [Odin network](../../general/multiplanetary), by accessing its GraphQL Playground.
+Let’s revisit the query we used [earlier](./running-node-with-executor) and try it on one of the main networks, the [Odin network](../../guide/general/multiplanetary.md), by accessing its GraphQL Playground.
 
 - [Odin GraphQL Playground URL](https://9c-main-rpc-1.nine-chronicles.com/ui/playground)
 

@@ -1,6 +1,6 @@
 # Avatar Information Viewer Tutorial
 
-This tutorial will show you how to easily fetch avatar information and create a board using [Mimir](../../general/get-state/get-state-with-mimir-graphql), a service that allows you to easily query the latest state of Nine Chronicles with GraphQL.
+This tutorial will show you how to easily fetch avatar information and create a board using [Mimir](../../guide/general/get-state/get-state-with-mimir-graphql.md), a service that allows you to easily query the latest state of Nine Chronicles with GraphQL.
 
 # Project Setup
 

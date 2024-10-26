@@ -6,7 +6,7 @@ With `Chrono`, you can register your private key, configure your desired network
 
 ## Installing Chrono
 
-Follow [this guide](../../general/chrono/how-to-use-chrono) to install Chrono.
+Follow [this guide](../../guide/general/how-to-use-chrono.md) to install Chrono.
 
 ### Adding Your Local Node as a Network
 
@@ -61,7 +61,7 @@ You'll see a UI for entering network information, as shown below. Fill in the de
 After a moment, your `My local` network will be successfully added.
 ![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/my-local-network.png){width=360}
 
-Next, follow [this guide](../../general/chrono/how-to-use-chrono#register-private-key) to import the private key you created.
+Next, follow [this guide](../../guide/general/how-to-use-chrono.md) to import the private key you created.
 
 > In the screenshot above, you can see that the selected account in `Chrono` has 3,920 NCG. This balance reflects the block mining rewards accumulated on the private key used to run the local node. Since this is the same account selected in `Chrono`, the NCG balance is displayed.
 

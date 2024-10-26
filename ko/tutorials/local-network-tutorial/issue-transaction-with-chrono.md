@@ -3,7 +3,7 @@
 나인크로니클 블록체인 네트워크에 트랜젝션을 발행하는 여러 방법 중에서 `크로노`를 사용해 트랜잭션을 발행하는 방법을 알아 보겠습니다. `크로노`는 `메타마스크`와 비슷한 기능을 제공하는 크롬 브라우저의 확장입니다. 사용자는 `크로노`에 개인 키를 등록하고 원하는 네트워크를 설정할 수 있고, 웹앱으로부터 요청 받은 트랜젝션을 크로노로 서명하고 전파할 수 있습니다.
 
 ## 크로노 설치
-[해당 가이드](../../general/chrono/how-to-use-chrono)를 참고해 크로노를 설치합니다.
+[해당 가이드](../../guide/general/how-to-use-chrono.md)를 참고해 크로노를 설치합니다.
 
 ### 로컬 노드를 네트워크로 추가하기
 
@@ -59,7 +59,7 @@ Planet ID는 식별자이며 자리수만 동일하다면 다른 값으로 넣�
 잠시 기다리면, `My local` 네트워크가 성공적으로 추가됩니다.
 ![alt text](/images/en/guide/issue-transaction/issue-transaction-with-chrono/my-local-network.png){width=360}
 
-이후 [해당 가이드](../../general/chrono/how-to-use-chrono#register-private-key)를 참고해 생성했던 private key를 import 해옵니다.
+이후 [해당 가이드](../#register-private-key)를 참고해 생성했던 private key를 import 해옵니다.
 
 > 위의 이미지를 다시 보면, `크로노`에서 선택되어 있는 계정에 3,920 NCG가 있는 것을 확인할 수 있습니다. 로컬 노드를 실행할 때 사용한 개인 키에 블록 채굴 보상이 꾸준히 쌓였는데, 이 개인 키와 같은 계정을 `크로노`에서 선택했기 때문에 NCG 잔액이 이렇게 표시되는 것입니다.
 

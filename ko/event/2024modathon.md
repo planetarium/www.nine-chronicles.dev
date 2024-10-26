@@ -81,7 +81,7 @@ Nine Chronicles Modathon의 심사는 **Planetarium 팀**이 다음 기준에 �
 
 # **추가 정보** 💡
 
-**Modathon에 관심이 있나요?** 😎 [아바타 정보 웹사이트 제작 가이드](../modding/guide/avatar-information-dapp-guide.md)와 [데일리 리워드 웹사이트 제작 가이드](../modding/guide/daily-reward-dapp.md)를 먼저 살펴보세요.  
+**Modathon에 관심이 있나요?** 😎 [아바타 정보 웹사이트 제작 가이드](../tutorials/modding/avatar-information-dapp-guide.md)와 [데일리 리워드 웹사이트 제작 가이드](../tutorials/modding/daily-reward-dapp.md)를 먼저 살펴보세요.  
 커뮤니티 프로젝트는 [awesome-9c](https://github.com/planetarium/awesome-9c)에서 확인할 수 있으며, 여러분의 프로젝트도 **소개**해보세요!
 
 질문이 있다면 [Planetarium Dev Discord Server](https://bit.ly/3zuWuZq)에 참여하여 부담 없이 **무엇이든 물어보세요**. 😄
