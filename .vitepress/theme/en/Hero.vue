@@ -9,7 +9,7 @@
       </h3>
 
       <div class="buttons">
-        <a href="/modding/getting-started" class="btn">Get started</a>
+        <a href="/guide/getting-started" class="btn">Get started</a>
         <a href="/event/2024modathon" class="btn btn--outline">
           🎉 Modathon
         </a>

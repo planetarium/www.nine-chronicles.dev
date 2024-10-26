@@ -9,7 +9,7 @@
       </h3>
 
       <div class="buttons">
-        <a href="/ko/modding/getting-started" class="btn">시작하기</a>
+        <a href="/ko/guide/getting-started" class="btn">시작하기</a>
         <a href="/ko/event/2024modathon" class="btn btn--outline">
           🎉 Modathon
         </a>

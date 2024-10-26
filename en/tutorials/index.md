@@ -1,0 +1,6 @@
+- Index
+  - Modding Tutorials
+    - [Creating an Avatar Information Page Tutorial](./modding/avatar-information-dapp-guide)
+    - [Creating a Daily Reward Page Tutorial](./modding/daily-reward-dapp.md)
+    - [Creating a Mod Using BepInEx](./modding/bepinex-guide)
+  - [Running the Nine Chronicles Network Locally](./local-network-tutorial/getting-started)
