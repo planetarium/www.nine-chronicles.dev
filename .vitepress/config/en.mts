@@ -137,7 +137,7 @@ function sidebarTutorials(): DefaultTheme.SidebarItem[] {
         { text: 'Running a Blockchain Node', link: 'tutorials/local-network-tutorial/running-node-with-executor.md' },
         { text: 'Querying State', link: 'tutorials/local-network-tutorial/get-state-with-headless-graphql.md' },
         { text: 'Creating a Private Key', link: 'tutorials/local-network-tutorial/create-a-private-key' },
-        { text: 'Creating a Genesis Bloc', link: 'tutorials/local-network-tutorial/create-a-genesis-block' },
+        { text: 'Creating a Genesis Block', link: 'tutorials/local-network-tutorial/create-a-genesis-block' },
         { text: 'Running a Node with Your Own Key', link: 'tutorials/local-network-tutorial/running-node-with-own-private-key.md' },
         { text: 'Running the Client with a Local Node', link: 'tutorials/local-network-tutorial/run-client-with-local-node' },
         { text: 'Issuing a Transaction', link: 'tutorials/local-network-tutorial/issue-transaction-with-chrono' }
