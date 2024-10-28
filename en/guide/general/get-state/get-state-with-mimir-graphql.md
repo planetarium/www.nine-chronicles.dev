@@ -27,4 +27,4 @@ query GetArenaSheet {
 }
 ```
 
-For detailed usage instructions, please refer to this [link](https://chillicream.com/docs/bananacakepop/v2/explore-the-ui).
+For detailed usage instructions, please refer to this [link](https://chillicream.com/docs/nitro/explore-the-ui).
