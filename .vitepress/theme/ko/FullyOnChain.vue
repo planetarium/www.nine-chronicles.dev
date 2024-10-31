@@ -6,9 +6,8 @@
                     <img src="/github.svg" alt="GitHub logo" class="icon" />
                     <div class="button-text">
                         <strong>Libplanet</strong>
-                        <div class="button-description"></div>나인 크로니클에서 사용되는 블록체인 라이브러리
+                        <div class="button-description">나인 크로니클에서 사용되는 블록체인 라이브러리</div>
                     </div>
-
                 </a>
                 <a href="https://github.com/planetarium/lib9c" target="_blank" class="button">
                     <img src="/github.svg" alt="GitHub logo" class="icon" />
@@ -46,16 +45,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 120px;
+    padding: 0 20px;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
     gap: 40px;
     word-break: keep-all;
+    flex-wrap: wrap;
 }
 
 .buttons-container {
@@ -126,5 +126,32 @@ a.highlight:hover {
     font-size: 40px;
     margin-bottom: 1rem;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 </style>
