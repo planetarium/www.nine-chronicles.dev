@@ -52,6 +52,7 @@
     font-size: 40px;
     margin-bottom: 1rem;
     font-weight: 600;
+    line-height: 2.5rem;
 }
 
 .description {
