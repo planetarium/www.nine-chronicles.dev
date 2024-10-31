@@ -11,7 +11,6 @@
                 </a>
                 <a href="https://github.com/planetarium/lib9c" target="_blank" class="button">
                     <img src="/github.svg" alt="GitHub logo" class="icon" />
-
                     <div class="button-text">
                         <strong>Lib9c</strong>
                         <div class="button-description">See the Nine Chronicles blockchain protocol</div>
@@ -19,7 +18,6 @@
                 </a>
                 <a href="https://github.com/planetarium/NCIPs" target="_blank" class="button">
                     <img src="/github.svg" alt="GitHub logo" class="icon" />
-
                     <div class="button-text">
                         <strong>NCIP</strong>
                         <div class="button-description">Check out Nine Chronicles Improvement Proposals</div>
@@ -49,16 +47,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 120px;
+    padding: 0 20px;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
     gap: 40px;
     word-break: keep-all;
+    flex-wrap: wrap;
 }
 
 .buttons-container {
@@ -129,5 +128,32 @@ a.highlight:hover {
     font-size: 40px;
     margin-bottom: 1rem;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 </style>
