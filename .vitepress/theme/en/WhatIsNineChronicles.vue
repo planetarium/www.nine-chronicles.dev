@@ -24,6 +24,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 120px;
+    padding: 0 20px;
 }
 
 .content {
@@ -32,6 +33,7 @@
     align-items: center;
     gap: 60px;
     word-break: keep-all;
+    flex-wrap: wrap;
 }
 
 .image-container {
@@ -65,11 +67,37 @@
 
 a.highlight {
     color: #b81d82;
-    /* 강조를 위한 파란색 링크 */
     text-decoration: none;
 }
 
 a.highlight:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 </style>
