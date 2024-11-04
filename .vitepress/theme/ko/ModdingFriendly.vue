@@ -5,8 +5,8 @@
                 <h1 class="title">모딩 친화적</h1>
                 <div class="description">
                     나인 크로니클은 광범위한 <b>모딩 도구와 지원</b>을 제공하여 플레이어가 직접 콘텐츠와 수정 사항을 만들고 공유할 수 있습니다.<br />
-                    <a href="/general/get-state/get-state-with-mimir-graphql" class="highlight">Mimir</a>를 사용해 GQL로 게임
-                    데이터를 받거나, <a href="/general/chrono/how-to-use-chrono" class="highlight">Chrono</a>를 사용해 웹사이트에서 서명을
+                    <a href="/ko/guide/general/get-state/get-state-with-mimir-graphql" class="highlight">Mimir</a>를 사용해 GQL로 게임
+                    데이터를 받거나, <a href="/ko/guide/general/how-to-use-chrono" class="highlight">Chrono</a>를 사용해 웹사이트에서 서명을
                     진행해 보세요.<br />
                     많은 모드들이 <a href="https://github.com/planetarium/awesome-9c" target="_blank" class="highlight">나인
                         크로니클

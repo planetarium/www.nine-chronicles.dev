@@ -7,8 +7,8 @@
                     <b>Nine Chronicles is modding-friendly</b>, making it easier for players and developers to create
                     mods with
                     various tools at their disposal.<br />
-                    With <a href="/general/get-state/get-state-with-mimir-graphql" class="highlight">Mimir</a>, you
-                    can easily access game data, and <a href="/general/chrono/how-to-use-chrono"
+                    With <a href="/guide/general/get-state/get-state-with-mimir-graphql" class="highlight">Mimir</a>, you
+                    can easily access game data, and <a href="/guide/general/how-to-use-chrono"
                         class="highlight">Chrono</a> allows you
                     to sign transactions seamlessly.<br />
                     Many mods are being actively developed within the <a
