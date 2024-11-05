@@ -1,0 +1,27 @@
+name: Links
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"
+  pull_request:
+
+jobs:
+  check-links-in-locals:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --method GET --fallback-extensions md --exclude dorahacks.io --exclude-path */forum-trunk */**/*.md
+  
+  check-links-in-remote:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --method GET --fallback-extensions md --exclude dorahacks.io --exclude-path */forum-trunk https://nine-chronicles.dev/

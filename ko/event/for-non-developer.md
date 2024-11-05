@@ -6,7 +6,7 @@ Nine Chronicles Modathon에 관심이 있는 비개발자 여러분, 환영합�
 
 ## 모딩 설정 및 목표
 
-저희의 목표는 Nine Chronicles 아바타 정보를 표시할 수 있는 웹사이트를 만들기 위한 환경을 구성한 다음 [아바타 정보 Dapp 가이드](https://modding/guide/avatar-information-dapp-guide)를 따라 웹사이트를 만들어볼겁니다.
+저희의 목표는 Nine Chronicles 아바타 정보를 표시할 수 있는 웹사이트를 만들기 위한 환경을 구성한 다음 [아바타 정보 Dapp 가이드](../tutorials/modding/avatar-information-dapp-guide)를 따라 웹사이트를 만들어볼겁니다.
 
 튜토리얼이 끝나고 나서 본인의 아이디어를 추가한 새로운 앱을 만들어보세요!
 
