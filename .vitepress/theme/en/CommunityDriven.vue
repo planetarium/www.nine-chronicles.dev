@@ -12,7 +12,7 @@
                     our main community hub, and we encourage you to join and be part of the conversation.
                 </div>
                 <div class="description">
-                    All repositories <a href="/contributing/getting-started" class="highlight">related to Nine
+                    All repositories <a href="/guide/contributing/getting-started" class="highlight">related to Nine
                         Chronicles are open source</a>, and
                     we welcome your participation through discussions and issues on GitHub. <b>Your feedback and
                         questions
