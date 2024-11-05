@@ -7,7 +7,7 @@ Once you've followed through to the end, if you feel inspired, we encourage you 
 ## Modding Setup and Goal
 
 Now let’s explain our goal. You'll be setting up your environment to create a website that can display avatar information from Nine Chronicles.  
-We’ll walk you through the basics, and you can follow the [Avatar Information Dapp Guide](https://modding/guide/avatar-information-dapp-guide) later to build the website step-by-step.
+We’ll walk you through the basics, and you can follow the [Avatar Information Dapp Guide](../tutorials/modding/avatar-information-dapp-guide) later to build the website step-by-step.
 
 By the end of this guide, you'll have everything set up and ready to dive into that guide!
 
