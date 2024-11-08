@@ -1,6 +1,6 @@
-# Welcome Non-Developers to the 2024 Modathon! 🎉
+# Welcome beginners to the 2024 Modathon! 🎉
 
-Hello and welcome to all non-developers who are interested in participating in the Nine Chronicles Modathon! Don't worry if you're new to coding—by following this guide, you'll be able to create a simple website that displays Nine Chronicles avatar information. 🌟
+Hello and welcome to all beginners who are interested in participating in the Nine Chronicles Modathon! Don't worry if you're new to coding—by following this guide, you'll be able to create a simple website that displays Nine Chronicles avatar information. 🌟
 
 Once you've followed through to the end, if you feel inspired, we encourage you to join the Modathon and submit your project. And if you have a cool mod idea but think it's too challenging, head over to the **#mod-ideas** channel in our Discord to find developers who can help bring your vision to life!
 
