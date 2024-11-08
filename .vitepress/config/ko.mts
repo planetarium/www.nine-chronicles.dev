@@ -44,8 +44,15 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebarEvent(): DefaultTheme.SidebarItem[] {
   return [
-    { text: '2024 Modathon', link: 'event/2024modathon' },
-    { text: '비개발자 가이드', link: 'event/for-non-developer' }
+    {
+      text: '2024 모다톤',
+      link: 'event/2024modathon',
+      collapsed: false,
+      items: [
+        { text: '초보자 가이드', link: 'event/for-non-developer' },
+        { text: '무기 제작자 가이드', link: 'event/for-weapon-crafter' },
+      ]
+    },
   ];
 }
 
