@@ -5,12 +5,13 @@
 프로젝트는 빠르게 프론트를 만들어볼 수 있는 [React](https://react.dev/)와 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.
 
 ```sh
-npx create-react-app some-app-name --template @planetarium/9c-mimir-gql
+npx degit planetarium/template-9c-mimir some-app-name
 ```
-먼저 [Create React APP](https://create-react-app.dev/)을 통해 기본적인 프로젝트 설정들을 받아온 후 실행해봅니다.
+먼저 [degit](https://www.npmjs.com/package/degit)을 통해 기본적인 프로젝트 설정들을 받아온 후 실행해봅니다.
 
 ```sh
 cd some-app-name
+npm install
 npm run codegen
 npm run start
 ```

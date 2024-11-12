@@ -12,12 +12,13 @@
 프로젝트는 빠르게 프론트를 만들어볼 수 있는 [React](https://react.dev/)와 [TypeScript](https://www.typescriptlang.org/)를 사용합니다.
 
 ```sh
-npx create-react-app some-app-name --template @planetarium/9c-chrono
+npx degit planetarium/template-9c-chrono some-app-name
 ```
-먼저 [Create React APP](https://create-react-app.dev/)을 통해 기본적인 프로젝트 설정들을 받아온 후 실행해봅니다.
+먼저 [degit](https://www.npmjs.com/package/degit)을 통해 기본적인 프로젝트 설정들을 받아온 후 실행해봅니다.
 
 ```sh
 cd some-app-name
+npm install
 npm run codegen
 npm run start
 ```
@@ -33,7 +34,7 @@ ReFill 버튼을 눌러 서명을 하고 실제로 Daily Reward를 받아볼 수
 ![alt text](/images/modding/guide/daily-reward-dapp/refill-buttons.png)
 
 ## 주요 코드 설명
-create-react-app을 통해 템플릿을 다운받았기 때문에 Chrono를 사용하기 위한 대부분의 세팅이 되어있는 상태입니다.
+degit을 통해 템플릿을 다운받았기 때문에 Chrono를 사용하기 위한 대부분의 세팅이 되어있는 상태입니다.
 
 ### SDK 불러오기
 ```ts

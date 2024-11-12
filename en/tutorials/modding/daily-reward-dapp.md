@@ -13,12 +13,13 @@ Before starting, please check the [Chrono](../../guide/general/how-to-use-chrono
 We'll use [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/) to quickly set up the front end of the project.
 
 ```sh
-npx create-react-app some-app-name --template @planetarium/9c-chrono
+npx degit planetarium/template-9c-chrono some-app-name
 ```
-First, we fetch the basic project settings via [Create React App](https://create-react-app.dev/) and run it.
+First, we fetch the basic project settings via [degit](https://www.npmjs.com/package/degit) and run it.
 
 ```sh
 cd some-app-name
+npm install
 npm run codegen
 npm run start
 ```
@@ -35,7 +36,7 @@ Afterward, retrieve the playable address, and once the avatar is displayed, you'
 
 ## Key Code Explanation
 
-Since we downloaded the template through create-react-app, most of the settings to use Chrono are already in place.
+Since we downloaded the template through degit, most of the settings to use Chrono are already in place.
 
 ### Loading the SDK
 
