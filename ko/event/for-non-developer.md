@@ -58,7 +58,7 @@ npm --version
 터미널에서 아래 명령어를 입력해 프로젝트를 생성하세요:
 
 ```bash
-npx create-react-app your-project-name --template @planetarium/9c-mimir-gql
+npx degit planetarium/template-9c-mimir your-project-name
 ```
 
 `your-project-name`은 여러분이 원하는 프로젝트 이름으로 변경하세요! 이 명령어는 저희가 만들어둔 아바타 정보 웹사이트 템플릿을 다운로드합니다.
@@ -71,6 +71,7 @@ npx create-react-app your-project-name --template @planetarium/9c-mimir-gql
 그다음, 아래 명령어들을 입력해 코드를 생성하고 프로젝트를 시작합니다:
 
 ```bash
+npm install
 npm run codegen
 npm run start
 ```

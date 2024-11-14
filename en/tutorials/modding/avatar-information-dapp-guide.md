@@ -7,13 +7,14 @@ This tutorial will show you how to easily fetch avatar information and create a 
 We will use [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/) to quickly create the front end of our project.
 
 ```sh
-npx create-react-app some-app-name --template @planetarium/9c-mimir-gql
+npx degit planetarium/template-9c-mimir some-app-name
 ```
 
-First, let's set up a basic project configuration using [Create React App](https://create-react-app.dev/) and run it to make sure everything is working.
+First, let's set up a basic project configuration using [degit](https://www.npmjs.com/package/degit) and run it to make sure everything is working.
 
 ```sh
 cd some-app-name
+npm install
 npm run codegen
 npm run start
 ```
@@ -22,7 +23,7 @@ Once the initialization is confirmed to be successful, you're ready to proceed!
 
 ## Modify the QueryTemplate
 
-Since you downloaded the template using create-react-app, most settings required to use Mimir GQL are already configured.
+Since you downloaded the template using degit, most settings required to use Mimir GQL are already configured.
 
 If you want to modify the query fetched by GQL, you can edit the `src/graphql/api.graphql` file. To fetch more information related to the avatar, let's modify the query to include the action point as shown below.
 

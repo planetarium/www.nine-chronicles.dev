@@ -58,7 +58,7 @@ We’re going to use a popular tool called [React](https://react.dev/) to build 
 In your terminal, run the following command to create a project:
 
 ```bash
-npx create-react-app your-project-name --template @planetarium/9c-mimir-gql
+npx degit planetarium/template-9c-mimir your-project-name
 ```
 
 Replace `your-project-name` with whatever you want to name your project! This will download a template for your avatar information website.
@@ -71,6 +71,7 @@ Once it’s done, open the folder in **VS Code**:
 Now, run these commands to generate some code and start the project:
 
 ```bash
+npm install
 npm run codegen
 npm run start
 ```
